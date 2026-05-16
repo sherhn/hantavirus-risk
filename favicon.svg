@@ -1,0 +1,9 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Hexagon background -->
+  <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="#14171f" stroke="#252c3e" stroke-width="1.5"/>
+  <!-- Biohazard-style cross / alert symbol -->
+  <!-- Vertical bar -->
+  <rect x="14.5" y="8" width="3" height="10" rx="1.5" fill="#e84545"/>
+  <!-- Dot -->
+  <circle cx="16" cy="22" r="1.8" fill="#e84545"/>
+</svg>

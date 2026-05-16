@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Тест на риск хантавируса — hantavirus-risk</title>
+<meta name="description" content="Онлайн-тест для самооценки риска хантавирусной инфекции. Краткая (20 вопросов) и расширенная (50 вопросов) версии.">
+<meta name="keywords" content="hantavirus-risk, хантавирус, ГЛПС, хантавирусный лёгочный синдром, тест на инфекцию, риск заражения, sherhn">
+<meta name="author" content="sherhn">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hantavirus-risk.sherhn.space/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hantavirus-risk.sherhn.space/">
+<meta property="og:title" content="Тест на риск хантавируса — hantavirus-risk">
+<meta property="og:description" content="Онлайн-тест для самооценки риска хантавирусной инфекции. Краткая (20 вопросов) и расширенная (50 вопросов) версии.">
+<meta property="og:image" content="https://hantavirus-risk.sherhn.space/og-image.png">
+<!-- TODO: add og-image.png (1200×630) -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="hantavirus-risk">
+<meta property="og:locale" content="ru_RU">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://hantavirus-risk.sherhn.space/">
+<meta name="twitter:title" content="Тест на риск хантавируса — hantavirus-risk">
+<meta name="twitter:description" content="Онлайн-тест для самооценки риска хантавирусной инфекции. Краткая (20 вопросов) и расширенная (50 вопросов) версии.">
+<meta name="twitter:image" content="https://hantavirus-risk.sherhn.space/og-image.png">
+<meta name="twitter:creator" content="@sherhn">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "hantavirus-risk",
+  "url": "https://hantavirus-risk.sherhn.space/",
+  "description": "Онлайн-тест для самооценки риска хантавирусной инфекции с краткой и расширенной версиями.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "author": {
+    "@type": "Person",
+    "name": "sherhn",
+    "url": "https://github.com/sherhn"
+  },
+  "license": "https://hantavirus-risk.sherhn.space/LICENSE.html",
+  "codeRepository": "https://github.com/sherhn/hantavirus-risk"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #14171f;
+    --surface2: #1c2130;
+    --border: #252c3e;
+    --text: #e8eaf0;
+    --muted: #6b7694;
+    --accent: #e84545;
+    --accent-soft: rgba(232, 69, 69, 0.12);
+    --accent2: #f4a23a;
+    --accent2-soft: rgba(244, 162, 58, 0.12);
+    --green: #3adc8f;
+    --green-soft: rgba(58, 220, 143, 0.1);
+    --blue: #4a9eff;
+    --blue-soft: rgba(74, 158, 255, 0.1);
+    --radius: 12px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(74,158,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74,158,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    padding: 60px 0 40px;
+    animation: fadeDown 0.8s ease both;
+  }
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(232, 69, 69, 0.3);
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .pulse-dot {
+    width: 7px; height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  .header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .header h1 em { font-style: italic; color: var(--accent); }
+  .header-sub {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+
+  /* ── Warning / Instructions ── */
+  .warning-box {
+    background: var(--accent-soft);
+    border: 1px solid rgba(232,69,69,0.25);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+  .warning-box .warn-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .warning-box p { font-size: 14px; color: #b0b8d0; line-height: 1.6; }
+  .warning-box strong { color: var(--text); }
+  .instructions {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+  .instructions p { font-size: 14px; color: #9099b8; line-height: 1.7; }
+
+  /* ── Test selector ── */
+  .test-selector {
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+  .test-selector-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .selector-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 560px) { .selector-cards { grid-template-columns: 1fr; } }
+  .selector-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .selector-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(74,158,255,0.1);
+  }
+  .selector-card.active {
+    border-color: var(--blue);
+    background: var(--blue-soft);
+  }
+  .selector-card-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .selector-card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .selector-card-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .selector-card-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .selector-card.active .selector-card-badge {
+    background: var(--blue-soft);
+    border-color: rgba(74,158,255,0.4);
+    color: var(--blue);
+  }
+  .start-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #4a9eff, #2266cc);
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 100px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 24px rgba(74,158,255,0.25);
+  }
+  .start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(74,158,255,0.35);
+  }
+
+  /* ── Progress ── */
+  .progress-bar-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,15,20,0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    margin: 0 -20px 20px;
+  }
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .progress-track { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue), var(--accent));
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+    width: 0%;
+  }
+
+  /* ── Block / Question ── */
+  .block { margin-bottom: 0; animation: fadeUp 0.6s ease both; }
+  .block-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--blue);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .block-num {
+    background: var(--blue-soft);
+    border: 1px solid rgba(74,158,255,0.2);
+    color: var(--blue);
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+  .question {
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+  .question.answered { border-color: rgba(74,158,255,0.25); }
+  .question-header { display: flex; gap: 14px; margin-bottom: 16px; }
+  .question-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); flex-shrink: 0; margin-top: 2px; }
+  .question-text { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; }
+  .options { display: flex; flex-direction: column; gap: 10px; padding-left: 26px; }
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--surface2);
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    user-select: none;
+  }
+  .option:hover { border-color: var(--border); background: #1f2535; }
+  .option.selected { border-color: var(--blue); background: var(--blue-soft); }
+  .option.selected .option-letter { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .option-letter {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--muted);
+    flex-shrink: 0;
+    transition: all 0.18s;
+  }
+  .option-text { font-size: 14px; color: #9099b8; line-height: 1.5; flex: 1; }
+  .option.selected .option-text { color: var(--text); }
+  .option-score-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .tag-high  { background: rgba(232,69,69,0.15);   color: var(--accent); }
+  .tag-mid   { background: rgba(244,162,58,0.15);  color: var(--accent2); }
+  .tag-low   { background: rgba(107,118,148,0.15); color: var(--muted); }
+  .tag-minus { background: rgba(58,220,143,0.15);  color: var(--green); }
+  .alert-option { border-color: rgba(232,69,69,0.3) !important; background: rgba(232,69,69,0.05) !important; }
+  .alert-option.selected { border-color: var(--accent) !important; background: var(--accent-soft) !important; }
+
+  /* ── Submit ── */
+  .submit-section { text-align: center; padding: 40px 0; animation: fadeUp 0.8s ease both; }
+  .submit-btn {
+    background: linear-gradient(135deg, #e84545, #c02020);
+    color: #fff;
+    border: none;
+    padding: 18px 48px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 100px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 24px rgba(232,69,69,0.25);
+  }
+  .submit-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(232,69,69,0.35); }
+  .submit-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .submit-hint { margin-top: 12px; font-size: 13px; color: var(--muted); font-family: 'DM Mono', monospace; }
+
+  /* ── Results ── */
+  .results { display: none; animation: fadeUp 0.8s ease both; }
+  .results.visible { display: block; }
+  .result-card {
+    border-radius: var(--radius);
+    padding: 36px;
+    margin-bottom: 24px;
+    border: 1.5px solid;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .result-low    { background: var(--green-soft); border-color: rgba(58,220,143,0.3); }
+  .result-low::before { background: linear-gradient(90deg, var(--green), #2cb877); }
+  .result-medium { background: rgba(244,162,58,0.08); border-color: rgba(244,162,58,0.35); }
+  .result-medium::before { background: linear-gradient(90deg, var(--accent2), #d48020); }
+  .result-high   { background: rgba(232,69,69,0.08); border-color: rgba(232,69,69,0.4); }
+  .result-high::before { background: linear-gradient(90deg, var(--accent), #a01010); }
+  .result-critical { background: rgba(232,69,69,0.14); border-color: rgba(232,69,69,0.6); animation: criticalPulse 1.5s ease-in-out infinite; }
+  .result-critical::before { background: linear-gradient(90deg, #ff2020, var(--accent)); }
+  .result-label { font-family: 'DM Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 8px; }
+  .result-score-display { font-family: 'DM Serif Display', serif; font-size: 56px; line-height: 1; margin-bottom: 16px; }
+  .result-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 12px; line-height: 1.3; }
+  .result-desc { font-size: 15px; line-height: 1.7; color: #9099b8; }
+  .result-desc strong { color: var(--text); }
+  .result-type-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── Restart / Disclaimer ── */
+  .restart-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 12px 28px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    transition: all 0.2s;
+    margin-top: 24px;
+  }
+  .restart-btn:hover { border-color: var(--blue); color: var(--blue); }
+  .disclaimer {
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* ── Modal Disclaimer ── */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5,7,12,0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease both;
+  }
+  .modal-box {
+    background: var(--surface);
+    border: 1.5px solid rgba(232,69,69,0.4);
+    border-radius: 16px;
+    padding: 36px;
+    max-width: 540px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(232,69,69,0.1);
+    animation: scaleUp 0.3s ease both;
+  }
+  .modal-icon { font-size: 36px; text-align: center; margin-bottom: 16px; }
+  .modal-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .modal-subtitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .modal-body {
+    font-size: 14px;
+    color: #9099b8;
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+  .modal-body strong { color: var(--text); }
+  .modal-body ul { padding-left: 20px; margin: 10px 0; }
+  .modal-body ul li { margin-bottom: 6px; }
+  .modal-divider { height: 1px; background: var(--border); margin: 20px 0; }
+  .modal-close-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #e84545, #c02020);
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 24px rgba(232,69,69,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .modal-close-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .modal-close-btn:not(:disabled):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 32px rgba(232,69,69,0.35);
+  }
+  .modal-timer {
+    margin-top: 12px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    min-height: 18px;
+  }
+  .modal-progress-track {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .modal-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 2px;
+    transition: width 0.1s linear;
+  }
+
+  /* ── Animations ── */
+  @keyframes fadeDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeUp   { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+  @keyframes scaleUp  { from { opacity:0; transform:scale(0.9); } to { opacity:1; transform:scale(1); } }
+  @keyframes pulse    { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:0.4; transform:scale(0.7); } }
+  @keyframes criticalPulse { 0%,100%{ box-shadow:0 0 0 0 rgba(232,69,69,0.3); } 50%{ box-shadow:0 0 0 12px rgba(232,69,69,0); } }
+
+  @media (max-width: 600px) {
+    .question { padding: 16px; }
+    .options   { padding-left: 0; }
+    .result-card { padding: 24px; }
+    .result-score-display { font-size: 40px; }
+    .modal-box { padding: 24px; }
+  }
+
+  /* ── Question grid / tile map ── */
+  .q-grid-wrap {
+    margin-top: 12px;
+  }
+  .q-grid-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+    margin-top: 10px;
+  }
+  .q-grid-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-top: 16px;
+  }
+  .q-grid-label { margin-top: 0; margin-bottom: 10px; }
+  .q-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+  }
+  .q-tile {
+    width: 32px; height: 32px;
+    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    background: var(--surface2);
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+  .q-tile:hover { border-color: var(--blue); color: var(--blue); }
+  .q-tile.answered {
+    background: var(--green-soft);
+    border-color: rgba(58,220,143,0.4);
+    color: var(--green);
+  }
+  .q-tile.current {
+    background: var(--blue-soft);
+    border-color: var(--blue);
+    color: var(--blue);
+    box-shadow: 0 0 0 2px rgba(74,158,255,0.2);
+  }
+  .q-tile.current.answered {
+    background: var(--blue-soft);
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+
+  .q-tile.skipped {
+    background: rgba(244,162,58,0.1);
+    border-color: rgba(244,162,58,0.35);
+    color: var(--accent2);
+  }
+  .q-tile.skipped.current {
+    background: var(--blue-soft);
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+  .q-nav-btn.skip-btn {
+    background: var(--surface2);
+    border: 1px dashed var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+  .q-nav-btn.skip-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  .question { display: none; }
+  .question.active-question { display: block; }
+  
+  /* Navigation buttons */
+  .q-nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 0 0 8px;
+  }
+  .q-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .q-nav-btn:hover:not(:disabled) { border-color: var(--blue); color: var(--blue); }
+  .q-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  .q-nav-btn.next-btn {
+    background: linear-gradient(135deg, #4a9eff, #2266cc);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(74,158,255,0.25);
+  }
+  .q-nav-btn.next-btn:hover:not(:disabled) { box-shadow: 0 6px 24px rgba(74,158,255,0.4); transform: translateY(-1px); }
+  .q-nav-btn.next-btn:disabled { opacity: 0.35; transform: none; }
+  .q-counter {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  /* ── Navbar ── */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: rgba(13,15,20,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 20px;
+  }
+  .nav-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.15s;
+    letter-spacing: 0.04em;
+  }
+  .nav-links a:hover { color: var(--text); background: var(--surface2); }
+  .nav-links a.active { color: var(--blue); }
+  .nav-gh {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted) !important;
+  }
+  .nav-gh:hover { color: var(--text) !important; }
+  @media (max-width: 560px) {
+    .nav-links .hide-mobile { display: none; }
+  }
+  /* ── Footer ── */
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 20px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-top: 60px;
+  }
+  .site-footer a { color: var(--muted); text-decoration: none; }
+  .site-footer a:hover { color: var(--blue); }
+  /* ── GitHub Star Button ── */
+  .gh-star-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 11px 22px;
+    border-radius: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-top: 12px;
+  }
+  .gh-star-btn:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(244,162,58,0.2); }
+
+  /* Animate question entrance */
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(30px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInBack {
+    from { opacity: 0; transform: translateX(-30px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  .question.active-question { animation: slideIn 0.3s ease both; }
+  .question.active-question.going-back { animation: slideInBack 0.3s ease both; }
+  /* Hide block titles in one-at-a-time mode */
+  .block-title { display: none; }
+  /* Submit section always visible, button disabled until ready */
+  .submit-section { display: block; }
+
+</style>
+</head>
+<body>
+<nav class="site-nav"><div class="nav-inner"><a href="index.html" class="nav-logo">⬡ <span>hantavirus</span>-risk</a><ul class="nav-links"><li><a href="index.html" class="active">Главная</a></li><li class="hide-mobile"><a href="about.html">О проекте</a></li><li class="hide-mobile"><a href="faq.html">FAQ</a></li><li class="hide-mobile"><a href="LICENSE.html">Лицензия</a></li><li><a href="https://github.com/sherhn/hantavirus-risk" target="_blank" class="nav-gh"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></li></ul></div></nav>
+
+<!-- ═══════════════════════════════════════════
+     MODAL DISCLAIMER (shown after result)
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="disclaimerModal" style="display:none">
+  <div class="modal-box">
+    <div class="modal-icon">⚕️</div>
+    <div class="modal-subtitle">Важное уведомление</div>
+    <div class="modal-title">Это не медицинский диагноз</div>
+    <div class="modal-divider"></div>
+    <div class="modal-body">
+      <strong>Данный тест является инструментом предварительной оценки риска</strong> и создан исключительно в информационных целях. Пожалуйста, примите к сведению:
+      <ul>
+        <li>Тест <strong>не заменяет</strong> осмотр врача, лабораторную диагностику или клиническое обследование.</li>
+        <li>Результат теста <strong>не является</strong> постановкой диагноза, назначением лечения или медицинской рекомендацией.</li>
+        <li>Хантавирусная инфекция <strong>диагностируется только лабораторно</strong> (ПЦР, серология IgM) и клинически врачом-инфекционистом.</li>
+        <li>При наличии острой одышки, кровохарканья, потери сознания или резкого падения давления — <strong>немедленно вызывайте скорую помощь (103 / 112)</strong>, не дожидаясь результата теста.</li>
+        <li>Авторы теста <strong>не несут ответственности</strong> за принятые на его основе решения.</li>
+      </ul>
+      <div class="modal-divider"></div>
+      Если вас беспокоит ваше состояние — <strong>обратитесь к врачу</strong>. Только специалист может поставить диагноз и назначить лечение. Берегите себя и своих близких.
+    </div>
+    <button class="modal-close-btn" id="modalCloseBtn" disabled onclick="closeModal()">
+      Я понимаю и принимаю к сведению
+    </button>
+    <div class="modal-timer" id="modalTimer">Пожалуйста, прочитайте внимательно — 3 секунды…</div>
+    <div class="modal-progress-track">
+      <div class="modal-progress-fill" id="modalProgressFill" style="width:0%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+═══════════════════════════════════════════ -->
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-badge">
+      <span class="pulse-dot"></span>
+      Оценка риска
+    </div>
+    <h1>Тест на риск<br><em>хантавирусной</em> инфекции</h1>
+    <p class="header-sub">Предварительная оценка вероятности заражения. Выберите формат теста ниже.</p>
+  </header>
+
+  <!-- Warning -->
+  <div class="warning-box">
+    <div class="warn-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Важное предупреждение
+    </div>
+    <p>Этот тест <strong>не является медицинским диагнозом</strong>. Хантавирусная инфекция — редкое, но крайне опасное заболевание: летальность при лёгочной форме достигает <strong>35–40%</strong>. Ранние симптомы практически неотличимы от гриппа. Тест создан для предварительной оценки риска и помощи в принятии решения об обращении к врачу.</p>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    <p>Внимательно прочитайте вопросы и выберите один вариант ответа, наиболее точно описывающий вашу ситуацию за последние <strong>1–7 дней</strong> (если не указано иное). В конце вы получите итоговый балл и интерпретацию результатов.</p>
+  </div>
+
+  <!-- Test selector -->
+  <div class="test-selector" id="selectorSection">
+    <div class="test-selector-title">Выберите формат теста</div>
+    <div class="selector-cards">
+      <div class="selector-card active" id="card-short" onclick="selectTest('short')">
+        <div class="selector-card-icon">⚡</div>
+        <div class="selector-card-title">Краткий тест</div>
+        <div class="selector-card-sub">Базовая оценка риска по ключевым симптомам и контактам</div>
+        <div class="selector-card-badge">20 вопросов · 3–5 мин</div>
+      </div>
+      <div class="selector-card" id="card-extended" onclick="selectTest('extended')">
+        <div class="selector-card-icon">🔬</div>
+        <div class="selector-card-title">Расширенный тест</div>
+        <div class="selector-card-sub">Детальный анализ с дифференциальной диагностикой</div>
+        <div class="selector-card-badge">50 вопросов · 10–15 мин</div>
+      </div>
+    </div>
+    <button class="start-btn" onclick="startTest()">Начать тест</button>
+    <div style="text-align:center">
+      <a href="https://github.com/sherhn/hantavirus-risk" target="_blank" class="gh-star-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        ⭐ Star on GitHub
+      </a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       SHORT TEST (20 questions)
+  ══════════════════════════════ -->
+  <div id="testForm-short" style="display:none">
+
+    <!-- Progress -->
+    <div class="progress-bar-wrap">
+      <div class="progress-info">
+        <span id="progressText-short">Вопрос 0 из 20</span>
+        <span id="progressPct-short">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill-short"></div></div>
+    </div>
+
+    <!-- Block 1 -->
+    <div class="block" style="animation-delay:0.1s">
+      <div class="block-title"><span class="block-num">1</span>Блок 1 — Контакт с потенциальным источником инфекции</div>
+
+      <div class="question" id="s-q1">
+        <div class="question-header"><span class="question-num">01</span><span class="question-text">Были ли вы в последние 2–6 недель в местах, где могли обитать грызуны (дача, сарай, подвал, чердак, поход с ночёвкой в палатке, сельская местность)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s1" data-score="5" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, я убирал(а) пыльные, давно не использовавшиеся помещения, где могли быть мыши, или работал(а) с землёй в сельской местности.</span></div>
+          <div class="option" data-q="s1" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Да, выезжал(а) на природу или находился(ась) в потенциально опасном месте, но без прямого контакта с пылью или гнёздами.</span></div>
+          <div class="option" data-q="s1" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, я не покидал(а) городскую квартиру/офис или точно не контактировал(а) с местами обитания грызунов.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q2">
+        <div class="question-header"><span class="question-num">02</span><span class="question-text">Замечали ли вы мышиный помёт, гнёзда или чувствовали резкий запах грызунов в помещении, где вы находились (в течение последних двух месяцев)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s2" data-score="5" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, я лично видел(а) помёт, гнёзда или мёртвых грызунов.</span></div>
+          <div class="option" data-q="s2" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Да, другие люди говорили, что видели следы грызунов, или запах чувствовался.</span></div>
+          <div class="option" data-q="s2" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, ничего такого не замечал(а).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q3">
+        <div class="question-header"><span class="question-num">03</span><span class="question-text">Есть ли у вас профессиональный риск (работы в сельском хозяйстве, дератизации, лесничестве, на стройке в сельской местности, в лаборатории)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s3" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, это моя постоянная работа или я регулярно этим занимаюсь.</span></div>
+          <div class="option" data-q="s3" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Иногда сталкиваюсь по работе с такими условиями.</span></div>
+          <div class="option" data-q="s3" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="block" style="animation-delay:0.2s">
+      <div class="block-title"><span class="block-num">2</span>Блок 2 — Симптомы в динамике (последние 1–7 дней)</div>
+
+      <div class="question" id="s-q4">
+        <div class="question-header"><span class="question-num">04</span><span class="question-text">Было ли у вас <strong>внезапное</strong> повышение температуры тела выше 38°C?</span></div>
+        <div class="options">
+          <div class="option" data-q="s4" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, температура поднялась резко, до 38.5°C и выше.</span></div>
+          <div class="option" data-q="s4" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Да, температура есть, но не выше 38°C, либо поднималась постепенно.</span></div>
+          <div class="option" data-q="s4" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, температура нормальная.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q5">
+        <div class="question-header"><span class="question-num">05</span><span class="question-text">Испытываете ли вы <strong>сильную</strong> мышечную боль (миалгию), особенно в крупных мышцах — бёдрах, спине, плечах?</span></div>
+        <div class="options">
+          <div class="option" data-q="s5" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, боль очень сильная, «ломит» всё тело, мешает двигаться и спать.</span></div>
+          <div class="option" data-q="s5" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Есть небольшая ломота или боль в какой-то одной группе мышц.</span></div>
+          <div class="option" data-q="s5" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, мышечной боли нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q6">
+        <div class="question-header"><span class="question-num">06</span><span class="question-text">Есть ли у вас головная боль, и если да — то какая она?</span></div>
+        <div class="options">
+          <div class="option" data-q="s6" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Очень сильная, почти невыносимая, может отдавать в глаза (ретро-орбитальная боль).</span></div>
+          <div class="option" data-q="s6" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Умеренная головная боль, терпимая, похожа на боль при обычной простуде.</span></div>
+          <div class="option" data-q="s6" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Головной боли нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q7">
+        <div class="question-header"><span class="question-num">07</span><span class="question-text">Отмечаете ли вы необычную, быстро нарастающую усталость и слабость, которые не проходят после отдыха?</span></div>
+        <div class="options">
+          <div class="option" data-q="s7" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, слабость настолько сильная, что я не могу встать с кровати, кружится голова.</span></div>
+          <div class="option" data-q="s7" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Значительная слабость, хуже чем обычно при простуде.</span></div>
+          <div class="option" data-q="s7" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Обычная лёгкая усталость или нет никаких симптомов.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q8">
+        <div class="question-header"><span class="question-num">08</span><span class="question-text">Есть ли у вас сильный насморк с обильными жидкими выделениями из носа?</span></div>
+        <div class="options">
+          <div class="option" data-q="s8" data-score="-2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, активный насморк с большим количеством выделений.</span></div>
+          <div class="option" data-q="s8" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Небольшая заложенность носа или слабые выделения.</span></div>
+          <div class="option" data-q="s8" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, носовое дыхание свободное.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q9">
+        <div class="question-header"><span class="question-num">09</span><span class="question-text">Есть ли у вас боль в горле при глотании?</span></div>
+        <div class="options">
+          <div class="option" data-q="s9" data-score="-2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, сильная боль в горле, горло красное, возможны налёты.</span></div>
+          <div class="option" data-q="s9" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Лёгкое першение или дискомфорт в горле.</span></div>
+          <div class="option" data-q="s9" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, горло не болит.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q10">
+        <div class="question-header"><span class="question-num">10</span><span class="question-text">Есть ли у вас тошнота, рвота или боли в животе?</span></div>
+        <div class="options">
+          <div class="option" data-q="s10" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, выраженная тошнота, была рвота и/или боли в животе.</span></div>
+          <div class="option" data-q="s10" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Лёгкая тошнота или дискомфорт в животе.</span></div>
+          <div class="option" data-q="s10" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q11">
+        <div class="question-header"><span class="question-num">11</span><span class="question-text">Есть ли у вас одышка (чувство нехватки воздуха) в покое или при минимальной нагрузке?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="s11" data-score="8" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, я задыхаюсь, даже сидя или разговаривая — не могу лежать. <strong style="color:var(--accent)">⚠ Вызывайте скорую немедленно!</strong></span></div>
+          <div class="option" data-q="s11" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Есть заметная одышка при ходьбе по комнате или при разговоре.</span></div>
+          <div class="option" data-q="s11" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, дышу нормально или одышка только при сильной нагрузке.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q12">
+        <div class="question-header"><span class="question-num">12</span><span class="question-text">Есть ли у вас боль или ноющий дискомфорт в пояснице (в области почек)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s12" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, болит поясница с одной или обеих сторон, боль появилась вместе с другими симптомами.</span></div>
+          <div class="option" data-q="s12" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Небольшой дискомфорт в спине, но я связываю его с физической нагрузкой.</span></div>
+          <div class="option" data-q="s12" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q13">
+        <div class="question-header"><span class="question-num">13</span><span class="question-text">Как быстро развивались ваши симптомы?</span></div>
+        <div class="options">
+          <div class="option" data-q="s13" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Очень быстро: утром был(а) здоров(а), а к вечеру резко поднялась температура, озноб, сильная ломота, и состояние ухудшается.</span></div>
+          <div class="option" data-q="s13" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Болезнь развивалась постепенно: сначала лёгкое недомогание, на следующий день температура и т.д.</span></div>
+          <div class="option" data-q="s13" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Симптомы практически не меняются уже несколько дней.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="block" style="animation-delay:0.3s">
+      <div class="block-title"><span class="block-num">3</span>Блок 3 — Контакты с людьми и другие факторы</div>
+
+      <div class="question" id="s-q14">
+        <div class="question-header"><span class="question-num">14</span><span class="question-text">Контактировали ли вы с человеком, у которого подтверждён хантавирус или тяжёлая скоротечная пневмония после возвращения из эндемичных регионов?</span></div>
+        <div class="options">
+          <div class="option" data-q="s14" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, был тесный контакт с таким человеком (особенно из Аргентины/Чили — вирус Анд).</span></div>
+          <div class="option" data-q="s14" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Слышал(а) о таких случаях в окружении, но лично не контактировал(а).</span></div>
+          <div class="option" data-q="s14" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, ничего подобного.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q15">
+        <div class="question-header"><span class="question-num">15</span><span class="question-text">Были ли вы в последние 2–6 недель в путешествии в Южной Америке (особенно в Патагонии, Аргентине, Чили) или других эндемичных регионах (Азия, Дальний Восток)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s15" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, путешествовал(а) в Южной Америке / Азии / Дальнем Востоке.</span></div>
+          <div class="option" data-q="s15" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Да, путешествовал(а), но в других регионах.</span></div>
+          <div class="option" data-q="s15" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q16">
+        <div class="question-header"><span class="question-num">16</span><span class="question-text">Болеет ли кто-то из ваших домашних или коллег похожими симптомами?</span></div>
+        <div class="options">
+          <div class="option" data-q="s16" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, несколько человек вокруг меня заболели одновременно с похожими симптомами.</span></div>
+          <div class="option" data-q="s16" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Да, но симптомы у всех разные.</span></div>
+          <div class="option" data-q="s16" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, вокруг все здоровы.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="block" style="animation-delay:0.4s">
+      <div class="block-title"><span class="block-num">4</span>Блок 4 — Текущее состояние и тревожные признаки</div>
+
+      <div class="question" id="s-q17">
+        <div class="question-header"><span class="question-num">17</span><span class="question-text">Какое у вас артериальное давление (если измеряли за последние сутки)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s17" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Оно значительно ниже моей нормы (например, было 120/80, а стало 90/60 и ниже).</span></div>
+          <div class="option" data-q="s17" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Давление в норме или немного повышено.</span></div>
+          <div class="option" data-q="s17" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Я не знаю / не измерял(а).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q18">
+        <div class="question-header"><span class="question-num">18</span><span class="question-text">Есть ли у вас хронические заболевания (диабет, гипертония, астма, болезни почек) или состояния, ослабляющие иммунитет?</span></div>
+        <div class="options">
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, есть серьёзные хронические заболевания.</span></div>
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Есть лёгкие хронические проблемы со здоровьем.</span></div>
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, я в целом здоров(а).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q19">
+        <div class="question-header"><span class="question-num">19</span><span class="question-text">Принимали ли вы в последние дни парацетамол или ибупрофен, и помогло ли это снизить температуру и боль?</span></div>
+        <div class="options">
+          <div class="option" data-q="s19" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Да, принимал(а), но это почти не помогло — температура и боль держатся.</span></div>
+          <div class="option" data-q="s19" data-score="-1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Да, лекарства помогли, стало значительно легче.</span></div>
+          <div class="option" data-q="s19" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Нет, не принимал(а).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q20">
+        <div class="question-header"><span class="question-num">20</span><span class="question-text">Как вы в целом можете оценить своё состояние прямо сейчас?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="s20" data-score="10" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">Очень тяжёлое: не могу встать с кровати, трудно дышать, сознание спутанное, сердце бьётся неритмично. <strong style="color:var(--accent)">⚠ НЕЗАМЕДЛИТЕЛЬНО ВЫЗЫВАЙТЕ СКОРУЮ!</strong></span></div>
+          <div class="option" data-q="s20" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">Средней тяжести: выраженная лихорадка, слабость, но я могу передвигаться и обслуживать себя.</span></div>
+          <div class="option" data-q="s20" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">Удовлетворительное: есть лёгкое недомогание, насморк, но я функционирую.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-nav" id="nav-short">
+      <button class="q-nav-btn prev-btn" onclick="goPrev('short')" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+      <button class="q-nav-btn skip-btn" onclick="skipQuestion('short')">Пропустить</button>
+      <span class="q-counter">1 / 20</span>
+      <button class="q-nav-btn next-btn" onclick="goNext('short')" disabled>
+        Далее
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="q-grid-wrap">
+      <div class="q-grid-label">Вопросы</div>
+      <div class="q-grid" id="qGrid-short"></div>
+    </div>
+
+    <div class="submit-section">
+      <button class="submit-btn" id="submitBtn-short" onclick="showResults('short')" disabled>Рассчитать результат</button>
+      <p class="submit-hint" id="submitHint-short">Ответьте на все 20 вопросов, чтобы получить результат</p>
+    </div>
+  </div><!-- /testForm-short -->
+
+
+  <!-- ══════════════════════════════
+       EXTENDED TEST (50 questions)
+  ══════════════════════════════ -->
+  <div id="testForm-extended" style="display:none">
+
+    <div class="progress-bar-wrap">
+      <div class="progress-info">
+        <span id="progressText-extended">Вопрос 0 из 50</span>
+        <span id="progressPct-extended">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill-extended"></div></div>
+    </div>
+
+    <!-- Block 1 -->
+    <div class="block" style="animation-delay:0.1s">
+      <div class="block-title"><span class="block-num">1</span>Блок 1 — Эпидемиологический анамнез (10 вопросов)</div>
+
+      <div class="question" id="e-q1">
+        <div class="question-header"><span class="question-num">01</span><span class="question-text">Посещали ли вы в последние 2–6 недель сельскую местность, дачу, лес, подвал, чердак или другое место, где могли обитать грызуны?</span></div>
+        <div class="options">
+          <div class="option" data-q="e1" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, и активно контактировал(а) с пылью (подметал(а), разбирал(а) старые вещи, работал(а) с землёй, ночевал(а) в палатке).</span></div>
+          <div class="option" data-q="e1" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Да, но просто находился(ась) в таком месте, без пылевых работ.</span></div>
+          <div class="option" data-q="e1" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет, не покидал(а) городскую квартиру/офис или точно не контактировал(а) с такими местами.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q2">
+        <div class="question-header"><span class="question-num">02</span><span class="question-text">Видели ли вы лично мышиный помёт, гнёзда, мёртвых грызунов в помещении, где находились (за последние 2 месяца)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e2" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, видел(а) свежий помёт, гнёзда или мёртвых мышей.</span></div>
+          <div class="option" data-q="e2" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Видел(а) старые следы, или мне сказали, что они есть.</span></div>
+          <div class="option" data-q="e2" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет, ничего такого.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q3">
+        <div class="question-header"><span class="question-num">03</span><span class="question-text">Вдыхали ли вы пыль во время уборки давно не использовавшихся помещений, сараев, подвалов (за последние 6 недель)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e3" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, чувствовал(а), что вдыхаю пыль, было пыльно, возможно без маски.</span></div>
+          <div class="option" data-q="e3" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Нет, уборка была влажной или я использовал(а) респиратор.</span></div>
+          <div class="option" data-q="e3" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Не проводил(а) таких уборок.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q4">
+        <div class="question-header"><span class="question-num">04</span><span class="question-text">Приходилось ли вам контактировать с живыми грызунами или их выделениями (брать в руки, убирать клетку)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e4" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, был тесный контакт с живыми дикими или домашними грызунами.</span></div>
+          <div class="option" data-q="e4" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Был случайный кратковременный контакт.</span></div>
+          <div class="option" data-q="e4" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q5">
+        <div class="question-header"><span class="question-num">05</span><span class="question-text">Работаете ли вы в сельском хозяйстве, лесничестве, дератизации, на стройке в сельской местности или в лаборатории с хантавирусами?</span></div>
+        <div class="options">
+          <div class="option" data-q="e5" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, это моя постоянная работа.</span></div>
+          <div class="option" data-q="e5" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Иногда выполняю такую работу.</span></div>
+          <div class="option" data-q="e5" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q6">
+        <div class="question-header"><span class="question-num">06</span><span class="question-text">Были ли вы за последние 2–6 недель в регионах, эндемичных по хантавирусам (Дальний Восток России, Урал, Поволжье, Аргентина, Чили, США — штаты Четырёх Углов, Китай, Корея)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e6" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, находился(ась) именно в таком регионе.</span></div>
+          <div class="option" data-q="e6" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Путешествовал(а) по другим регионам.</span></div>
+          <div class="option" data-q="e6" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q7">
+        <div class="question-header"><span class="question-num">07</span><span class="question-text">Участвовали ли вы в активном отдыхе с ночёвкой в палатке или в домиках в лесу/горах в последние 6 недель?</span></div>
+        <div class="options">
+          <div class="option" data-q="e7" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, ночевал(а) в палатке или лесном домике.</span></div>
+          <div class="option" data-q="e7" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Да, но ночевал(а) в благоустроенном отеле.</span></div>
+          <div class="option" data-q="e7" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q8">
+        <div class="question-header"><span class="question-num">08</span><span class="question-text">Известно ли вам о случаях хантавирусной инфекции среди знакомых, соседей или в вашем районе за последние 2 месяца?</span></div>
+        <div class="options">
+          <div class="option" data-q="e8" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, был подтверждённый случай у людей.</span></div>
+          <div class="option" data-q="e8" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Слышал(а) о случаях среди животных (мышей), но не среди людей.</span></div>
+          <div class="option" data-q="e8" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q9">
+        <div class="question-header"><span class="question-num">09</span><span class="question-text">Контактировали ли вы с человеком, у которого была подтверждена хантавирусная инфекция или тяжёлая скоротечная пневмония неясного происхождения (особенно после возвращения из эндемичных зон)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e9" data-score="6" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, был тесный бытовой контакт (особенно с больным из Аргентины/Чили — вирус Анд).</span></div>
+          <div class="option" data-q="e9" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Был случайный контакт или находился(ась) в одном помещении.</span></div>
+          <div class="option" data-q="e9" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q10">
+        <div class="question-header"><span class="question-num">10</span><span class="question-text">Был ли в вашем окружении человек, который умер от быстро развившейся дыхательной недостаточности или отёка лёгких неясного генеза за последний месяц?</span></div>
+        <div class="options">
+          <div class="option" data-q="e10" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, и это произошло после гриппоподобных симптомов.</span></div>
+          <div class="option" data-q="e10" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Был, но причина ясна (например, рак, травма).</span></div>
+          <div class="option" data-q="e10" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="block" style="animation-delay:0.2s">
+      <div class="block-title"><span class="block-num">2</span>Блок 2 — Симптомы начальной фазы (10 вопросов)</div>
+
+      <div class="question" id="e-q11">
+        <div class="question-header"><span class="question-num">11</span><span class="question-text">Как началось заболевание?</span></div>
+        <div class="options">
+          <div class="option" data-q="e11" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Внезапно, среди полного здоровья: резкий подъём температуры, озноб, сильная слабость.</span></div>
+          <div class="option" data-q="e11" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Постепенно: сначала лёгкое недомогание, потом температура.</span></div>
+          <div class="option" data-q="e11" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Температуры нет, только утомляемость.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q12">
+        <div class="question-header"><span class="question-num">12</span><span class="question-text">Какая максимальная температура тела за последние сутки?</span></div>
+        <div class="options">
+          <div class="option" data-q="e12" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Выше 39°C, плохо сбивается жаропонижающими.</span></div>
+          <div class="option" data-q="e12" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">38–39°C.</span></div>
+          <div class="option" data-q="e12" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">37–38°C.</span></div>
+          <div class="option" data-q="e12" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Нормальная (до 37°C).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q13">
+        <div class="question-header"><span class="question-num">13</span><span class="question-text">Есть ли у вас озноб, дрожь, чувство холода при высокой температуре?</span></div>
+        <div class="options">
+          <div class="option" data-q="e13" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, выраженный озноб, «зуб на зуб не попадает».</span></div>
+          <div class="option" data-q="e13" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Лёгкое познабливание.</span></div>
+          <div class="option" data-q="e13" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q14">
+        <div class="question-header"><span class="question-num">14</span><span class="question-text">Как выражена мышечная боль (миалгия)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e14" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Очень сильная: болят крупные мышцы (спина, бёдра, икры), невозможно найти удобное положение.</span></div>
+          <div class="option" data-q="e14" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Умеренная ломота, как при гриппе.</span></div>
+          <div class="option" data-q="e14" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Небольшой дискомфорт.</span></div>
+          <div class="option" data-q="e14" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Мышечной боли нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q15">
+        <div class="question-header"><span class="question-num">15</span><span class="question-text">Где локализуется головная боль?</span></div>
+        <div class="options">
+          <div class="option" data-q="e15" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Преимущественно в области лба и глаз (ретро-орбитальная), пульсирующая, усиливается при движении глаз.</span></div>
+          <div class="option" data-q="e15" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Разлитая, умеренная, сжимающая «каска».</span></div>
+          <div class="option" data-q="e15" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Головной боли нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q16">
+        <div class="question-header"><span class="question-num">16</span><span class="question-text">Отмечаете ли вы боль или резь в глазах, светобоязнь?</span></div>
+        <div class="options">
+          <div class="option" data-q="e16" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, глаза болят, слезятся, неприятно смотреть на свет.</span></div>
+          <div class="option" data-q="e16" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Есть небольшая сухость или усталость глаз.</span></div>
+          <div class="option" data-q="e16" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q17">
+        <div class="question-header"><span class="question-num">17</span><span class="question-text">Насколько выражена общая слабость и утомляемость?</span></div>
+        <div class="options">
+          <div class="option" data-q="e17" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Крайняя: я не могу встать с постели, кружится голова.</span></div>
+          <div class="option" data-q="e17" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Сильная, но я могу передвигаться по дому.</span></div>
+          <div class="option" data-q="e17" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Лёгкая усталость, как после рабочего дня.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q18">
+        <div class="question-header"><span class="question-num">18</span><span class="question-text">Была ли у вас тошнота и/или рвота в первые дни болезни?</span></div>
+        <div class="options">
+          <div class="option" data-q="e18" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, тошнота постоянная, была рвота.</span></div>
+          <div class="option" data-q="e18" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Лёгкая тошнота, без рвоты.</span></div>
+          <div class="option" data-q="e18" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q19">
+        <div class="question-header"><span class="question-num">19</span><span class="question-text">Ощущаете ли вы боль или дискомфорт в животе?</span></div>
+        <div class="options">
+          <div class="option" data-q="e19" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, довольно сильная боль, иногда схваткообразная, может сопровождаться диареей.</span></div>
+          <div class="option" data-q="e19" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшой дискомфорт.</span></div>
+          <div class="option" data-q="e19" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q20">
+        <div class="question-header"><span class="question-num">20</span><span class="question-text">Как вы оцениваете своё потоотделение в течение болезни?</span></div>
+        <div class="options">
+          <div class="option" data-q="e20" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Обильный пот, проливной, особенно ночью.</span></div>
+          <div class="option" data-q="e20" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Умеренное потоотделение при снижении температуры.</span></div>
+          <div class="option" data-q="e20" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Обычное.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="block" style="animation-delay:0.3s">
+      <div class="block-title"><span class="block-num">3</span>Блок 3 — Респираторные и сердечно-сосудистые проявления (10 вопросов)</div>
+
+      <div class="question" id="e-q21">
+        <div class="question-header"><span class="question-num">21</span><span class="question-text">Есть ли у вас одышка (чувство нехватки воздуха) в покое?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e21" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, выраженная одышка, я не могу лежать, приходится сидеть. <strong style="color:var(--accent)">⚠ Срочная медицинская помощь!</strong></span></div>
+          <div class="option" data-q="e21" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Есть небольшая одышка при разговоре или минимальной нагрузке.</span></div>
+          <div class="option" data-q="e21" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Одышка появляется только при физической нагрузке.</span></div>
+          <div class="option" data-q="e21" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Одышки нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q22">
+        <div class="question-header"><span class="question-num">22</span><span class="question-text">Какая у вас частота дыхания в минуту в покое? (посчитайте за 30 секунд и умножьте на 2)</span></div>
+        <div class="options">
+          <div class="option" data-q="e22" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Более 25 вдохов/мин.</span></div>
+          <div class="option" data-q="e22" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">20–25 вдохов/мин.</span></div>
+          <div class="option" data-q="e22" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Менее 20 вдохов/мин.</span></div>
+          <div class="option" data-q="e22" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Не могу посчитать / не знаю.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q23">
+        <div class="question-header"><span class="question-num">23</span><span class="question-text">Появился ли у вас кашель? Если да, то какой?</span></div>
+        <div class="options">
+          <div class="option" data-q="e23" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Сухой, мучительный, без мокроты.</span></div>
+          <div class="option alert-option" data-q="e23" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Кашель с пенистой или розовой мокротой (кровохарканье). <strong style="color:var(--accent)">⚠ Немедленно вызывайте скорую!</strong></span></div>
+          <div class="option" data-q="e23" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Влажный кашель с обычной мокротой (жёлтой/зелёной).</span></div>
+          <div class="option" data-q="e23" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Кашля нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q24">
+        <div class="question-header"><span class="question-num">24</span><span class="question-text">Чувствуете ли вы стеснение или боль в груди при дыхании?</span></div>
+        <div class="options">
+          <div class="option" data-q="e24" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, боль усиливается на вдохе, чувство распирания в груди.</span></div>
+          <div class="option" data-q="e24" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Лёгкое стеснение, но не боль.</span></div>
+          <div class="option" data-q="e24" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q25">
+        <div class="question-header"><span class="question-num">25</span><span class="question-text">Измеряли ли вы сатурацию (насыщение крови кислородом) пульсоксиметром?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e25" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, SpO₂ ниже 90%. <strong style="color:var(--accent)">⚠ Немедленно вызывайте скорую!</strong></span></div>
+          <div class="option" data-q="e25" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Да, SpO₂ 90–94%.</span></div>
+          <div class="option" data-q="e25" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Да, SpO₂ 95% и выше.</span></div>
+          <div class="option" data-q="e25" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Не измерял(а).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q26">
+        <div class="question-header"><span class="question-num">26</span><span class="question-text">Замечаете ли вы посинение губ, ногтей или кожи (цианоз)?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e26" data-score="8" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, губы или ногти имеют синеватый оттенок. <strong style="color:var(--accent)">⚠ Вызывайте скорую немедленно!</strong></span></div>
+          <div class="option" data-q="e26" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Немного бледная или сероватая кожа.</span></div>
+          <div class="option" data-q="e26" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет, кожа обычного цвета.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q27">
+        <div class="question-header"><span class="question-num">27</span><span class="question-text">Чувствуете ли вы сердцебиение, перебои в работе сердца?</span></div>
+        <div class="options">
+          <div class="option" data-q="e27" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, сердце колотится, тахикардия (пульс >100 в покое).</span></div>
+          <div class="option" data-q="e27" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшое учащение пульса (80–100).</span></div>
+          <div class="option" data-q="e27" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Пульс обычный.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q28">
+        <div class="question-header"><span class="question-num">28</span><span class="question-text">Какое у вас артериальное давление (если измеряли)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e28" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Резко пониженное (ниже 90/60, если ваша норма выше).</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Умеренно пониженное или норма.</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Повышенное.</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Не измерял(а).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q29">
+        <div class="question-header"><span class="question-num">29</span><span class="question-text">Ощущаете ли вы нехватку воздуха в положении лёжа на спине, заставляющую вас садиться?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e29" data-score="8" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, я не могу лежать горизонтально, только сидя или полулёжа. <strong style="color:var(--accent)">⚠ Срочная помощь!</strong></span></div>
+          <div class="option" data-q="e29" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшой дискомфорт, но могу лежать.</span></div>
+          <div class="option" data-q="e29" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет, сплю в обычном положении.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q30">
+        <div class="question-header"><span class="question-num">30</span><span class="question-text">Есть ли у вас хрипы или свисты при дыхании, слышные на расстоянии?</span></div>
+        <div class="options">
+          <div class="option" data-q="e30" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, слышу свист или булькающие звуки при выдохе/вдохе.</span></div>
+          <div class="option" data-q="e30" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Только лёгкая заложенность в груди.</span></div>
+          <div class="option" data-q="e30" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="block" style="animation-delay:0.4s">
+      <div class="block-title"><span class="block-num">4</span>Блок 4 — Гематологические, почечные и геморрагические признаки (10 вопросов)</div>
+
+      <div class="question" id="e-q31">
+        <div class="question-header"><span class="question-num">31</span><span class="question-text">Замечали ли вы кровоточивость дёсен при чистке зубов или появление синяков без причины в последние дни?</span></div>
+        <div class="options">
+          <div class="option" data-q="e31" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, выраженная кровоточивость, крупные синяки.</span></div>
+          <div class="option" data-q="e31" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Лёгкая кровоточивость, один-два маленьких синячка.</span></div>
+          <div class="option" data-q="e31" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q32">
+        <div class="question-header"><span class="question-num">32</span><span class="question-text">Есть ли у вас петехии — мелкие красные или фиолетовые точки на коже (как сыпь, не исчезающая при надавливании)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e32" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, много точек на туловище, руках, слизистых.</span></div>
+          <div class="option" data-q="e32" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Несколько точек, похожих на сосудистые звёздочки.</span></div>
+          <div class="option" data-q="e32" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q33">
+        <div class="question-header"><span class="question-num">33</span><span class="question-text">Были ли у вас носовые кровотечения в течение болезни?</span></div>
+        <div class="options">
+          <div class="option" data-q="e33" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, неоднократно, трудно остановить.</span></div>
+          <div class="option" data-q="e33" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Один раз, небольшое.</span></div>
+          <div class="option" data-q="e33" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q34">
+        <div class="question-header"><span class="question-num">34</span><span class="question-text">Как изменился объём мочи за последние сутки?</span></div>
+        <div class="options">
+          <div class="option" data-q="e34" data-score="6" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Мочи стало значительно меньше, иногда несколько капель, или я не мочился(ась) более 6–8 часов.</span></div>
+          <div class="option" data-q="e34" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Мочи меньше обычного, но я ещё мочился(ась).</span></div>
+          <div class="option" data-q="e34" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Объём мочи не изменился.</span></div>
+          <div class="option" data-q="e34" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Не слежу, не знаю.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q35">
+        <div class="question-header"><span class="question-num">35</span><span class="question-text">Какого цвета моча?</span></div>
+        <div class="options">
+          <div class="option" data-q="e35" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Тёмная, цвета «мясных помоев», мутная, с кровью.</span></div>
+          <div class="option" data-q="e35" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Концентрированная, тёмно-жёлтая.</span></div>
+          <div class="option" data-q="e35" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Обычного цвета.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q36">
+        <div class="question-header"><span class="question-num">36</span><span class="question-text">Есть ли у вас боль в пояснице или области почек?</span></div>
+        <div class="options">
+          <div class="option" data-q="e36" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, тупая, ноющая боль с одной или обеих сторон.</span></div>
+          <div class="option" data-q="e36" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Лёгкий дискомфорт после физической нагрузки.</span></div>
+          <div class="option" data-q="e36" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q37">
+        <div class="question-header"><span class="question-num">37</span><span class="question-text">Появились ли у вас отёки на лице, веках или ногах (особенно по утрам)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e37" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, заметная отёчность лица, «мешки» под глазами, отёки стоп.</span></div>
+          <div class="option" data-q="e37" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшая пастозность по утрам.</span></div>
+          <div class="option" data-q="e37" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q38">
+        <div class="question-header"><span class="question-num">38</span><span class="question-text">Сдавали ли вы общий анализ крови в последние дни? (тромбоциты и гематокрит)</span></div>
+        <div class="options">
+          <div class="option" data-q="e38" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, тромбоциты снижены (менее 150×10⁹/л), гематокрит повышен (выше 50% у мужчин, выше 45% у женщин).</span></div>
+          <div class="option" data-q="e38" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Да, есть небольшие отклонения (тромбоциты на нижней границе нормы, гематокрит чуть повышен).</span></div>
+          <div class="option" data-q="e38" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Да, все показатели в норме.</span></div>
+          <div class="option" data-q="e38" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Не сдавал(а).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q39">
+        <div class="question-header"><span class="question-num">39</span><span class="question-text">Исследовали ли вы кровь на хантавирус (ПЦР или антитела IgM)?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e39" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, результат положительный. <strong style="color:var(--accent)">⚠ Немедленно к врачу, если ещё не обратились!</strong></span></div>
+          <div class="option" data-q="e39" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Да, результат отрицательный.</span></div>
+          <div class="option" data-q="e39" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q40">
+        <div class="question-header"><span class="question-num">40</span><span class="question-text">Как быстро ухудшается ваше состояние?</span></div>
+        <div class="options">
+          <div class="option" data-q="e40" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Очень быстро: каждый час становится хуже, нарастает одышка или слабость.</span></div>
+          <div class="option" data-q="e40" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Медленно, но ощутимо ухудшается день ото дня.</span></div>
+          <div class="option" data-q="e40" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Без изменений или улучшается.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 5 -->
+    <div class="block" style="animation-delay:0.5s">
+      <div class="block-title"><span class="block-num">5</span>Блок 5 — Дифференциальный диагноз и общее состояние (10 вопросов)</div>
+
+      <div class="question" id="e-q41">
+        <div class="question-header"><span class="question-num">41</span><span class="question-text">Есть ли у вас боль в горле при глотании?</span></div>
+        <div class="options">
+          <div class="option" data-q="e41" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, сильная боль, горло красное, налёты.</span></div>
+          <div class="option" data-q="e41" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Лёгкое першение, дискомфорт.</span></div>
+          <div class="option" data-q="e41" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q42">
+        <div class="question-header"><span class="question-num">42</span><span class="question-text">Присутствует ли у вас выраженный насморк с обильными жидкими выделениями и/или чихание?</span></div>
+        <div class="options">
+          <div class="option" data-q="e42" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, сильно течёт из носа, часто чихаю.</span></div>
+          <div class="option" data-q="e42" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшая заложенность носа.</span></div>
+          <div class="option" data-q="e42" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет, носовое дыхание свободное.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q43">
+        <div class="question-header"><span class="question-num">43</span><span class="question-text">Отмечаете ли вы увеличение или болезненность шейных, подчелюстных лимфоузлов?</span></div>
+        <div class="options">
+          <div class="option" data-q="e43" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, лимфоузлы увеличены и болят.</span></div>
+          <div class="option" data-q="e43" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшое увеличение, безболезненно.</span></div>
+          <div class="option" data-q="e43" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q44">
+        <div class="question-header"><span class="question-num">44</span><span class="question-text">Есть ли у вас сыпь на коже другого характера (пятнистая, уртикарная, пузырьковая)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e44" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, обильная сыпь по всему телу.</span></div>
+          <div class="option" data-q="e44" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшие высыпания.</span></div>
+          <div class="option" data-q="e44" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q45">
+        <div class="question-header"><span class="question-num">45</span><span class="question-text">Болят ли у вас суставы (артралгия) без отёка?</span></div>
+        <div class="options">
+          <div class="option" data-q="e45" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, сильно болят несколько суставов (колени, кисти).</span></div>
+          <div class="option" data-q="e45" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Небольшая скованность.</span></div>
+          <div class="option" data-q="e45" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q46">
+        <div class="question-header"><span class="question-num">46</span><span class="question-text">Контактировали ли вы за последние 3–7 дней с человеком, у которого подтверждён грипп, COVID-19 или ОРВИ?</span></div>
+        <div class="options">
+          <div class="option" data-q="e46" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, был тесный контакт с больным, у которого лабораторно подтверждён грипп/COVID.</span></div>
+          <div class="option" data-q="e46" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Да, контактировал(а) с простывшим человеком.</span></div>
+          <div class="option" data-q="e46" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q47">
+        <div class="question-header"><span class="question-num">47</span><span class="question-text">Принимали ли вы антибиотики или противовирусные препараты, и помогли ли они?</span></div>
+        <div class="options">
+          <div class="option" data-q="e47" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, принимал(а) антибиотики, но состояние не улучшилось или ухудшилось.</span></div>
+          <div class="option" data-q="e47" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Да, принимал(а) противовирусные (от гриппа/COVID), стало легче.</span></div>
+          <div class="option" data-q="e47" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q48">
+        <div class="question-header"><span class="question-num">48</span><span class="question-text">Есть ли у вас хронические заболевания (диабет, гипертония, болезни почек, печени, лёгких, иммунодефицит)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, и они могут искажать симптомы.</span></div>
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Есть лёгкие хронические проблемы.</span></div>
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Нет.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q49">
+        <div class="question-header"><span class="question-num">49</span><span class="question-text">Курите ли вы или курили длительно?</span></div>
+        <div class="options">
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Да, длительный стаж курения, есть кашель курильщика.</span></div>
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Бросил(а) курить.</span></div>
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Не курю.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q50">
+        <div class="question-header"><span class="question-num">50</span><span class="question-text">Как в целом вы оцениваете своё состояние прямо сейчас?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e50" data-score="12" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">Тяжёлое: выраженная одышка, спутанность сознания, низкое давление. <strong style="color:var(--accent)">⚠ НЕМЕДЛЕННО ВЫЗЫВАЙТЕ СКОРУЮ (103 / 112)!</strong></span></div>
+          <div class="option" data-q="e50" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">Средней тяжести: лихорадка, слабость, но я в сознании и могу двигаться.</span></div>
+          <div class="option" data-q="e50" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">Удовлетворительное: есть симптомы, но я могу себя обслуживать.</span></div>
+          <div class="option" data-q="e50" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Хорошее, ничего не беспокоит.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-nav" id="nav-extended">
+      <button class="q-nav-btn prev-btn" onclick="goPrev('extended')" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+      <button class="q-nav-btn skip-btn" onclick="skipQuestion('extended')">Пропустить</button>
+      <span class="q-counter">1 / 50</span>
+      <button class="q-nav-btn next-btn" onclick="goNext('extended')" disabled>
+        Далее
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="q-grid-wrap">
+      <div class="q-grid-label">Вопросы</div>
+      <div class="q-grid" id="qGrid-extended"></div>
+    </div>
+
+    <div class="submit-section">
+      <button class="submit-btn" id="submitBtn-extended" onclick="showResults('extended')" disabled>Рассчитать результат</button>
+      <p class="submit-hint" id="submitHint-extended">Ответьте на все 50 вопросов, чтобы получить результат</p>
+    </div>
+  </div><!-- /testForm-extended -->
+
+
+  <!-- ══════════════════════════════
+       RESULTS SECTION
+  ══════════════════════════════ -->
+  <div class="results" id="resultsSection">
+    <div id="resultCard"></div>
+    <div class="disclaimer">
+      Этот тест — инструмент предварительной оценки риска, а не замена лабораторной диагностики и осмотра врача. Даже при низком балле, при наличии острой одышки, кровохарканья или потери сознания — немедленно вызывайте скорую. Берегите себя.
+    </div>
+    <div style="text-align:center">
+      <button class="restart-btn" onclick="restartTest()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        Пройти тест заново
+      </button>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+// ─── State ───────────────────────────────────────
+const answersShort    = {};
+const answersExtended = {};
+const TOTAL_SHORT    = 20;
+const TOTAL_EXTENDED = 50;
+let currentMode = 'short'; // 'short' | 'extended'
+let currentQuestion = { short: 1, extended: 1 };
+
+// ─── Question Grid ────────────────────────────────
+const skippedShort    = new Set();
+const skippedExtended = new Set();
+
+function buildGrid(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const grid = document.getElementById(`qGrid-${mode}`);
+  if (!grid) return;
+  grid.innerHTML = '';
+  for (let i = 1; i <= total; i++) {
+    const tile = document.createElement('button');
+    tile.className = 'q-tile';
+    tile.id = `tile-${mode}-${i}`;
+    tile.textContent = i;
+    tile.onclick = (function(n){ return function(){ jumpTo(mode, n); }; })(i);
+    grid.appendChild(tile);
+  }
+}
+
+function updateGrid(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const skipped = mode === 'short' ? skippedShort : skippedExtended;
+  const prefix = getQuestionPrefix(mode);
+  const cur = currentQuestion[mode];
+  for (let i = 1; i <= total; i++) {
+    const tile = document.getElementById(`tile-${mode}-${i}`);
+    if (!tile) continue;
+    const key = `${prefix}${i}`;
+    tile.className = 'q-tile';
+    if (answers[key] !== undefined) tile.classList.add('answered');
+    else if (skipped.has(i)) tile.classList.add('skipped');
+    if (i === cur) tile.classList.add('current');
+  }
+}
+
+function jumpTo(mode, num) {
+  showQuestion(mode, num, num < currentQuestion[mode], true);
+}
+
+function skipQuestion(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const cur = currentQuestion[mode];
+  const skipped = mode === 'short' ? skippedShort : skippedExtended;
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const prefix = getQuestionPrefix(mode);
+
+  // Only mark as skipped if not already answered
+  if (answers[`${prefix}${cur}`] === undefined) {
+    skipped.add(cur);
+  }
+
+  // Find next unanswered + non-skipped question, or first skipped if all done
+  let next = null;
+  for (let i = cur + 1; i <= total; i++) {
+    if (answers[`${prefix}${i}`] === undefined) { next = i; break; }
+  }
+  if (next === null) {
+    // wrap: find first skipped question
+    for (let i = 1; i <= total; i++) {
+      if (answers[`${prefix}${i}`] === undefined) { next = i; break; }
+    }
+  }
+
+  updateGrid(mode);
+  checkSubmit(mode);
+  if (next !== null) {
+    showQuestion(mode, next, false, true);
+  }
+}
+
+// ─── Selector ────────────────────────────────────
+function selectTest(mode) {
+  currentMode = mode;
+  document.getElementById('card-short').classList.toggle('active', mode === 'short');
+  document.getElementById('card-extended').classList.toggle('active', mode === 'extended');
+}
+
+function startTest() {
+  document.getElementById('selectorSection').style.display = 'none';
+  currentQuestion[currentMode] = 1;
+  if (currentMode === 'short') {
+    document.getElementById('testForm-short').style.display = '';
+    buildGrid('short');
+    showQuestion('short', 1);
+    updateProgress('short');
+  } else {
+    document.getElementById('testForm-extended').style.display = '';
+    buildGrid('extended');
+    showQuestion('extended', 1);
+    updateProgress('extended');
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── One-at-a-time question display ──────────────
+function getQuestionPrefix(mode) {
+  return mode === 'short' ? 's' : 'e';
+}
+
+function showQuestion(mode, num, goingBack, scroll) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const prefix = getQuestionPrefix(mode);
+  
+  // Hide all questions for this mode
+  document.querySelectorAll(`#testForm-${mode} .question`).forEach(q => {
+    q.classList.remove('active-question', 'going-back');
+  });
+  
+  // Show current question
+  const qEl = document.getElementById(`${prefix[0]}-q${num}`);
+  if (qEl) {
+    qEl.classList.add('active-question');
+    if (goingBack) qEl.classList.add('going-back');
+  }
+  
+  currentQuestion[mode] = num;
+  
+  // Update nav buttons
+  updateNavButtons(mode, num, total);
+  updateGrid(mode);
+
+  if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateNavButtons(mode, num, total) {
+  const navEl = document.getElementById(`nav-${mode}`);
+  if (!navEl) return;
+  
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const prefix = getQuestionPrefix(mode);
+  const hasAnswer = answers[`${prefix}${num}`] !== undefined;
+  
+  navEl.querySelector('.prev-btn').disabled = (num === 1);
+  navEl.querySelector('.next-btn').disabled = !hasAnswer || (num === total);
+  navEl.querySelector('.q-counter').textContent = `${num} / ${total}`;
+}
+
+function goNext(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const cur = currentQuestion[mode];
+  if (cur < total) showQuestion(mode, cur + 1, false, true);
+}
+
+function goPrev(mode) {
+  const cur = currentQuestion[mode];
+  if (cur > 1) showQuestion(mode, cur - 1, true, true);
+}
+
+// ─── Options ──────────────────────────────────────
+function selectOption(el, mode) {
+  const q     = el.dataset.q;
+  const score = parseInt(el.dataset.score);
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+
+  document.querySelectorAll(`.option[data-q="${q}"]`).forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+
+  answers[q] = score;
+  const qEl = el.closest('.question');
+  if (qEl) qEl.classList.add('answered');
+
+  updateProgress(mode);
+  checkSubmit(mode);
+  updateGrid(mode);
+  
+  // Update nav buttons to enable next
+  updateNavButtons(mode, currentQuestion[mode], total);
+  
+  // Auto-advance after short delay if not last question (no scroll)
+  const cur = currentQuestion[mode];
+  if (cur < total) {
+    setTimeout(() => showQuestion(mode, cur + 1, false, false), 350);
+  }
+}
+
+function updateProgress(mode) {
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const total   = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const answered = Object.keys(answers).length;
+  const pct = Math.round((answered / total) * 100);
+  document.getElementById(`progressFill-${mode}`).style.width = pct + '%';
+  document.getElementById(`progressText-${mode}`).textContent = `Вопрос ${answered} из ${total}`;
+  document.getElementById(`progressPct-${mode}`).textContent = pct + '%';
+}
+
+function checkSubmit(mode) {
+  const answers  = mode === 'short' ? answersShort : answersExtended;
+  const skipped  = mode === 'short' ? skippedShort : skippedExtended;
+  const total    = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const prefix   = getQuestionPrefix(mode);
+  const answered = Object.keys(answers).length;
+  const btn  = document.getElementById(`submitBtn-${mode}`);
+  const hint = document.getElementById(`submitHint-${mode}`);
+
+  // Count unanswered (not answered and not skipped)
+  let unanswered = 0;
+  for (let i = 1; i <= total; i++) {
+    if (answers[`${prefix}${i}`] === undefined) unanswered++;
+  }
+
+  if (unanswered === 0) {
+    btn.disabled = false;
+    if (skipped.size > 0) {
+      hint.textContent = `Все вопросы отвечены (${skipped.size} было пропущено и возвращено) — можно получить результат`;
+    } else {
+      hint.textContent = 'Все вопросы отвечены — можно получить результат';
+    }
+  } else {
+    btn.disabled = true;
+    hint.textContent = `Осталось без ответа: ${unanswered} вопрос(ов)`;
+  }
+}
+
+function calcScore(mode) {
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  return Object.values(answers).reduce((a, b) => a + b, 0);
+}
+
+// ─── Results ──────────────────────────────────────
+function showResults(mode) {
+  const score   = calcScore(mode);
+  const isExt   = mode === 'extended';
+  const typeTag = isExt ? '🔬 Расширенный тест · 50 вопросов' : '⚡ Краткий тест · 20 вопросов';
+  let card = '';
+
+  const threshCritical = isExt ? 70 : 30;
+  const threshHigh     = isExt ? 31 : 16;
+  const threshMed      = isExt ? 10 : 5;
+
+  if (score > threshCritical) {
+    card = `
+      <div class="result-card result-critical">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent)">🚨 Критический результат</div>
+        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-title" style="color:var(--accent)">Немедленно вызывайте скорую помощь</div>
+        <div class="result-desc">
+          <strong>Звоните 103 или 112 прямо сейчас.</strong> Ваше состояние требует неотложного медицинского вмешательства. С высокой долей вероятности развивается хантавирусный лёгочный синдром или тяжёлая почечная форма.<br><br>
+          До приезда скорой: откройте окно для доступа свежего воздуха, примите полусидячее положение, не делайте резких движений. Сообщите врачам о ваших контактах с грызунами. <strong>Дорога каждая минута</strong> — отёк лёгких может развиться стремительно.
+        </div>
+      </div>`;
+  } else if (score >= threshHigh) {
+    card = `
+      <div class="result-card result-high">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent)">⚠ Высокая вероятность опасной инфекции</div>
+        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-title">Необходима срочная госпитализация</div>
+        <div class="result-desc">
+          Сочетание ваших симптомов и факторов риска <strong>весьма подозрительно</strong> на хантавирусную инфекцию (лёгочная или почечная форма). Также возможен тяжёлый грипп с пневмонией или сепсис.<br><br>
+          <strong>Вам необходимо как можно скорее попасть в инфекционный стационар</strong> с отделением интенсивной терапии. До приезда врача соблюдайте постельный режим, контролируйте давление и частоту дыхания.
+        </div>
+      </div>`;
+  } else if (score >= threshMed) {
+    card = `
+      <div class="result-card result-medium">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent2)">⚡ Умеренная вероятность — нельзя исключать хантавирус</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-title">Необходима консультация врача</div>
+        <div class="result-desc">
+          Картина смазанная. Это может быть <strong>грипп, COVID-19, аденовирус, лептоспироз, начальная стадия ГЛПС/ХЛС</strong>. Ваши контакты с грызунами и некоторые симптомы настораживают.<br><br>
+          <strong>Рекомендуется консультация врача в течение 24–48 часов.</strong> Сдайте общий анализ крови (особенно тромбоциты), при возможности — ПЦР на хантавирус. Расскажите врачу о ваших поездках и возможных контактах.
+        </div>
+      </div>`;
+  } else {
+    card = `
+      <div class="result-card result-low">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--green)">✓ Низкая вероятность хантавируса</div>
+        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-title">Признаки хантавирусной инфекции маловероятны</div>
+        <div class="result-desc">
+          Ваши симптомы и история контактов с наибольшей вероятностью указывают на <strong>обычную усталость, стресс, лёгкую простуду или другое нетяжёлое состояние</strong>.<br><br>
+          Помните: высокая температура и сильная слабость требуют внимания в любом случае. Если симптомы сохраняются дольше <strong>3 дней или усиливаются</strong>, обратитесь к терапевту.
+        </div>
+      </div>`;
+  }
+
+  document.getElementById('resultCard').innerHTML = card;
+  document.getElementById(`testForm-${mode}`).style.display = 'none';
+  document.getElementById('resultsSection').classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showDisclaimerModal();
+}
+
+// ─── Modal ────────────────────────────────────────
+function showDisclaimerModal() {
+  const modal   = document.getElementById('disclaimerModal');
+  const btn     = document.getElementById('modalCloseBtn');
+  const timerEl = document.getElementById('modalTimer');
+  const fillEl  = document.getElementById('modalProgressFill');
+
+  modal.style.display = 'flex';
+  btn.disabled = true;
+
+  const DURATION = 3000;
+  const INTERVAL = 50;
+  let elapsed = 0;
+
+  const tick = setInterval(() => {
+    elapsed += INTERVAL;
+    const pct = Math.min((elapsed / DURATION) * 100, 100);
+    fillEl.style.width = pct + '%';
+    const remaining = Math.ceil((DURATION - elapsed) / 1000);
+    if (remaining > 0) {
+      timerEl.textContent = `Пожалуйста, прочитайте внимательно — ${remaining} ${remaining === 1 ? 'секунда' : 'секунды'}…`;
+    } else {
+      timerEl.textContent = 'Теперь вы можете закрыть это окно.';
+      btn.disabled = false;
+      clearInterval(tick);
+    }
+  }, INTERVAL);
+}
+
+function closeModal() {
+  document.getElementById('disclaimerModal').style.display = 'none';
+}
+
+// ─── Restart ─────────────────────────────────────
+function restartTest() {
+  for (const k in answersShort) delete answersShort[k];
+  skippedShort.clear();
+  document.querySelectorAll('#testForm-short .option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('#testForm-short .question').forEach(q => q.classList.remove('answered', 'active-question', 'going-back'));
+  document.getElementById('submitBtn-short').disabled = true;
+  document.getElementById('submitHint-short').textContent = 'Ответьте на все 20 вопросов, чтобы получить результат';
+
+  for (const k in answersExtended) delete answersExtended[k];
+  skippedExtended.clear();
+  document.querySelectorAll('#testForm-extended .option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('#testForm-extended .question').forEach(q => q.classList.remove('answered', 'active-question', 'going-back'));
+  document.getElementById('submitBtn-extended').disabled = true;
+  document.getElementById('submitHint-extended').textContent = 'Ответьте на все 50 вопросов, чтобы получить результат';
+
+  currentQuestion.short = 1;
+  currentQuestion.extended = 1;
+  updateProgress('short');
+  updateProgress('extended');
+
+  // Clear grid highlights
+  document.querySelectorAll('.q-tile').forEach(t => t.className = 'q-tile');
+
+  document.getElementById('testForm-short').style.display = 'none';
+  document.getElementById('testForm-extended').style.display = 'none';
+  document.getElementById('resultsSection').classList.remove('visible');
+  document.getElementById('selectorSection').style.display = '';
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+<footer class="site-footer">
+  © 2026 <a href="https://github.com/sherhn">sherhn</a> · MIT-style License ·
+  <a href="mailto:sherhn.inc@gmail.com">sherhn.inc@gmail.com</a>
+</footer>
+</body>
+</html>
