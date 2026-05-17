@@ -654,21 +654,35 @@ h1 em { font-style: italic; color: var(--accent); }
   backdrop-filter: blur(8px);
   z-index: 9000;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   animation: fadeIn 0.3s ease both;
 }
 .modal-box {
   background: var(--surface);
   border: 1.5px solid rgba(232,69,69,0.4);
   border-radius: 16px;
-  padding: 36px;
+  padding: 28px 24px;
   max-width: 540px;
   width: 100%;
   position: relative;
   box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(232,69,69,0.1);
   animation: scaleUp 0.3s ease both;
+  margin: auto;
+}
+@media (max-width: 600px) {
+  .modal-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+  .modal-box {
+    padding: 22px 18px;
+    border-radius: 12px;
+    margin: 0;
+  }
 }
 .modal-icon { font-size: 36px; text-align: center; margin-bottom: 16px; }
 .modal-title {
