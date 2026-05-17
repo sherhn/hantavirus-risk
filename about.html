@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO -->
-<title>О проекте — hantavirus-risk</title>
-<meta name="description" content="hantavirus-risk — инструмент предварительной оценки риска хантавирусной инфекции. Узнайте, как работает тест и кто его создал.">
-<meta name="keywords" content="hantavirus-risk, о проекте, хантавирус, оценка риска, ГЛПС, скрининг, sherhn">
+<title>About — hantavirus-risk</title>
+<meta name="description" content="hantavirus-risk — preliminary risk assessment tool for hantavirus infection. Learn how the test works and who created it.">
+<meta name="keywords" content="hantavirus-risk, about, hantavirus, risk assessment, HFRS, screening, sherhn">
 <meta name="author" content="sherhn">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hantavirus-risk.sherhn.space/about.html">
+<link rel="canonical" href="https://hantavirus-risk.sherhn.space/about">
+<link rel="alternate" hreflang="ru" href="https://hantavirus-risk.sherhn.space/ru/about">
+<link rel="alternate" hreflang="en" href="https://hantavirus-risk.sherhn.space/about">
+<link rel="alternate" hreflang="es" href="https://hantavirus-risk.sherhn.space/es/about">
+<link rel="alternate" hreflang="hi" href="https://hantavirus-risk.sherhn.space/hi/about">
+<link rel="alternate" hreflang="zh" href="https://hantavirus-risk.sherhn.space/zh/about">
+<link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/about">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://hantavirus-risk.sherhn.space/about.html">
-<meta property="og:title" content="О проекте — hantavirus-risk">
-<meta property="og:description" content="hantavirus-risk — инструмент предварительной оценки риска хантавирусной инфекции. Узнайте, как работает тест и кто его создал.">
-<meta property="og:image" content="https://hantavirus-risk.sherhn.space/og-image.png">
+<meta property="og:url" content="https://hantavirus-risk.sherhn.space/about">
+<meta property="og:title" content="About — hantavirus-risk">
+<meta property="og:description" content="hantavirus-risk — preliminary risk assessment tool for hantavirus infection. Learn how the test works and who created it.">
+<meta property="og:image" content="https://hantavirus-risk.sherhn.space/ru/og-image.png">
 <!-- TODO: add og-image.png (1200×630) -->
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="hantavirus-risk">
-<meta property="og:locale" content="ru_RU">
+<meta property="og:locale" content="en_US">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://hantavirus-risk.sherhn.space/about.html">
-<meta name="twitter:title" content="О проекте — hantavirus-risk">
-<meta name="twitter:description" content="hantavirus-risk — инструмент предварительной оценки риска хантавирусной инфекции. Узнайте, как работает тест и кто его создал.">
-<meta name="twitter:image" content="https://hantavirus-risk.sherhn.space/og-image.png">
+<meta name="twitter:url" content="https://hantavirus-risk.sherhn.space/about">
+<meta name="twitter:title" content="About — hantavirus-risk">
+<meta name="twitter:description" content="hantavirus-risk — preliminary risk assessment tool for hantavirus infection. Learn how the test works and who created it.">
+<meta name="twitter:image" content="https://hantavirus-risk.sherhn.space/ru/og-image.png">
 <meta name="twitter:creator" content="@sherhn">
 
 <!-- Favicon -->
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <!-- Stylesheets & Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,9 +50,9 @@
 {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "url": "https://hantavirus-risk.sherhn.space/about.html",
-  "name": "О проекте hantavirus-risk",
-  "description": "Онлайн-инструмент предварительной оценки риска хантавирусной инфекции с краткой и расширенной версиями теста.",
+  "url": "https://hantavirus-risk.sherhn.space/about",
+  "name": "About hantavirus-risk",
+  "description": "Online preliminary risk assessment tool for hantavirus infection with brief and extended test versions.",
   "author": {
     "@type": "Person",
     "name": "sherhn",
@@ -54,161 +60,34 @@
   }
 }
 </script>
-
-<style>
-  :root {
-    --bg: #0d0f14;
-    --surface: #14171f;
-    --surface2: #1c2130;
-    --border: #252c3e;
-    --text: #e8eaf0;
-    --muted: #6b7694;
-    --accent: #e84545;
-    --accent-soft: rgba(232, 69, 69, 0.12);
-    --accent2: #f4a23a;
-    --green: #3adc8f;
-    --blue: #4a9eff;
-    --blue-soft: rgba(74, 158, 255, 0.1);
-    --radius: 12px;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(74,158,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(74,158,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .site-nav {
-    position: sticky; top: 0; z-index: 200;
-    background: rgba(13,15,20,0.92);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 20px;
-  }
-  .nav-inner {
-    max-width: 780px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 52px;
-  }
-  .nav-logo {
-    font-family: 'DM Mono', monospace; font-size: 13px;
-    color: var(--text); text-decoration: none; letter-spacing: 0.05em;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
-  .nav-links a {
-    font-family: 'DM Mono', monospace; font-size: 12px;
-    color: var(--muted); text-decoration: none;
-    padding: 6px 12px; border-radius: 6px;
-    transition: all 0.15s; letter-spacing: 0.04em;
-  }
-  .nav-links a:hover { color: var(--text); background: var(--surface2); }
-  .nav-links a.active { color: var(--blue); }
-  .nav-gh { display: flex; align-items: center; gap: 6px; color: var(--muted) !important; }
-  .nav-gh:hover { color: var(--text) !important; }
-  @media (max-width: 560px) { .nav-links .hide-mobile { display: none; } }
-
-  .container {
-    max-width: 780px; margin: 0 auto;
-    padding: 60px 20px 80px; position: relative; z-index: 1;
-  }
-  .page-header { margin-bottom: 48px; animation: fadeDown 0.7s ease both; }
-  .page-tag {
-    font-family: 'DM Mono', monospace; font-size: 11px;
-    text-transform: uppercase; letter-spacing: 0.15em;
-    color: var(--blue); margin-bottom: 16px;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .page-tag::before { content: ''; width: 24px; height: 1px; background: var(--blue); }
-  h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(28px, 5vw, 44px);
-    font-weight: 400; line-height: 1.15;
-    margin-bottom: 16px;
-  }
-  h1 em { font-style: italic; color: var(--accent); }
-  .lead { font-size: 17px; color: #9099b8; font-weight: 300; max-width: 600px; }
-
-  .section { margin-bottom: 48px; animation: fadeUp 0.7s ease both; }
-  .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 22px; margin-bottom: 16px;
-    color: var(--text); display: flex; align-items: center; gap: 12px;
-  }
-  .section-title::after {
-    content: ''; flex: 1; height: 1px;
-    background: linear-gradient(90deg, var(--border), transparent);
-  }
-  p { margin-bottom: 14px; color: #9099b8; }
-  p strong { color: var(--text); }
-
-  .info-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 16px; margin-top: 24px;
-  }
-  @media (max-width: 560px) { .info-grid { grid-template-columns: 1fr; } }
-  .info-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 24px;
-  }
-  .info-card-icon { font-size: 24px; margin-bottom: 10px; }
-  .info-card-title {
-    font-family: 'DM Mono', monospace; font-size: 11px;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--blue); margin-bottom: 8px;
-  }
-  .info-card p { font-size: 14px; margin: 0; }
-
-  .contact-box {
-    background: var(--surface); border: 1px solid var(--border);
-    border-left: 3px solid var(--blue); border-radius: var(--radius);
-    padding: 24px; margin-top: 24px;
-  }
-  .contact-box a { color: var(--blue); text-decoration: none; }
-  .contact-box a:hover { text-decoration: underline; }
-
-  .site-footer {
-    border-top: 1px solid var(--border); padding: 28px 20px;
-    text-align: center; font-family: 'DM Mono', monospace;
-    font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
-    margin-top: 60px;
-  }
-  .site-footer a { color: var(--muted); text-decoration: none; }
-  .site-footer a:hover { color: var(--blue); }
-
-  @keyframes fadeDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes fadeUp   { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
-</style>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">⬡ <span>hantavirus</span>-risk</a>
+    <a href="/" class="nav-logo">⬡ <span>hantavirus</span>-risk</a>
     <ul class="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li class="hide-mobile"><a href="about.html" class="active">О проекте</a></li>
-      <li class="hide-mobile"><a href="faq.html">FAQ</a></li>
-      <li class="hide-mobile"><a href="LICENSE.html">Лицензия</a></li>
+      <li><a href="/">Home</a></li>
+      <li class="hide-mobile"><a href="/about" class="active">About</a></li>
+      <li class="hide-mobile"><a href="/faq">FAQ</a></li>
+      <li class="hide-mobile"><a href="/LICENSE">License</a></li>
       <li><a href="https://github.com/sherhn/hantavirus-risk" target="_blank" class="nav-gh">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        GitHub
+        <span class="gh-text">GitHub</span>
       </a></li>
+      <li class="lang-switcher">
+        <button class="lang-btn" id="langBtn" aria-label="Select language">
+          <span>🌐</span><span class="lang-current">EN</span><span>▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="/ru/about" class="lang-option"><span class="lang-flag">🇷🇺</span> Русский</a>
+          <a href="/about" class="lang-option active"><span class="lang-flag">🇬🇧</span> English</a>
+          <a href="/es/about" class="lang-option"><span class="lang-flag">🇪🇸</span> Español</a>
+          <a href="/hi/about" class="lang-option"><span class="lang-flag">🇮🇳</span> हिन्दी</a>
+          <a href="/zh/about" class="lang-option"><span class="lang-flag">🇨🇳</span> 中文</a>
+        </div>
+      </li>
     </ul>
   </div>
 </nav>
@@ -216,57 +95,57 @@
 <div class="container">
 
   <div class="page-header">
-    <div class="page-tag">О проекте</div>
-    <h1>Что такое <em>hantavirus-risk</em>?</h1>
-    <p class="lead">Онлайн-инструмент предварительной самооценки риска хантавирусной инфекции — для тех, кто хочет быстро понять, стоит ли обращаться к врачу.</p>
+    <div class="page-tag">About</div>
+    <h1>What is <em>hantavirus-risk</em>?</h1>
+    <p class="lead">An online preliminary self-assessment tool for hantavirus infection — for those who want to quickly understand whether they should see a doctor.</p>
   </div>
 
   <div class="section" style="animation-delay:0.1s">
-    <h2 class="section-title">О проекте</h2>
-    <p><strong>hantavirus-risk</strong> — это бесплатный инструмент предварительной оценки риска, разработанный для помощи людям в быстрой самооценке вероятности заражения хантавирусной инфекцией. Тест анализирует симптомы, историю контактов и факторы риска, чтобы дать ориентировочный результат и помочь принять решение об обращении к врачу.</p>
-    <p>Хантавирус — редкое, но крайне опасное заболевание. Ранние симптомы неотличимы от обычного гриппа, а стремительное ухудшение состояния может застать врасплох. Своевременная диагностика и госпитализация критически важны.</p>
-    <p><strong>Важно:</strong> этот тест не является медицинским диагнозом. Он создан исключительно в информационных целях.</p>
+    <h2 class="section-title">About the project</h2>
+    <p><strong>hantavirus-risk</strong> is a free preliminary risk assessment tool designed to help people quickly self-assess the likelihood of hantavirus infection. The test analyzes symptoms, exposure history, and risk factors to provide an approximate result and help guide the decision to seek medical care.</p>
+    <p>Hantavirus is a rare but extremely dangerous disease. Early symptoms are indistinguishable from the common flu, and rapid deterioration can catch you off guard. Timely diagnosis and hospitalization are critically important.</p>
+    <p><strong>Important:</strong> this test does not provide a medical diagnosis. It is created for informational purposes only.</p>
   </div>
 
   <div class="section" style="animation-delay:0.2s">
-    <h2 class="section-title">Как это работает</h2>
+    <h2 class="section-title">How it works</h2>
     <div class="info-grid">
       <div class="info-card">
         <div class="info-card-icon">⚡</div>
-        <div class="info-card-title">Краткий тест</div>
-        <p>20 вопросов по ключевым симптомам и контактам. Займёт 3–5 минут. Подходит для быстрой первичной оценки.</p>
+        <div class="info-card-title">Brief test</div>
+        <p>20 questions covering key symptoms and exposures. Takes 3–5 minutes. Suitable for quick initial assessment.</p>
       </div>
       <div class="info-card">
         <div class="info-card-icon">🔬</div>
-        <div class="info-card-title">Расширенный тест</div>
-        <p>50 вопросов с детальным анализом и дифференциальной диагностикой. Занимает 10–15 минут. Даёт более точный результат.</p>
+        <div class="info-card-title">Extended test</div>
+        <p>50 questions with detailed analysis and differential diagnostics. Takes 10–15 minutes. Provides more accurate results.</p>
       </div>
       <div class="info-card">
         <div class="info-card-icon">📊</div>
-        <div class="info-card-title">Балльная система</div>
-        <p>Каждый ответ получает взвешенный балл. Итоговая сумма определяет уровень риска: низкий, умеренный, высокий или критический.</p>
+        <div class="info-card-title">Scoring system</div>
+        <p>Each answer receives a weighted score. The final sum determines the risk level: low, moderate, high, or critical.</p>
       </div>
       <div class="info-card">
         <div class="info-card-icon">🔒</div>
-        <div class="info-card-title">Без данных</div>
-        <p>Тест работает полностью в браузере. Никакие ответы не передаются на сервер и не сохраняются. Анонимно и безопасно.</p>
+        <div class="info-card-title">No data storage</div>
+        <p>The test runs entirely in your browser. No answers are sent to any server or saved. Anonymous and secure.</p>
       </div>
     </div>
   </div>
 
   <div class="section" style="animation-delay:0.3s">
-    <h2 class="section-title">Зачем мы это создали</h2>
-    <p>В период вспышек хантавируса (обычно поздняя весна — лето) многие люди не понимают, насколько серьёзны их симптомы. Цель проекта — дать простой, доступный инструмент первичной ориентации: стоит ли срочно вызвать скорую, обратиться к врачу или просто понаблюдать за состоянием.</p>
-    <p>Тест создан на основе актуальных клинических данных о хантавирусном лёгочном синдроме (ХЛС) и геморрагической лихорадке с почечным синдромом (ГЛПС).</p>
+    <h2 class="section-title">Why we built this</h2>
+    <p>During hantavirus outbreaks (typically late spring through summer), many people don't realize how serious their symptoms might be. The goal of this project is to provide a simple, accessible tool for initial orientation: whether to call emergency services, see a doctor, or simply monitor your condition.</p>
+    <p>The test is based on current clinical data on hantavirus pulmonary syndrome (HPS) and hemorrhagic fever with renal syndrome (HFRS).</p>
   </div>
 
   <div class="section" style="animation-delay:0.4s">
-    <h2 class="section-title">Контакт</h2>
-    <p>Мы рады вопросам, отзывам и предложениям о сотрудничестве.</p>
+    <h2 class="section-title">Contact</h2>
+    <p>We welcome questions, feedback, and collaboration suggestions.</p>
     <div class="contact-box">
       <p><strong>Email:</strong> <a href="mailto:sherhn.inc@gmail.com">sherhn.inc@gmail.com</a></p>
       <p style="margin:0"><strong>GitHub:</strong> <a href="https://github.com/sherhn/hantavirus-risk" target="_blank">github.com/sherhn/hantavirus-risk</a></p>
-      <p style="margin-top:10px; font-size:14px;">Обычно отвечаем в течение 48 часов в рабочие дни. По срочным вопросам — используйте email.</p>
+      <p style="margin-top:10px; font-size:14px;">We usually reply within 48 hours on business days. For urgent matters, please use email.</p>
     </div>
   </div>
 
@@ -276,6 +155,20 @@
   © 2026 <a href="https://github.com/sherhn">sherhn</a> · MIT-style License ·
   <a href="mailto:sherhn.inc@gmail.com">sherhn.inc@gmail.com</a>
 </footer>
+
+
+<script>
+(function() {
+  var btn = document.getElementById('langBtn');
+  var dd  = document.getElementById('langDropdown');
+  if (!btn || !dd) return;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dd.classList.toggle('open');
+  });
+  document.addEventListener('click', function() { dd.classList.remove('open'); });
+})();
+</script>
 
 </body>
 </html>

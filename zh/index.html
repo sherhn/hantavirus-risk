@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>汉坦病毒风险评估测试 — hantavirus-risk</title>
+<meta name="description" content="在线汉坦病毒感染风险自评测试。快速版（20题）和详细版（50题）。">
+<meta name="keywords" content="hantavirus-risk, 汉坦病毒, 肾综合征出血热, 汉坦病毒肺综合征, 感染测试, 感染风险, sherhn">
+<meta name="author" content="sherhn">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hantavirus-risk.sherhn.space/zh/">
+<link rel="alternate" hreflang="ru" href="https://hantavirus-risk.sherhn.space/ru">
+<link rel="alternate" hreflang="en" href="https://hantavirus-risk.sherhn.space/">
+<link rel="alternate" hreflang="es" href="https://hantavirus-risk.sherhn.space/es">
+<link rel="alternate" hreflang="hi" href="https://hantavirus-risk.sherhn.space/hi">
+<link rel="alternate" hreflang="zh" href="https://hantavirus-risk.sherhn.space/zh">
+<link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hantavirus-risk.sherhn.space/zh/">
+<meta property="og:title" content="汉坦病毒风险评估测试 — hantavirus-risk">
+<meta property="og:description" content="在线汉坦病毒感染风险自评测试。快速版（20题）和详细版（50题）。">
+<meta property="og:image" content="https://hantavirus-risk.sherhn.space/zh/og-image.png">
+<!-- TODO: add og-image.png (1200×630) -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="hantavirus-risk">
+<meta property="og:locale" content="zh_CN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://hantavirus-risk.sherhn.space/zh/">
+<meta name="twitter:title" content="汉坦病毒风险评估测试 — hantavirus-risk">
+<meta name="twitter:description" content="在线汉坦病毒感染风险自评测试。快速版（20题）和详细版（50题）。">
+<meta name="twitter:image" content="https://hantavirus-risk.sherhn.space/zh/og-image.png">
+<meta name="twitter:creator" content="@sherhn">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "hantavirus-risk",
+  "url": "https://hantavirus-risk.sherhn.space/zh/",
+  "description": "在线汉坦病毒感染风险自评测试，包含快速版和详细版。",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "author": {
+    "@type": "Person",
+    "name": "sherhn",
+    "url": "https://github.com/sherhn"
+  },
+  "license": "https://hantavirus-risk.sherhn.space/zh/LICENSE",
+  "codeRepository": "https://github.com/sherhn/hantavirus-risk"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<nav class="site-nav"><div class="nav-inner"><a href="/zh/" class="nav-logo">⬡ <span>hantavirus</span>-risk</a><ul class="nav-links">
+      <li><a href="/zh/" class="active">首页</a></li>
+      <li class="hide-mobile"><a href="/zh/about">关于项目</a></li>
+      <li class="hide-mobile"><a href="/zh/faq">常见问题</a></li>
+      <li class="hide-mobile"><a href="/zh/LICENSE">许可证</a></li>
+      <li><a href="https://github.com/sherhn/hantavirus-risk" target="_blank" class="nav-gh">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span class="gh-text">GitHub</span>
+      </a></li>
+      <li class="lang-switcher">
+        <button class="lang-btn" id="langBtn" aria-label="选择语言">
+          <span>🌐</span><span class="lang-current">中文</span><span>▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="/ru" class="lang-option"><span class="lang-flag">🇷🇺</span> Русский</a>
+          <a href="/" class="lang-option"><span class="lang-flag">🇬🇧</span> English</a>
+          <a href="/es" class="lang-option"><span class="lang-flag">🇪🇸</span> Español</a>
+          <a href="/hi" class="lang-option"><span class="lang-flag">🇮🇳</span> हिन्दी</a>
+          <a href="/zh" class="lang-option active"><span class="lang-flag">🇨🇳</span> 中文</a>
+        </div>
+      </li>
+    </ul></div></nav>
+
+<!-- ═══════════════════════════════════════════
+     模态窗 — 结果显示后展示
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="disclaimerModal" style="display:none">
+  <div class="modal-box">
+    <div class="modal-icon">⚕️</div>
+    <div class="modal-subtitle">重要提示</div>
+    <div class="modal-title">这不是医学诊断</div>
+    <div class="modal-divider"></div>
+    <div class="modal-body">
+      <strong>本测试是风险预评估工具</strong>，仅用于信息参考目的。请注意：
+      <ul>
+        <li>测试<strong>不能替代</strong>医生检查、实验室诊断或临床评估。</li>
+        <li>测试结果<strong>不构成</strong>诊断、治疗建议或医疗推荐。</li>
+        <li>汉坦病毒感染<strong>只能通过实验室检测</strong>（PCR、IgM血清学）和感染科医生临床诊断。</li>
+        <li>如果出现急性呼吸困难、咯血、意识丧失或血压骤降——<strong>请立即拨打急救电话（中国120）</strong>，不要等待测试结果。</li>
+        <li>测试作者<strong>不对基于测试结果做出的决策承担责任</strong>。</li>
+      </ul>
+      <div class="modal-divider"></div>
+      如果您担心自己的状况——<strong>请咨询医生</strong>。只有专业医生才能做出诊断并给予治疗。照顾好自己和家人。
+    </div>
+    <button class="modal-close-btn" id="modalCloseBtn" disabled onclick="closeModal()">
+      我理解并已阅读
+    </button>
+    <div class="modal-timer" id="modalTimer">请仔细阅读 — 3 秒…</div>
+    <div class="modal-progress-track">
+      <div class="modal-progress-fill" id="modalProgressFill" style="width:0%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     主内容
+═══════════════════════════════════════════ -->
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-badge">
+      <span class="pulse-dot"></span>
+      风险评估
+    </div>
+    <h1>汉坦病毒<br><em>感染</em>风险测试</h1>
+    <p class="header-sub">感染可能性的预评估。在下方选择测试版本。</p>
+  </header>
+
+  <!-- Warning -->
+  <div class="warning-box">
+    <div class="warn-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      重要警告
+    </div>
+    <p>本测试<strong>不能替代医学诊断</strong>。汉坦病毒感染是一种罕见但极其危险的疾病：肺部形式死亡率高达<strong>35–40%</strong>。早期症状与流感几乎无法区分。本测试用于初步风险评估，辅助判断是否需要就医。</p>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    <p>请仔细阅读每个问题，选择最符合您过去<strong>1-7天</strong>（除非另有说明）情况的选项。最后您将获得总分和结果解读。</p>
+  </div>
+
+  <!-- Test selector -->
+  <div class="test-selector" id="selectorSection">
+    <div class="test-selector-title">选择测试版本</div>
+    <div class="selector-cards">
+      <div class="selector-card active" id="card-short" onclick="selectTest('short')">
+        <div class="selector-card-icon">⚡</div>
+        <div class="selector-card-title">快速测试</div>
+        <div class="selector-card-sub">基于主要症状和接触史的基础风险评估</div>
+        <div class="selector-card-badge">20个问题 · 3–5分钟</div>
+      </div>
+      <div class="selector-card" id="card-extended" onclick="selectTest('extended')">
+        <div class="selector-card-icon">🔬</div>
+        <div class="selector-card-title">详细测试</div>
+        <div class="selector-card-sub">包含鉴别诊断的详细分析</div>
+        <div class="selector-card-badge">50个问题 · 10–15分钟</div>
+      </div>
+    </div>
+    <button class="start-btn" onclick="startTest()">开始测试</button>
+    <div style="text-align:center">
+      <a href="https://github.com/sherhn/hantavirus-risk" target="_blank" class="gh-star-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        ⭐ Star on GitHub
+      </a>
+    </div>
+  </div>
+
+  <!-- Articles -->
+  <div class="index-articles" id="articlesSection">
+    <div class="index-articles-title">关于汉坦病毒的实用资料</div>
+    <div class="index-articles-grid">
+      <a href="/zh/symptoms" class="index-article-card">
+        <div class="index-article-icon">🌡️</div>
+        <div class="index-article-tag">临床表现</div>
+        <div class="index-article-title">汉坦病毒症状</div>
+        <div class="index-article-desc">疾病分期、与流感的区别以及需要立即呼叫急救的危险信号。</div>
+      </a>
+      <a href="/zh/transmission" class="index-article-card">
+        <div class="index-article-icon">🦠</div>
+        <div class="index-article-tag">流行病学</div>
+        <div class="index-article-title">传播途径</div>
+        <div class="index-article-desc">如何感染汉坦病毒、谁属于高风险人群以及安第斯病毒的独特危险性。</div>
+      </a>
+      <a href="/zh/prevention" class="index-article-card">
+        <div class="index-article-icon">🛡️</div>
+        <div class="index-article-tag">预防</div>
+        <div class="index-article-title">如何保护自己</div>
+        <div class="index-article-desc">清洁、野外活动、田间作业以及接触啮齿动物时的具体安全规则。</div>
+      </a>
+      <a href="/zh/how-to-detect" class="index-article-card">
+        <div class="index-article-icon">🔬</div>
+        <div class="index-article-tag">诊断</div>
+        <div class="index-article-title">如何检测汉坦病毒</div>
+        <div class="index-article-desc">PCR、血清学、快速检测 —— 该检查什么以及何时去化验。</div>
+      </a>
+      <a href="/zh/history" class="index-article-card">
+        <div class="index-article-icon">📜</div>
+        <div class="index-article-tag">历史</div>
+        <div class="index-article-title">汉坦病毒历史</div>
+        <div class="index-article-desc">从朝鲜战争到优胜美地暴发 —— 发现和疫情编年史。</div>
+      </a>
+      <a href="/zh/faq" class="index-article-card">
+        <div class="index-article-icon">💬</div>
+        <div class="index-article-tag">常见问题</div>
+        <div class="index-article-title">常见问题</div>
+        <div class="index-article-desc">测试能替代医生吗？汉坦病毒会人传人吗？结果高风险怎么办？</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       快速测试 (20题)
+  ══════════════════════════════ -->
+  <div id="testForm-short" style="display:none">
+
+    <!-- Progress -->
+    <div class="progress-bar-wrap">
+      <div class="progress-info">
+        <span id="progressText-short">问题 0 / 20</span>
+        <span id="progressPct-short">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill-short"></div></div>
+    </div>
+
+    <!-- Block 1 -->
+    <div class="block" style="animation-delay:0.1s">
+      <div class="block-title"><span class="block-num">1</span>第1部分 — 与潜在感染源的接触</div>
+
+      <div class="question" id="s-q1">
+        <div class="question-header"><span class="question-num">01</span><span class="question-text">在过去2-6周内，您是否去过可能栖息啮齿动物的地方（别墅、棚屋、地下室、阁楼、帐篷露营、农村）？</span></div>
+        <div class="options">
+          <div class="option" data-q="s1" data-score="5" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，我打扫了长期未用、可能有老鼠的 dusty 房间，或在农村接触过土壤。</span></div>
+          <div class="option" data-q="s1" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">是，我去过大自然或处于潜在危险区域，但没有直接接触灰尘或巢穴。</span></div>
+          <div class="option" data-q="s1" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，我没有离开过城市公寓/办公室，或确定没有接触过啮齿动物栖息地。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q2">
+        <div class="question-header"><span class="question-num">02</span><span class="question-text">在过去两个月内，您是否注意到老鼠粪便、巢穴或闻到强烈的鼠类气味？</span></div>
+        <div class="options">
+          <div class="option" data-q="s2" data-score="5" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，我亲眼看到粪便、巢穴或死亡啮齿动物。</span></div>
+          <div class="option" data-q="s2" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">是，其他人说看到了鼠迹，或闻到了气味。</span></div>
+          <div class="option" data-q="s2" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，没注意到类似情况。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q3">
+        <div class="question-header"><span class="question-num">03</span><span class="question-text">您是否有职业风险（农业、灭鼠、林业、农村建筑工地、实验室工作）？</span></div>
+        <div class="options">
+          <div class="option" data-q="s3" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，这是我的固定工作或我经常从事此类活动。</span></div>
+          <div class="option" data-q="s3" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">工作中偶尔会遇到此类条件。</span></div>
+          <div class="option" data-q="s3" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="block" style="animation-delay:0.2s">
+      <div class="block-title"><span class="block-num">2</span>第2部分 — 动态症状（过去1-7天）</div>
+
+      <div class="question" id="s-q4">
+        <div class="question-header"><span class="question-num">04</span><span class="question-text">是否出现<strong>突发性</strong>体温升高超过38°C？</span></div>
+        <div class="options">
+          <div class="option" data-q="s4" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，体温突然升至38.5°C及以上。</span></div>
+          <div class="option" data-q="s4" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">是，有发热但不超过38°C，或逐渐升高。</span></div>
+          <div class="option" data-q="s4" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，体温正常。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q5">
+        <div class="question-header"><span class="question-num">05</span><span class="question-text">是否感到<strong>剧烈</strong>肌肉疼痛（肌痛），尤其是大腿、背部、肩部等大肌群？</span></div>
+        <div class="options">
+          <div class="option" data-q="s5" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，疼痛非常剧烈，全身“酸痛”，影响活动和睡眠。</span></div>
+          <div class="option" data-q="s5" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">轻度酸痛或某一肌群疼痛。</span></div>
+          <div class="option" data-q="s5" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有肌肉疼痛。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q6">
+        <div class="question-header"><span class="question-num">06</span><span class="question-text">是否有头痛？如果有，是什么样的？</span></div>
+        <div class="options">
+          <div class="option" data-q="s6" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">非常剧烈，几乎无法忍受，可能放射到眼部（眶后痛）。</span></div>
+          <div class="option" data-q="s6" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">中度头痛，可忍受，类似普通感冒。</span></div>
+          <div class="option" data-q="s6" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有头痛。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q7">
+        <div class="question-header"><span class="question-num">07</span><span class="question-text">是否感到异常快速加重的疲劳和虚弱，休息后不缓解？</span></div>
+        <div class="options">
+          <div class="option" data-q="s7" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，虚弱到无法起床，头晕。</span></div>
+          <div class="option" data-q="s7" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">明显虚弱，比普通感冒更严重。</span></div>
+          <div class="option" data-q="s7" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">普通轻度疲劳或无症状。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q8">
+        <div class="question-header"><span class="question-num">08</span><span class="question-text">是否有严重流鼻涕，大量清涕？</span></div>
+        <div class="options">
+          <div class="option" data-q="s8" data-score="-2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，流鼻涕严重，分泌物多。</span></div>
+          <div class="option" data-q="s8" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">轻度鼻塞或少量分泌物。</span></div>
+          <div class="option" data-q="s8" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，鼻子通畅。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q9">
+        <div class="question-header"><span class="question-num">09</span><span class="question-text">吞咽时是否有喉咙痛？</span></div>
+        <div class="options">
+          <div class="option" data-q="s9" data-score="-2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，剧烈喉痛，喉咙发红，可能有渗出物。</span></div>
+          <div class="option" data-q="s9" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">轻度瘙痒或不适。</span></div>
+          <div class="option" data-q="s9" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，喉咙不痛。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q10">
+        <div class="question-header"><span class="question-num">10</span><span class="question-text">是否有恶心、呕吐或腹痛？</span></div>
+        <div class="options">
+          <div class="option" data-q="s10" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，明显恶心，曾呕吐和/或腹痛。</span></div>
+          <div class="option" data-q="s10" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">轻度恶心或腹部不适。</span></div>
+          <div class="option" data-q="s10" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q11">
+        <div class="question-header"><span class="question-num">11</span><span class="question-text">休息时或轻微活动时是否有气短（感觉空气不足）？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="s11" data-score="8" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，即使坐着或说话都喘不上气——无法躺下。 <strong style="color:var(--accent)">⚠ 请立即呼叫急救！</strong></span></div>
+          <div class="option" data-q="s11" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">在室内走动或说话时明显气短。</span></div>
+          <div class="option" data-q="s11" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，呼吸正常或仅在剧烈活动时气短。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q12">
+        <div class="question-header"><span class="question-num">12</span><span class="question-text">是否有腰部（肾脏区域）疼痛或钝痛不适？</span></div>
+        <div class="options">
+          <div class="option" data-q="s12" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，单侧或双侧腰痛，与其他症状同时出现。</span></div>
+          <div class="option" data-q="s12" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">背部轻微不适，可能与体力活动有关。</span></div>
+          <div class="option" data-q="s12" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q13">
+        <div class="question-header"><span class="question-num">13</span><span class="question-text">您的症状发展速度如何？</span></div>
+        <div class="options">
+          <div class="option" data-q="s13" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">非常快：早上还好好的，傍晚突然发烧、寒战、剧烈酸痛，状态持续恶化。</span></div>
+          <div class="option" data-q="s13" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">逐渐发展：先是轻度不适，第二天发烧等。</span></div>
+          <div class="option" data-q="s13" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">症状几天来几乎没有变化。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="block" style="animation-delay:0.3s">
+      <div class="block-title"><span class="block-num">3</span>第3部分 — 人际接触及其他因素</div>
+
+      <div class="question" id="s-q14">
+        <div class="question-header"><span class="question-num">14</span><span class="question-text">您是否接触过确诊汉坦病毒或从流行地区返回后罹患严重快速进展性肺炎的人？</span></div>
+        <div class="options">
+          <div class="option" data-q="s14" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，与此人密切接触（尤其是来自阿根廷/智利 — 安第斯病毒）。</span></div>
+          <div class="option" data-q="s14" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">听说周围有此类病例，但未直接接触。</span></div>
+          <div class="option" data-q="s14" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q15">
+        <div class="question-header"><span class="question-num">15</span><span class="question-text">过去2-6周内，您是否去过南美洲（尤其是巴塔哥尼亚、阿根廷、智利）或其他流行地区（亚洲、远东）旅行？</span></div>
+        <div class="options">
+          <div class="option" data-q="s15" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，去过南美洲/亚洲/远东。</span></div>
+          <div class="option" data-q="s15" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">是，去过其他地区旅行。</span></div>
+          <div class="option" data-q="s15" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q16">
+        <div class="question-header"><span class="question-num">16</span><span class="question-text">您的家人或同事中是否有人患有类似症状？</span></div>
+        <div class="options">
+          <div class="option" data-q="s16" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，周围有几个人同时出现类似症状。</span></div>
+          <div class="option" data-q="s16" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">是，但大家症状不同。</span></div>
+          <div class="option" data-q="s16" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，周围人都健康。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="block" style="animation-delay:0.4s">
+      <div class="block-title"><span class="block-num">4</span>第4部分 — 当前状态和预警信号</div>
+
+      <div class="question" id="s-q17">
+        <div class="question-header"><span class="question-num">17</span><span class="question-text">您的血压是多少（如果最近测量过）？</span></div>
+        <div class="options">
+          <div class="option" data-q="s17" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">显著低于我的正常值（例如原来120/80，现在90/60或更低）。</span></div>
+          <div class="option" data-q="s17" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">血压正常或略高。</span></div>
+          <div class="option" data-q="s17" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">我不知道/没测过。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q18">
+        <div class="question-header"><span class="question-num">18</span><span class="question-text">您是否有慢性病（糖尿病、高血压、哮喘、肾脏疾病）或削弱免疫力的状况？</span></div>
+        <div class="options">
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，有严重的慢性病。</span></div>
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">有轻度慢性健康问题。</span></div>
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有，总体健康。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q19">
+        <div class="question-header"><span class="question-num">19</span><span class="question-text">最近几天是否服用过扑热息痛或布洛芬？是否帮助退热和止痛？</span></div>
+        <div class="options">
+          <div class="option" data-q="s19" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">是，服用了，但几乎没效果 — 发热和疼痛持续。</span></div>
+          <div class="option" data-q="s19" data-score="-1" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">是，药物有效，明显好转。</span></div>
+          <div class="option" data-q="s19" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">没有服用。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q20">
+        <div class="question-header"><span class="question-num">20</span><span class="question-text">您如何总体评价自己目前的状态？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="s20" data-score="10" onclick="selectOption(this,'short')"><span class="option-letter">А</span><span class="option-text">非常严重：无法起床，呼吸困难，意识模糊，心跳不规律。 <strong style="color:var(--accent)">⚠ 立即呼叫急救！</strong></span></div>
+          <div class="option" data-q="s20" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">В</span><span class="option-text">中度：明显发热、虚弱，但可以走动和自理。</span></div>
+          <div class="option" data-q="s20" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">С</span><span class="option-text">尚可：轻度不适、流鼻涕，但能正常生活。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-nav" id="nav-short">
+      <button class="q-nav-btn prev-btn" onclick="goPrev('short')" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        上一题
+      </button>
+      <button class="q-nav-btn skip-btn" onclick="skipQuestion('short')">跳过</button>
+      <span class="q-counter">1 / 20</span>
+      <button class="q-nav-btn next-btn" onclick="goNext('short')" disabled>
+        下一题
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="q-grid-wrap">
+      <div class="q-grid-label">题目</div>
+      <div class="q-grid" id="qGrid-short"></div>
+    </div>
+
+    <div class="submit-section">
+      <button class="submit-btn" id="submitBtn-short" onclick="showResults('short')" disabled>计算得分</button>
+      <p class="submit-hint" id="submitHint-short">请回答所有20个问题以获取结果</p>
+    </div>
+  </div><!-- /testForm-short -->
+
+
+  <!-- ══════════════════════════════
+       详细测试 (50题)
+  ══════════════════════════════ -->
+  <div id="testForm-extended" style="display:none">
+
+    <div class="progress-bar-wrap">
+      <div class="progress-info">
+        <span id="progressText-extended">问题 0 / 50</span>
+        <span id="progressPct-extended">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill-extended"></div></div>
+    </div>
+
+    <!-- Block 1 -->
+    <div class="block" style="animation-delay:0.1s">
+      <div class="block-title"><span class="block-num">1</span>第1部分 — 流行病学史（10题）</div>
+
+      <div class="question" id="e-q1">
+        <div class="question-header"><span class="question-num">01</span><span class="question-text">过去2-6周内，您是否去过农村、别墅、森林、地下室、阁楼或其他可能有啮齿动物的场所？</span></div>
+        <div class="options">
+          <div class="option" data-q="e1" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，并且主动接触了灰尘（扫地、整理旧物、翻土、帐篷过夜）。</span></div>
+          <div class="option" data-q="e1" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">是，但只是待在那里，没有扬尘作业。</span></div>
+          <div class="option" data-q="e1" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有，未离开城市公寓/办公室，或确定未接触此类场所。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q2">
+        <div class="question-header"><span class="question-num">02</span><span class="question-text">在过去2个月内，您是否亲眼看到老鼠粪便、巢穴或死亡啮齿动物？</span></div>
+        <div class="options">
+          <div class="option" data-q="e2" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，看到新鲜粪便、巢穴或死老鼠。</span></div>
+          <div class="option" data-q="e2" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">看到陈旧痕迹，或别人告诉我存在。</span></div>
+          <div class="option" data-q="e2" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q3">
+        <div class="question-header"><span class="question-num">03</span><span class="question-text">过去6周内，您是否在打扫长期未用的房间、棚屋、地下室时吸入过灰尘？</span></div>
+        <div class="options">
+          <div class="option" data-q="e3" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，感觉吸入灰尘，灰尘很大，可能没戴口罩。</span></div>
+          <div class="option" data-q="e3" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">没有，是湿式清洁或我使用了呼吸器。</span></div>
+          <div class="option" data-q="e3" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">未进行此类清扫。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q4">
+        <div class="question-header"><span class="question-num">04</span><span class="question-text">您是否接触过活体啮齿动物或其分泌物（用手抓、清理笼子）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e4" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，与野生或家养啮齿动物密切接触。</span></div>
+          <div class="option" data-q="e4" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">有过偶然的短暂接触。</span></div>
+          <div class="option" data-q="e4" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q5">
+        <div class="question-header"><span class="question-num">05</span><span class="question-text">您是否从事农业、林业、灭鼠、农村建筑工地或汉坦病毒实验室工作？</span></div>
+        <div class="options">
+          <div class="option" data-q="e5" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，这是我的固定工作。</span></div>
+          <div class="option" data-q="e5" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">偶尔从事此类工作。</span></div>
+          <div class="option" data-q="e5" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q6">
+        <div class="question-header"><span class="question-num">06</span><span class="question-text">过去2-6周内，您是否去过汉坦病毒流行地区（俄罗斯远东、乌拉尔、伏尔加地区、阿根廷、智利、美国四角落地区、中国、韩国）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e6" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，去过此类地区。</span></div>
+          <div class="option" data-q="e6" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">去过其他地区旅行。</span></div>
+          <div class="option" data-q="e6" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q7">
+        <div class="question-header"><span class="question-num">07</span><span class="question-text">过去6周内，您是否参加过帐篷露营或森林/山间小屋的户外活动并在那里过夜？</span></div>
+        <div class="options">
+          <div class="option" data-q="e7" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，在帐篷或森林小屋过夜。</span></div>
+          <div class="option" data-q="e7" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">是，但在设施齐全的酒店过夜。</span></div>
+          <div class="option" data-q="e7" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q8">
+        <div class="question-header"><span class="question-num">08</span><span class="question-text">您是否知道过去2个月内有熟人或邻居或您所在地区出现汉坦病毒感染的病例？</span></div>
+        <div class="options">
+          <div class="option" data-q="e8" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，有人确诊感染。</span></div>
+          <div class="option" data-q="e8" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">听说动物（老鼠）中出现了病例，但未听闻人感染。</span></div>
+          <div class="option" data-q="e8" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q9">
+        <div class="question-header"><span class="question-num">09</span><span class="question-text">您是否接触过确诊汉坦病毒感染者或患有不明原因的严重快速进展性肺炎（尤其是从流行区返回后）的人？</span></div>
+        <div class="options">
+          <div class="option" data-q="e9" data-score="6" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，有密切家庭接触（尤其是来自阿根廷/智利的患者 — 安第斯病毒）。</span></div>
+          <div class="option" data-q="e9" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">有过偶然接触或共处一室。</span></div>
+          <div class="option" data-q="e9" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q10">
+        <div class="question-header"><span class="question-num">10</span><span class="question-text">过去一个月内，您周围是否有人因快速发展的呼吸衰竭或不明原因肺水肿而死亡？</span></div>
+        <div class="options">
+          <div class="option" data-q="e10" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，并且是在流感样症状之后发生的。</span></div>
+          <div class="option" data-q="e10" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">有，但原因明确（如癌症、创伤）。</span></div>
+          <div class="option" data-q="e10" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="block" style="animation-delay:0.2s">
+      <div class="block-title"><span class="block-num">2</span>第2部分 — 初期症状（10题）</div>
+
+      <div class="question" id="e-q11">
+        <div class="question-header"><span class="question-num">11</span><span class="question-text">疾病是如何开始的？</span></div>
+        <div class="options">
+          <div class="option" data-q="e11" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">突然，完全健康状态下：突发高烧、寒战、严重虚弱。</span></div>
+          <div class="option" data-q="e11" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">逐渐：先轻度不适，然后发烧。</span></div>
+          <div class="option" data-q="e11" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有发烧，只有疲劳。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q12">
+        <div class="question-header"><span class="question-num">12</span><span class="question-text">过去24小时内最高体温是多少？</span></div>
+        <div class="options">
+          <div class="option" data-q="e12" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">高于39°C，退烧药效果差。</span></div>
+          <div class="option" data-q="e12" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">38–39°C。</span></div>
+          <div class="option" data-q="e12" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">37–38°C。</span></div>
+          <div class="option" data-q="e12" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">正常（低于37°C）。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q13">
+        <div class="question-header"><span class="question-num">13</span><span class="question-text">高烧时是否有寒战、发抖、感觉冷？</span></div>
+        <div class="options">
+          <div class="option" data-q="e13" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，明显寒战，“牙齿打颤”。</span></div>
+          <div class="option" data-q="e13" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度发冷。</span></div>
+          <div class="option" data-q="e13" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q14">
+        <div class="question-header"><span class="question-num">14</span><span class="question-text">肌肉疼痛（肌痛）有多明显？</span></div>
+        <div class="options">
+          <div class="option" data-q="e14" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">非常严重：大肌肉群（背部、大腿、小腿）疼痛，找不到舒适姿势。</span></div>
+          <div class="option" data-q="e14" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">中度酸痛，类似流感。</span></div>
+          <div class="option" data-q="e14" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">轻度不适。</span></div>
+          <div class="option" data-q="e14" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">没有肌肉疼痛。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q15">
+        <div class="question-header"><span class="question-num">15</span><span class="question-text">头痛的部位在哪里？</span></div>
+        <div class="options">
+          <div class="option" data-q="e15" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">主要在额头和眼部（眶后），搏动性，眼球活动时加重。</span></div>
+          <div class="option" data-q="e15" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">弥漫性、中度、压迫感。</span></div>
+          <div class="option" data-q="e15" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有头痛。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q16">
+        <div class="question-header"><span class="question-num">16</span><span class="question-text">是否有眼痛、刺痛或畏光？</span></div>
+        <div class="options">
+          <div class="option" data-q="e16" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，眼睛疼痛、流泪，怕光。</span></div>
+          <div class="option" data-q="e16" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度干涩或眼疲劳。</span></div>
+          <div class="option" data-q="e16" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q17">
+        <div class="question-header"><span class="question-num">17</span><span class="question-text">全身虚弱和疲劳程度如何？</span></div>
+        <div class="options">
+          <div class="option" data-q="e17" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">极度：无法起床，头晕。</span></div>
+          <div class="option" data-q="e17" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">严重，但可以在家走动。</span></div>
+          <div class="option" data-q="e17" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">轻度疲劳，像工作一天后。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q18">
+        <div class="question-header"><span class="question-num">18</span><span class="question-text">发病初期是否有恶心和/或呕吐？</span></div>
+        <div class="options">
+          <div class="option" data-q="e18" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，持续恶心，曾呕吐。</span></div>
+          <div class="option" data-q="e18" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度恶心，无呕吐。</span></div>
+          <div class="option" data-q="e18" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q19">
+        <div class="question-header"><span class="question-num">19</span><span class="question-text">是否有腹痛或腹部不适？</span></div>
+        <div class="options">
+          <div class="option" data-q="e19" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，比较剧烈的疼痛，有时绞痛，可能伴有腹泻。</span></div>
+          <div class="option" data-q="e19" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度不适。</span></div>
+          <div class="option" data-q="e19" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q20">
+        <div class="question-header"><span class="question-num">20</span><span class="question-text">生病期间您的出汗情况如何？</span></div>
+        <div class="options">
+          <div class="option" data-q="e20" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">大量出汗，尤其夜间。</span></div>
+          <div class="option" data-q="e20" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">退烧时中度出汗。</span></div>
+          <div class="option" data-q="e20" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">正常。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="block" style="animation-delay:0.3s">
+      <div class="block-title"><span class="block-num">3</span>第3部分 — 呼吸和心血管表现（10题）</div>
+
+      <div class="question" id="e-q21">
+        <div class="question-header"><span class="question-num">21</span><span class="question-text">休息时是否有气短（感觉空气不足）？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e21" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，明显气短，无法躺下，必须坐着。 <strong style="color:var(--accent)">⚠ 紧急医疗帮助！</strong></span></div>
+          <div class="option" data-q="e21" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">说话或轻微活动时有轻度气短。</span></div>
+          <div class="option" data-q="e21" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">气短仅在体力活动时出现。</span></div>
+          <div class="option" data-q="e21" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">没有气短。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q22">
+        <div class="question-header"><span class="question-num">22</span><span class="question-text">休息时每分钟呼吸次数是多少？（计30秒乘以2）</span></div>
+        <div class="options">
+          <div class="option" data-q="e22" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">超过25次/分钟。</span></div>
+          <div class="option" data-q="e22" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">20–25次/分钟。</span></div>
+          <div class="option" data-q="e22" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">少于20次/分钟。</span></div>
+          <div class="option" data-q="e22" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">无法计算/不知道。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q23">
+        <div class="question-header"><span class="question-num">23</span><span class="question-text">是否出现咳嗽？如果有，是什么样的？</span></div>
+        <div class="options">
+          <div class="option" data-q="e23" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">干咳，刺激性，无痰。</span></div>
+          <div class="option alert-option" data-q="e23" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">咳嗽伴有泡沫状或粉色痰（咯血）。 <strong style="color:var(--accent)">⚠ 立即呼叫急救！</strong></span></div>
+          <div class="option" data-q="e23" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">湿咳，有普通痰（黄/绿）。</span></div>
+          <div class="option" data-q="e23" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">无咳嗽。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q24">
+        <div class="question-header"><span class="question-num">24</span><span class="question-text">呼吸时是否感到胸闷或胸痛？</span></div>
+        <div class="options">
+          <div class="option" data-q="e24" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，吸气时加重，胸部胀满感。</span></div>
+          <div class="option" data-q="e24" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度胸闷，但不是疼痛。</span></div>
+          <div class="option" data-q="e24" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q25">
+        <div class="question-header"><span class="question-num">25</span><span class="question-text">是否用血氧仪测量过血氧饱和度？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e25" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，SpO₂ 低于90%。 <strong style="color:var(--accent)">⚠ 立即呼叫急救！</strong></span></div>
+          <div class="option" data-q="e25" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">是，SpO₂ 90–94%。</span></div>
+          <div class="option" data-q="e25" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">是，SpO₂ 95%及以上。</span></div>
+          <div class="option" data-q="e25" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">没有测量。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q26">
+        <div class="question-header"><span class="question-num">26</span><span class="question-text">是否注意到嘴唇、指甲或皮肤发紫（发绀）？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e26" data-score="8" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，嘴唇或指甲呈蓝紫色。 <strong style="color:var(--accent)">⚠ 立即呼叫急救！</strong></span></div>
+          <div class="option" data-q="e26" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">皮肤略显苍白或灰色。</span></div>
+          <div class="option" data-q="e26" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有，肤色正常。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q27">
+        <div class="question-header"><span class="question-num">27</span><span class="question-text">是否感到心跳、心律不齐？</span></div>
+        <div class="options">
+          <div class="option" data-q="e27" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，心跳剧烈，心动过速（静息时心率>100）。</span></div>
+          <div class="option" data-q="e27" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">心率轻度加快（80–100）。</span></div>
+          <div class="option" data-q="e27" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">心率正常。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q28">
+        <div class="question-header"><span class="question-num">28</span><span class="question-text">血压是多少（如果测量过）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e28" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">显著降低（低于90/60，而您的正常值更高）。</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">中度偏低或正常。</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">偏高。</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">没有测量。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q29">
+        <div class="question-header"><span class="question-num">29</span><span class="question-text">平躺时是否感到空气不足，迫使您坐起来？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e29" data-score="8" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，我无法平躺，只能坐着或半躺着。 <strong style="color:var(--accent)">⚠ 紧急帮助！</strong></span></div>
+          <div class="option" data-q="e29" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度不适，但仍可平躺。</span></div>
+          <div class="option" data-q="e29" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有，正常平躺睡觉。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q30">
+        <div class="question-header"><span class="question-num">30</span><span class="question-text">呼吸时是否有能听见的哮鸣音或哨声？</span></div>
+        <div class="options">
+          <div class="option" data-q="e30" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，呼气/吸气时听到哨音或咕噜声。</span></div>
+          <div class="option" data-q="e30" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">仅胸部轻度发闷。</span></div>
+          <div class="option" data-q="e30" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="block" style="animation-delay:0.4s">
+      <div class="block-title"><span class="block-num">4</span>第4部分 — 血液、肾脏和出血表现（10题）</div>
+
+      <div class="question" id="e-q31">
+        <div class="question-header"><span class="question-num">31</span><span class="question-text">最近几天刷牙时是否牙龈出血或无故出现瘀伤？</span></div>
+        <div class="options">
+          <div class="option" data-q="e31" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，明显出血，大块瘀斑。</span></div>
+          <div class="option" data-q="e31" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度出血，一两个小瘀点。</span></div>
+          <div class="option" data-q="e31" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q32">
+        <div class="question-header"><span class="question-num">32</span><span class="question-text">是否有瘀点 — 皮肤上细小的红色或紫色点（按压不消退的皮疹）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e32" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，躯干、手臂、黏膜上有很多点。</span></div>
+          <div class="option" data-q="e32" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">几个点，类似血管痣。</span></div>
+          <div class="option" data-q="e32" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q33">
+        <div class="question-header"><span class="question-num">33</span><span class="question-text">生病期间是否有鼻出血？</span></div>
+        <div class="options">
+          <div class="option" data-q="e33" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，多次，难以止住。</span></div>
+          <div class="option" data-q="e33" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">一次，少量。</span></div>
+          <div class="option" data-q="e33" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q34">
+        <div class="question-header"><span class="question-num">34</span><span class="question-text">过去24小时尿量有何变化？</span></div>
+        <div class="options">
+          <div class="option" data-q="e34" data-score="6" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">尿量显著减少，有时只有几滴，或6-8小时以上未排尿。</span></div>
+          <div class="option" data-q="e34" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">尿量比平时少，但还有排尿。</span></div>
+          <div class="option" data-q="e34" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">尿量未改变。</span></div>
+          <div class="option" data-q="e34" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">没有留意，不知道。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q35">
+        <div class="question-header"><span class="question-num">35</span><span class="question-text">尿液是什么颜色？</span></div>
+        <div class="options">
+          <div class="option" data-q="e35" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">深色，像“洗肉水”，浑浊，带血。</span></div>
+          <div class="option" data-q="e35" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">浓缩，深黄色。</span></div>
+          <div class="option" data-q="e35" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">正常颜色。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q36">
+        <div class="question-header"><span class="question-num">36</span><span class="question-text">是否有腰痛或肾区疼痛？</span></div>
+        <div class="options">
+          <div class="option" data-q="e36" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，单侧或双侧钝痛、酸胀感。</span></div>
+          <div class="option" data-q="e36" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">体力活动后轻度不适。</span></div>
+          <div class="option" data-q="e36" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q37">
+        <div class="question-header"><span class="question-num">37</span><span class="question-text">是否出现面部、眼睑或腿部水肿（尤其早晨）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e37" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，面部明显浮肿，眼袋，脚踝水肿。</span></div>
+          <div class="option" data-q="e37" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">早晨轻微肿胀。</span></div>
+          <div class="option" data-q="e37" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q38">
+        <div class="question-header"><span class="question-num">38</span><span class="question-text">最近几天是否查过血常规？（血小板和血细胞比容）</span></div>
+        <div class="options">
+          <div class="option" data-q="e38" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，血小板降低（低于150×10⁹/L），血细胞比容升高（男性>50%，女性>45%）。</span></div>
+          <div class="option" data-q="e38" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">是，有轻微偏差（血小板在正常低限，血细胞比容略高）。</span></div>
+          <div class="option" data-q="e38" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">是，所有指标正常。</span></div>
+          <div class="option" data-q="e38" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">没有查过。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q39">
+        <div class="question-header"><span class="question-num">39</span><span class="question-text">是否检测过汉坦病毒（PCR或IgM抗体）？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e39" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，结果阳性。 <strong style="color:var(--accent)">⚠ 若还未就医，请立即去医院！</strong></span></div>
+          <div class="option" data-q="e39" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">是，结果阴性。</span></div>
+          <div class="option" data-q="e39" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q40">
+        <div class="question-header"><span class="question-num">40</span><span class="question-text">您的病情恶化速度有多快？</span></div>
+        <div class="options">
+          <div class="option" data-q="e40" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">非常快：每小时都在恶化，气短或虚弱加重。</span></div>
+          <div class="option" data-q="e40" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">缓慢但日复一日明显恶化。</span></div>
+          <div class="option" data-q="e40" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有变化或好转。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 5 -->
+    <div class="block" style="animation-delay:0.5s">
+      <div class="block-title"><span class="block-num">5</span>第5部分 — 鉴别诊断和整体状况（10题）</div>
+
+      <div class="question" id="e-q41">
+        <div class="question-header"><span class="question-num">41</span><span class="question-text">吞咽时是否有喉咙痛？</span></div>
+        <div class="options">
+          <div class="option" data-q="e41" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，剧烈疼痛，喉咙红，有渗出物。</span></div>
+          <div class="option" data-q="e41" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度瘙痒或不适。</span></div>
+          <div class="option" data-q="e41" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q42">
+        <div class="question-header"><span class="question-num">42</span><span class="question-text">是否有明显的流鼻涕、大量清涕和/或打喷嚏？</span></div>
+        <div class="options">
+          <div class="option" data-q="e42" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，大量流涕，经常打喷嚏。</span></div>
+          <div class="option" data-q="e42" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度鼻塞。</span></div>
+          <div class="option" data-q="e42" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有，鼻子通畅。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q43">
+        <div class="question-header"><span class="question-num">43</span><span class="question-text">是否注意到颈部或下颌下淋巴结肿大或触痛？</span></div>
+        <div class="options">
+          <div class="option" data-q="e43" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，淋巴结肿大并疼痛。</span></div>
+          <div class="option" data-q="e43" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度肿大，无痛。</span></div>
+          <div class="option" data-q="e43" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q44">
+        <div class="question-header"><span class="question-num">44</span><span class="question-text">是否有其他类型的皮疹（斑丘疹、荨麻疹、水疱）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e44" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，全身大量皮疹。</span></div>
+          <div class="option" data-q="e44" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">少量皮疹。</span></div>
+          <div class="option" data-q="e44" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q45">
+        <div class="question-header"><span class="question-num">45</span><span class="question-text">是否有关节痛（无肿胀）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e45" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，几个关节（膝、手）剧痛。</span></div>
+          <div class="option" data-q="e45" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">轻度僵硬。</span></div>
+          <div class="option" data-q="e45" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q46">
+        <div class="question-header"><span class="question-num">46</span><span class="question-text">过去3-7天内，您是否接触过确诊流感、COVID-19或急性呼吸道感染的人？</span></div>
+        <div class="options">
+          <div class="option" data-q="e46" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，与实验室确诊流感/新冠的患者密切接触。</span></div>
+          <div class="option" data-q="e46" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">是，接触过感冒的人。</span></div>
+          <div class="option" data-q="e46" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q47">
+        <div class="question-header"><span class="question-num">47</span><span class="question-text">是否服用过抗生素或抗病毒药物？效果如何？</span></div>
+        <div class="options">
+          <div class="option" data-q="e47" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，服用了抗生素，但病情没有好转甚至恶化。</span></div>
+          <div class="option" data-q="e47" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">是，服用了抗病毒药（流感/新冠），感觉好转。</span></div>
+          <div class="option" data-q="e47" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q48">
+        <div class="question-header"><span class="question-num">48</span><span class="question-text">是否有慢性病（糖尿病、高血压、肾脏、肝脏、肺部疾病、免疫缺陷）？</span></div>
+        <div class="options">
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，可能掩盖症状。</span></div>
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">有轻度慢性问题。</span></div>
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">没有。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q49">
+        <div class="question-header"><span class="question-num">49</span><span class="question-text">您是否吸烟或长期吸烟？</span></div>
+        <div class="options">
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">是，烟龄长，有吸烟者咳嗽。</span></div>
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">已戒烟。</span></div>
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">不吸烟。</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q50">
+        <div class="question-header"><span class="question-num">50</span><span class="question-text">总体而言，您如何评价自己目前的状态？</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e50" data-score="12" onclick="selectOption(this,'extended')"><span class="option-letter">А</span><span class="option-text">严重：明显气短、意识模糊、低血压。 <strong style="color:var(--accent)">⚠ 立即呼叫急救（120）！</strong></span></div>
+          <div class="option" data-q="e50" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">В</span><span class="option-text">中度：发烧、虚弱，但意识清楚，可以活动。</span></div>
+          <div class="option" data-q="e50" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">С</span><span class="option-text">尚可：有症状，但能自理。</span></div>
+          <div class="option" data-q="e50" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">良好，没有不适。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-nav" id="nav-extended">
+      <button class="q-nav-btn prev-btn" onclick="goPrev('extended')" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        上一题
+      </button>
+      <button class="q-nav-btn skip-btn" onclick="skipQuestion('extended')">跳过</button>
+      <span class="q-counter">1 / 50</span>
+      <button class="q-nav-btn next-btn" onclick="goNext('extended')" disabled>
+        下一题
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="q-grid-wrap">
+      <div class="q-grid-label">题目</div>
+      <div class="q-grid" id="qGrid-extended"></div>
+    </div>
+
+    <div class="submit-section">
+      <button class="submit-btn" id="submitBtn-extended" onclick="showResults('extended')" disabled>计算得分</button>
+      <p class="submit-hint" id="submitHint-extended">请回答所有50个问题以获取结果</p>
+    </div>
+  </div><!-- /testForm-extended -->
+
+
+  <!-- ══════════════════════════════
+       结果区
+  ══════════════════════════════ -->
+  <div class="results" id="resultsSection">
+    <div id="resultCard"></div>
+    <div class="disclaimer">
+      本测试是风险预评估工具，不能替代实验室诊断和医生检查。即使得分较低，如果出现急性呼吸困难、咯血或意识丧失，请立即呼叫急救。珍爱生命。
+    </div>
+    <div style="text-align:center">
+      <button class="restart-btn" onclick="restartTest()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        重新测试
+      </button>
+    </div>
+
+    <div class="index-articles" style="margin-top:40px">
+      <div class="index-articles-title">了解更多关于汉坦病毒</div>
+      <div class="index-articles-grid">
+        <a href="/zh/symptoms" class="index-article-card">
+          <div class="index-article-icon">🌡️</div>
+          <div class="index-article-tag">临床表现</div>
+          <div class="index-article-title">汉坦病毒症状</div>
+          <div class="index-article-desc">疾病分期、与流感的区别及危险信号。</div>
+        </a>
+        <a href="/zh/transmission" class="index-article-card">
+          <div class="index-article-icon">🦠</div>
+          <div class="index-article-tag">流行病学</div>
+          <div class="index-article-title">传播途径</div>
+          <div class="index-article-desc">如何感染，谁有风险，安第斯病毒的特殊性。</div>
+        </a>
+        <a href="/zh/prevention" class="index-article-card">
+          <div class="index-article-icon">🛡️</div>
+          <div class="index-article-tag">预防</div>
+          <div class="index-article-title">如何保护自己</div>
+          <div class="index-article-desc">清洁、野外、接触啮齿动物时的安全规则。</div>
+        </a>
+        <a href="/zh/how-to-detect" class="index-article-card">
+          <div class="index-article-icon">🔬</div>
+          <div class="index-article-tag">诊断</div>
+          <div class="index-article-title">化验和方法</div>
+          <div class="index-article-desc">PCR、血清学、快速检测 — 该查什么。</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+// ─── State ───────────────────────────────────────
+const answersShort    = {};
+const answersExtended = {};
+const TOTAL_SHORT    = 20;
+const TOTAL_EXTENDED = 50;
+let currentMode = 'short'; // 'short' | 'extended'
+let currentQuestion = { short: 1, extended: 1 };
+
+// ─── Question Grid ────────────────────────────────
+const skippedShort    = new Set();
+const skippedExtended = new Set();
+
+function buildGrid(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const grid = document.getElementById(`qGrid-${mode}`);
+  if (!grid) return;
+  grid.innerHTML = '';
+  for (let i = 1; i <= total; i++) {
+    const tile = document.createElement('button');
+    tile.className = 'q-tile';
+    tile.id = `tile-${mode}-${i}`;
+    tile.textContent = i;
+    tile.onclick = (function(n){ return function(){ jumpTo(mode, n); }; })(i);
+    grid.appendChild(tile);
+  }
+}
+
+function updateGrid(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const skipped = mode === 'short' ? skippedShort : skippedExtended;
+  const prefix = getQuestionPrefix(mode);
+  const cur = currentQuestion[mode];
+  for (let i = 1; i <= total; i++) {
+    const tile = document.getElementById(`tile-${mode}-${i}`);
+    if (!tile) continue;
+    const key = `${prefix}${i}`;
+    tile.className = 'q-tile';
+    if (answers[key] !== undefined) tile.classList.add('answered');
+    else if (skipped.has(i)) tile.classList.add('skipped');
+    if (i === cur) tile.classList.add('current');
+  }
+}
+
+function jumpTo(mode, num) {
+  showQuestion(mode, num, num < currentQuestion[mode], true);
+}
+
+function skipQuestion(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const cur = currentQuestion[mode];
+  const skipped = mode === 'short' ? skippedShort : skippedExtended;
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const prefix = getQuestionPrefix(mode);
+
+  if (answers[`${prefix}${cur}`] === undefined) {
+    skipped.add(cur);
+  }
+
+  let next = null;
+  for (let i = cur + 1; i <= total; i++) {
+    if (answers[`${prefix}${i}`] === undefined) { next = i; break; }
+  }
+  if (next === null) {
+    for (let i = 1; i <= total; i++) {
+      if (answers[`${prefix}${i}`] === undefined) { next = i; break; }
+    }
+  }
+
+  updateGrid(mode);
+  checkSubmit(mode);
+  if (next !== null) {
+    showQuestion(mode, next, false, false);
+  }
+}
+
+// ─── Selector ────────────────────────────────────
+function selectTest(mode) {
+  currentMode = mode;
+  document.getElementById('card-short').classList.toggle('active', mode === 'short');
+  document.getElementById('card-extended').classList.toggle('active', mode === 'extended');
+}
+
+function startTest() {
+  document.getElementById('selectorSection').style.display = 'none';
+  document.getElementById('articlesSection').style.display = 'none';
+  currentQuestion[currentMode] = 1;
+  if (currentMode === 'short') {
+    document.getElementById('testForm-short').style.display = '';
+    buildGrid('short');
+    showQuestion('short', 1);
+    updateProgress('short');
+  } else {
+    document.getElementById('testForm-extended').style.display = '';
+    buildGrid('extended');
+    showQuestion('extended', 1);
+    updateProgress('extended');
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── One-at-a-time question display ──────────────
+function getQuestionPrefix(mode) {
+  return mode === 'short' ? 's' : 'e';
+}
+
+function showQuestion(mode, num, goingBack, scroll) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const prefix = getQuestionPrefix(mode);
+
+  document.querySelectorAll(`#testForm-${mode} .question`).forEach(q => {
+    q.classList.remove('active-question', 'going-back');
+  });
+
+  const qEl = document.getElementById(`${prefix[0]}-q${num}`);
+  if (qEl) {
+    qEl.classList.add('active-question');
+    if (goingBack) qEl.classList.add('going-back');
+  }
+
+  currentQuestion[mode] = num;
+
+  updateNavButtons(mode, num, total);
+  updateGrid(mode);
+
+  if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateNavButtons(mode, num, total) {
+  const navEl = document.getElementById(`nav-${mode}`);
+  if (!navEl) return;
+
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const prefix = getQuestionPrefix(mode);
+  const hasAnswer = answers[`${prefix}${num}`] !== undefined;
+
+  navEl.querySelector('.prev-btn').disabled = (num === 1);
+  navEl.querySelector('.next-btn').disabled = !hasAnswer || (num === total);
+  navEl.querySelector('.q-counter').textContent = `${num} / ${total}`;
+}
+
+function goNext(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const cur = currentQuestion[mode];
+  if (cur < total) showQuestion(mode, cur + 1, false, false);
+}
+
+function goPrev(mode) {
+  const cur = currentQuestion[mode];
+  if (cur > 1) showQuestion(mode, cur - 1, true, false);
+}
+
+// ─── Options ──────────────────────────────────────
+function selectOption(el, mode) {
+  const q     = el.dataset.q;
+  const score = parseInt(el.dataset.score);
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+
+  document.querySelectorAll(`.option[data-q="${q}"]`).forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+
+  answers[q] = score;
+  const qEl = el.closest('.question');
+  if (qEl) qEl.classList.add('answered');
+
+  updateProgress(mode);
+  checkSubmit(mode);
+  updateGrid(mode);
+
+  updateNavButtons(mode, currentQuestion[mode], total);
+
+  const cur = currentQuestion[mode];
+  if (cur < total) {
+    setTimeout(() => showQuestion(mode, cur + 1, false, false), 350);
+  }
+}
+
+function updateProgress(mode) {
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const total   = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const answered = Object.keys(answers).length;
+  const pct = Math.round((answered / total) * 100);
+  document.getElementById(`progressFill-${mode}`).style.width = pct + '%';
+  document.getElementById(`progressText-${mode}`).textContent = `问题 ${answered} / ${total}`;
+  document.getElementById(`progressPct-${mode}`).textContent = pct + '%';
+}
+
+function checkSubmit(mode) {
+  const answers  = mode === 'short' ? answersShort : answersExtended;
+  const skipped  = mode === 'short' ? skippedShort : skippedExtended;
+  const total    = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const prefix   = getQuestionPrefix(mode);
+  const btn  = document.getElementById(`submitBtn-${mode}`);
+  const hint = document.getElementById(`submitHint-${mode}`);
+
+  let unanswered = 0;
+  for (let i = 1; i <= total; i++) {
+    if (answers[`${prefix}${i}`] === undefined) unanswered++;
+  }
+
+  if (unanswered === 0) {
+    btn.disabled = false;
+    if (skipped.size > 0) {
+      hint.textContent = `所有问题均已作答（跳过 ${skipped.size} 题并已返回）— 可以获得结果`;
+    } else {
+      hint.textContent = '所有问题均已作答 — 可以获得结果';
+    }
+  } else {
+    btn.disabled = true;
+    hint.textContent = `未作答问题数：${unanswered}`;
+  }
+}
+
+function calcScore(mode) {
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  return Object.values(answers).reduce((a, b) => a + b, 0);
+}
+
+// ─── Results ──────────────────────────────────────
+function showResults(mode) {
+  const score   = calcScore(mode);
+  const isExt   = mode === 'extended';
+  const typeTag = isExt ? '🔬 详细测试 · 50个问题' : '⚡ 快速测试 · 20个问题';
+  let card = '';
+
+  const threshCritical = isExt ? 70 : 30;
+  const threshHigh     = isExt ? 31 : 16;
+  const threshMed      = isExt ? 10 : 5;
+
+  if (score > threshCritical) {
+    card = `
+      <div class="result-card result-critical">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent)">🚨 危急结果</div>
+        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-title" style="color:var(--accent)">立即呼叫急救</div>
+        <div class="result-desc">
+          <strong>请立即拨打急救电话（中国120）。</strong> 您的情况需要紧急医疗干预。高度怀疑汉坦病毒肺综合征或严重肾型。<br><br>
+          等待急救时：打开窗户通风，采取半卧位，避免剧烈动作。告知医生您接触过啮齿动物。<strong>每一分钟都很重要</strong> — 肺水肿可能迅速恶化。
+        </div>
+      </div>`;
+  } else if (score >= threshHigh) {
+    card = `
+      <div class="result-card result-high">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent)">⚠ 高度疑似危险感染</div>
+        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-title">需要紧急住院</div>
+        <div class="result-desc">
+          您的症状和风险因素组合<strong>高度怀疑</strong>汉坦病毒感染（肺型或肾型）。也可能为重症流感合并肺炎或败血症。<br><br>
+          <strong>您应尽快前往感染科医院并可能需要重症监护。</strong> 就医前请卧床休息，监测血压和呼吸频率。
+        </div>
+      </div>`;
+  } else if (score >= threshMed) {
+    card = `
+      <div class="result-card result-medium">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent2)">⚡ 中度可能性 — 不能排除汉坦病毒</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-title">需要就医咨询</div>
+        <div class="result-desc">
+          表现不典型。可能是<strong>流感、COVID-19、腺病毒、钩端螺旋体病、肾综合征出血热/汉坦病毒肺综合征早期</strong>。您接触啮齿动物的历史和部分症状值得警惕。<br><br>
+          <strong>建议在24-48小时内就医。</strong> 查血常规（尤其血小板），如果可能做汉坦病毒PCR。告知医生您的旅行史和接触史。
+        </div>
+      </div>`;
+  } else {
+    card = `
+      <div class="result-card result-low">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--green)">✓ 汉坦病毒可能性较低</div>
+        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-title">汉坦病毒感染的可能性不大</div>
+        <div class="result-desc">
+          您的症状和接触史最大可能指向<strong>普通疲劳、压力、轻度感冒或其他非严重状况</strong>。<br><br>
+          请记住：任何情况下高烧和严重虚弱都需要重视。如果症状持续<strong>超过3天或加重</strong>，请咨询全科医生。
+        </div>
+      </div>`;
+  }
+
+  document.getElementById('resultCard').innerHTML = card;
+  document.getElementById(`testForm-${mode}`).style.display = 'none';
+  document.getElementById('resultsSection').classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showDisclaimerModal();
+}
+
+// ─── Modal ────────────────────────────────────────
+function showDisclaimerModal() {
+  const modal   = document.getElementById('disclaimerModal');
+  const btn     = document.getElementById('modalCloseBtn');
+  const timerEl = document.getElementById('modalTimer');
+  const fillEl  = document.getElementById('modalProgressFill');
+
+  modal.style.display = 'flex';
+  btn.disabled = true;
+
+  const DURATION = 3000;
+  const INTERVAL = 50;
+  let elapsed = 0;
+
+  const tick = setInterval(() => {
+    elapsed += INTERVAL;
+    const pct = Math.min((elapsed / DURATION) * 100, 100);
+    fillEl.style.width = pct + '%';
+    const remaining = Math.ceil((DURATION - elapsed) / 1000);
+    if (remaining > 0) {
+      timerEl.textContent = `请仔细阅读 — ${remaining} 秒…`;
+    } else {
+      timerEl.textContent = '现在您可以关闭此窗口。';
+      btn.disabled = false;
+      clearInterval(tick);
+    }
+  }, INTERVAL);
+}
+
+function closeModal() {
+  document.getElementById('disclaimerModal').style.display = 'none';
+}
+
+// ─── Restart ─────────────────────────────────────
+function restartTest() {
+  for (const k in answersShort) delete answersShort[k];
+  skippedShort.clear();
+  document.querySelectorAll('#testForm-short .option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('#testForm-short .question').forEach(q => q.classList.remove('answered', 'active-question', 'going-back'));
+  document.getElementById('submitBtn-short').disabled = true;
+  document.getElementById('submitHint-short').textContent = '请回答所有20个问题以获取结果';
+
+  for (const k in answersExtended) delete answersExtended[k];
+  skippedExtended.clear();
+  document.querySelectorAll('#testForm-extended .option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('#testForm-extended .question').forEach(q => q.classList.remove('answered', 'active-question', 'going-back'));
+  document.getElementById('submitBtn-extended').disabled = true;
+  document.getElementById('submitHint-extended').textContent = '请回答所有50个问题以获取结果';
+
+  currentQuestion.short = 1;
+  currentQuestion.extended = 1;
+  updateProgress('short');
+  updateProgress('extended');
+
+  document.querySelectorAll('.q-tile').forEach(t => t.className = 'q-tile');
+
+  document.getElementById('testForm-short').style.display = 'none';
+  document.getElementById('testForm-extended').style.display = 'none';
+  document.getElementById('resultsSection').classList.remove('visible');
+  document.getElementById('selectorSection').style.display = '';
+  document.getElementById('articlesSection').style.display = '';
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+<footer class="site-footer">
+  © 2026 <a href="https://github.com/sherhn">sherhn</a> · MIT 风格许可证 ·
+  <a href="mailto:sherhn.inc@gmail.com">sherhn.inc@gmail.com</a>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('langBtn');
+  var dd  = document.getElementById('langDropdown');
+  if (!btn || !dd) return;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dd.classList.toggle('open');
+  });
+  document.addEventListener('click', function() { dd.classList.remove('open'); });
+})();
+</script>
+
+</body>
+</html>

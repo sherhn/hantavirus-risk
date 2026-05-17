@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Test de riesgo de hantavirus — hantavirus-risk</title>
+<meta name="description" content="Test en línea de autoevaluación del riesgo de infección por hantavirus. Versión corta (20 preguntas) y extendida (50 preguntas).">
+<meta name="keywords" content="hantavirus-risk, hantavirus, SPH, FHSR, test de infección, riesgo de contagio, sherhn">
+<meta name="author" content="sherhn">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hantavirus-risk.sherhn.space/es/">
+<link rel="alternate" hreflang="ru" href="https://hantavirus-risk.sherhn.space/ru">
+<link rel="alternate" hreflang="en" href="https://hantavirus-risk.sherhn.space/">
+<link rel="alternate" hreflang="es" href="https://hantavirus-risk.sherhn.space/es">
+<link rel="alternate" hreflang="hi" href="https://hantavirus-risk.sherhn.space/hi">
+<link rel="alternate" hreflang="zh" href="https://hantavirus-risk.sherhn.space/zh">
+<link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hantavirus-risk.sherhn.space/es/">
+<meta property="og:title" content="Test de riesgo de hantavirus — hantavirus-risk">
+<meta property="og:description" content="Test en línea de autoevaluación del riesgo de infección por hantavirus. Versión corta (20 preguntas) y extendida (50 preguntas).">
+<meta property="og:image" content="https://hantavirus-risk.sherhn.space/es/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="hantavirus-risk">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://hantavirus-risk.sherhn.space/es/">
+<meta name="twitter:title" content="Test de riesgo de hantavirus — hantavirus-risk">
+<meta name="twitter:description" content="Test en línea de autoevaluación del riesgo de infección por hantavirus. Versión corta (20 preguntas) y extendida (50 preguntas).">
+<meta name="twitter:image" content="https://hantavirus-risk.sherhn.space/es/og-image.png">
+<meta name="twitter:creator" content="@sherhn">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "hantavirus-risk",
+  "url": "https://hantavirus-risk.sherhn.space/es/",
+  "description": "Test en línea de autoevaluación del riesgo de infección por hantavirus con versión corta y extendida.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "author": {
+    "@type": "Person",
+    "name": "sherhn",
+    "url": "https://github.com/sherhn"
+  },
+  "license": "https://hantavirus-risk.sherhn.space/es/LICENSE",
+  "codeRepository": "https://github.com/sherhn/hantavirus-risk"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<nav class="site-nav"><div class="nav-inner"><a href="/es" class="nav-logo">⬡ <span>hantavirus</span>-risk</a><ul class="nav-links">
+      <li><a href="/es" class="active">Inicio</a></li>
+      <li class="hide-mobile"><a href="/es/about">Acerca de</a></li>
+      <li class="hide-mobile"><a href="/es/faq">FAQ</a></li>
+      <li class="hide-mobile"><a href="/es/LICENSE">Licencia</a></li>
+      <li><a href="https://github.com/sherhn/hantavirus-risk" target="_blank" class="nav-gh">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span class="gh-text">GitHub</span>
+      </a></li>
+      <li class="lang-switcher">
+        <button class="lang-btn" id="langBtn" aria-label="Seleccionar idioma">
+          <span>🌐</span><span class="lang-current">ES</span><span>▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="/ru" class="lang-option"><span class="lang-flag">🇷🇺</span> Русский</a>
+          <a href="/" class="lang-option"><span class="lang-flag">🇬🇧</span> English</a>
+          <a href="/es" class="lang-option active"><span class="lang-flag">🇪🇸</span> Español</a>
+          <a href="/hi" class="lang-option"><span class="lang-flag">🇮🇳</span> हिन्दी</a>
+          <a href="/zh" class="lang-option"><span class="lang-flag">🇨🇳</span> 中文</a>
+        </div>
+      </li>
+    </ul></div></nav>
+
+<!-- ═══════════════════════════════════════════
+     MODAL DISCLAIMER (shown after result)
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="disclaimerModal" style="display:none">
+  <div class="modal-box">
+    <div class="modal-icon">⚕️</div>
+    <div class="modal-subtitle">Aviso importante</div>
+    <div class="modal-title">Esto no es un diagnóstico médico</div>
+    <div class="modal-divider"></div>
+    <div class="modal-body">
+      <strong>Este test es una herramienta de evaluación de riesgo preliminar</strong> y ha sido creado exclusivamente con fines informativos. Por favor, tenga en cuenta:
+      <ul>
+        <li>El test <strong>no reemplaza</strong> el examen médico, el diagnóstico de laboratorio ni la exploración clínica.</li>
+        <li>El resultado del test <strong>no constituye</strong> un diagnóstico, prescripción de tratamiento ni recomendación médica.</li>
+        <li>La infección por hantavirus <strong>solo se diagnostica mediante laboratorio</strong> (PCR, serología IgM) y clínicamente por un médico infectólogo.</li>
+        <li>Ante disnea aguda, hemoptisis, pérdida de conocimiento o caída brusca de tensión — <strong>llame inmediatamente a emergencias (112)</strong>, sin esperar el resultado del test.</li>
+        <li>Los autores del test <strong>no se responsabilizan</strong> de las decisiones tomadas en base al mismo.</li>
+      </ul>
+      <div class="modal-divider"></div>
+      Si le preocupa su estado — <strong>consulte a un médico</strong>. Solo un especialista puede diagnosticar y prescribir un tratamiento. Cuídese.
+    </div>
+    <button class="modal-close-btn" id="modalCloseBtn" disabled onclick="closeModal()">
+      Lo entiendo y lo tengo en cuenta
+    </button>
+    <div class="modal-timer" id="modalTimer">Por favor, léalo atentamente — 3 segundos…</div>
+    <div class="modal-progress-track">
+      <div class="modal-progress-fill" id="modalProgressFill" style="width:0%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+═══════════════════════════════════════════ -->
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-badge">
+      <span class="pulse-dot"></span>
+      Evaluación de riesgo
+    </div>
+    <h1>Test de riesgo de<br><em>infección por hantavirus</em></h1>
+    <p class="header-sub">Evaluación preliminar de la probabilidad de contagio. Elija el formato del test a continuación.</p>
+  </header>
+
+  <!-- Warning -->
+  <div class="warning-box">
+    <div class="warn-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Advertencia importante
+    </div>
+    <p>Este test <strong>no es un diagnóstico médico</strong>. La infección por hantavirus es una enfermedad poco frecuente pero extremadamente peligrosa: la letalidad en la forma pulmonar alcanza el <strong>35–40%</strong>. Los síntomas tempranos son prácticamente indistinguibles de la gripe. El test está diseñado para una evaluación preliminar del riesgo y para ayudar a tomar la decisión de consultar a un médico.</p>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    <p>Lea atentamente las preguntas y elija una respuesta que describa con mayor precisión su situación en los últimos <strong>1–7 días</strong> (salvo indicación contraria). Al finalizar, obtendrá una puntuación total con la interpretación de los resultados.</p>
+  </div>
+
+  <!-- Test selector -->
+  <div class="test-selector" id="selectorSection">
+    <div class="test-selector-title">Elija el formato del test</div>
+    <div class="selector-cards">
+      <div class="selector-card active" id="card-short" onclick="selectTest('short')">
+        <div class="selector-card-icon">⚡</div>
+        <div class="selector-card-title">Prueba corta</div>
+        <div class="selector-card-sub">Evaluación básica del riesgo por síntomas clave y contactos</div>
+        <div class="selector-card-badge">20 preguntas · 3–5 min</div>
+      </div>
+      <div class="selector-card" id="card-extended" onclick="selectTest('extended')">
+        <div class="selector-card-icon">🔬</div>
+        <div class="selector-card-title">Prueba extendida</div>
+        <div class="selector-card-sub">Análisis detallado con diagnóstico diferencial</div>
+        <div class="selector-card-badge">50 preguntas · 10–15 min</div>
+      </div>
+    </div>
+    <button class="start-btn" onclick="startTest()">Comenzar el test</button>
+    <div style="text-align:center">
+      <a href="https://github.com/sherhn/hantavirus-risk" target="_blank" class="gh-star-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        ⭐ Star on GitHub
+      </a>
+    </div>
+  </div>
+
+  <!-- Articles -->
+  <div class="index-articles" id="articlesSection">
+    <div class="index-articles-title">Material útil sobre el hantavirus</div>
+    <div class="index-articles-grid">
+      <a href="/es/symptoms" class="index-article-card">
+        <div class="index-article-icon">🌡️</div>
+        <div class="index-article-tag">Clínica</div>
+        <div class="index-article-title">Síntomas del hantavirus</div>
+        <div class="index-article-desc">Etapas de la enfermedad, diferencias con la gripe y señales de alarma para llamar a urgencias de inmediato.</div>
+      </a>
+      <a href="/es/transmission" class="index-article-card">
+        <div class="index-article-icon">🦠</div>
+        <div class="index-article-tag">Epidemiología</div>
+        <div class="index-article-title">Vías de transmisión</div>
+        <div class="index-article-desc">Cómo se contagia el hantavirus, quiénes están en riesgo y por qué es peligroso el virus Andes.</div>
+      </a>
+      <a href="/es/prevention" class="index-article-card">
+        <div class="index-article-icon">🛡️</div>
+        <div class="index-article-tag">Prevención</div>
+        <div class="index-article-title">Cómo protegerse</div>
+        <div class="index-article-desc">Normas concretas para la limpieza, actividades al aire libre, trabajo de campo y contacto con roedores.</div>
+      </a>
+      <a href="/es/how-to-detect" class="index-article-card">
+        <div class="index-article-icon">🔬</div>
+        <div class="index-article-tag">Diagnóstico</div>
+        <div class="index-article-title">Cómo detectar el hantavirus</div>
+        <div class="index-article-desc">PCR, serología, pruebas rápidas — qué análisis solicitar y cuándo acudir al médico.</div>
+      </a>
+      <a href="/es/history" class="index-article-card">
+        <div class="index-article-icon">📜</div>
+        <div class="index-article-tag">Historia</div>
+        <div class="index-article-title">Historia del hantavirus</div>
+        <div class="index-article-desc">De la Guerra de Corea al brote en Yosemite: cronología de descubrimientos y epidemias.</div>
+      </a>
+      <a href="/es/faq" class="index-article-card">
+        <div class="index-article-icon">💬</div>
+        <div class="index-article-tag">FAQ</div>
+        <div class="index-article-title">Preguntas frecuentes</div>
+        <div class="index-article-desc">¿El test reemplaza al médico? ¿Se transmite el hantavirus entre personas? ¿Qué hacer ante un resultado alto?</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       SHORT TEST (20 questions)
+  ══════════════════════════════ -->
+  <div id="testForm-short" style="display:none">
+
+    <!-- Progress -->
+    <div class="progress-bar-wrap">
+      <div class="progress-info">
+        <span id="progressText-short">Pregunta 0 de 20</span>
+        <span id="progressPct-short">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill-short"></div></div>
+    </div>
+
+    <!-- Block 1 -->
+    <div class="block" style="animation-delay:0.1s">
+      <div class="block-title"><span class="block-num">1</span>Bloque 1 — Contacto con posibles fuentes de infección</div>
+
+      <div class="question" id="s-q1">
+        <div class="question-header"><span class="question-num">01</span><span class="question-text">En las últimas 2–6 semanas, ¿estuvo en lugares donde pudieran vivir roedores (casa de campo, granero, sótano, ático, acampada, zona rural)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s1" data-score="5" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, limpié espacios polvorientos y largo tiempo sin usar donde podría haber ratones, o trabajé con tierra en zona rural.</span></div>
+          <div class="option" data-q="s1" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Sí, estuve en la naturaleza o en un lugar potencialmente peligroso, pero sin contacto directo con polvo o nidos.</span></div>
+          <div class="option" data-q="s1" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, no salí del piso/oficina en la ciudad o con certeza no tuve contacto con lugares donde habitan roedores.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q2">
+        <div class="question-header"><span class="question-num">02</span><span class="question-text">En los últimos dos meses, ¿observó excrementos de ratones, nidos o percibió olor fuerte a roedores en algún lugar donde estuvo?</span></div>
+        <div class="options">
+          <div class="option" data-q="s2" data-score="5" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, vi personalmente excrementos, nidos o roedores muertos.</span></div>
+          <div class="option" data-q="s2" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Sí, otras personas dijeron haber visto señales de roedores, o percibí el olor.</span></div>
+          <div class="option" data-q="s2" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, no noté nada de eso.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q3">
+        <div class="question-header"><span class="question-num">03</span><span class="question-text">¿Tiene riesgo profesional (agricultura, desratización, silvicultura, construcción en zona rural, laboratorio)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s3" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, es mi trabajo habitual o me dedico a ello con frecuencia.</span></div>
+          <div class="option" data-q="s3" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">En ocasiones me expongo a esas condiciones por trabajo.</span></div>
+          <div class="option" data-q="s3" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="block" style="animation-delay:0.2s">
+      <div class="block-title"><span class="block-num">2</span>Bloque 2 — Síntomas en evolución (últimos 1–7 días)</div>
+
+      <div class="question" id="s-q4">
+        <div class="question-header"><span class="question-num">04</span><span class="question-text">¿Tuvo una elevación <strong>repentina</strong> de temperatura por encima de 38°C?</span></div>
+        <div class="options">
+          <div class="option" data-q="s4" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, la temperatura subió de golpe, a 38,5°C o más.</span></div>
+          <div class="option" data-q="s4" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Sí, hay fiebre pero no supera los 38°C, o fue subiendo gradualmente.</span></div>
+          <div class="option" data-q="s4" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, la temperatura es normal.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q5">
+        <div class="question-header"><span class="question-num">05</span><span class="question-text">¿Siente <strong>dolor muscular intenso</strong> (mialgia), especialmente en grupos musculares grandes: muslos, espalda, hombros?</span></div>
+        <div class="options">
+          <div class="option" data-q="s5" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, el dolor es muy fuerte, me «rompe» el cuerpo entero, impide moverse y dormir.</span></div>
+          <div class="option" data-q="s5" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Hay algo de dolor o molestia en algún grupo muscular.</span></div>
+          <div class="option" data-q="s5" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, no tengo dolor muscular.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q6">
+        <div class="question-header"><span class="question-num">06</span><span class="question-text">¿Tiene cefalea? En caso afirmativo, ¿cómo es?</span></div>
+        <div class="options">
+          <div class="option" data-q="s6" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Muy intensa, casi insoportable, puede irradiarse a los ojos (dolor retroorbitario).</span></div>
+          <div class="option" data-q="s6" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Cefalea moderada, tolerable, similar a la de un resfriado común.</span></div>
+          <div class="option" data-q="s6" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No tengo cefalea.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q7">
+        <div class="question-header"><span class="question-num">07</span><span class="question-text">¿Nota una fatiga y debilidad inusuales que aumentan rápidamente y no mejoran con el descanso?</span></div>
+        <div class="options">
+          <div class="option" data-q="s7" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, la debilidad es tan fuerte que no puedo levantarme de la cama, tengo mareos.</span></div>
+          <div class="option" data-q="s7" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Debilidad considerable, peor que en un resfriado normal.</span></div>
+          <div class="option" data-q="s7" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">Cansancio leve habitual o sin síntomas.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q8">
+        <div class="question-header"><span class="question-num">08</span><span class="question-text">¿Tiene rinorrea intensa con abundante secreción líquida?</span></div>
+        <div class="options">
+          <div class="option" data-q="s8" data-score="-2" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, moco abundante y fluido.</span></div>
+          <div class="option" data-q="s8" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Ligera congestión nasal o secreción escasa.</span></div>
+          <div class="option" data-q="s8" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, respiro bien por la nariz.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q9">
+        <div class="question-header"><span class="question-num">09</span><span class="question-text">¿Siente dolor de garganta al tragar?</span></div>
+        <div class="options">
+          <div class="option" data-q="s9" data-score="-2" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, dolor fuerte, garganta enrojecida, posibles placas.</span></div>
+          <div class="option" data-q="s9" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Ligero picor o molestia en la garganta.</span></div>
+          <div class="option" data-q="s9" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, la garganta no duele.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q10">
+        <div class="question-header"><span class="question-num">10</span><span class="question-text">¿Tiene náuseas, vómitos o dolor abdominal?</span></div>
+        <div class="options">
+          <div class="option" data-q="s10" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, náuseas intensas, vómitos y/o dolor abdominal.</span></div>
+          <div class="option" data-q="s10" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Náuseas leves o malestar abdominal leve.</span></div>
+          <div class="option" data-q="s10" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q11">
+        <div class="question-header"><span class="question-num">11</span><span class="question-text">¿Tiene disnea (sensación de falta de aire) en reposo o con mínimo esfuerzo?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="s11" data-score="8" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, me ahogo incluso sentado o al hablar — no puedo estar tumbado. <strong style="color:var(--accent)">⚠ ¡Llame a urgencias ahora mismo!</strong></span></div>
+          <div class="option" data-q="s11" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Noto disnea al caminar por la habitación o al hablar.</span></div>
+          <div class="option" data-q="s11" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, respiro con normalidad o solo tengo disnea con esfuerzo intenso.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q12">
+        <div class="question-header"><span class="question-num">12</span><span class="question-text">¿Tiene dolor o molestia sorda en la zona lumbar (riñones)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s12" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, duele la zona lumbar en uno o ambos lados, y el dolor apareció junto con otros síntomas.</span></div>
+          <div class="option" data-q="s12" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Ligera molestia en la espalda, que relaciono con esfuerzo físico.</span></div>
+          <div class="option" data-q="s12" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q13">
+        <div class="question-header"><span class="question-num">13</span><span class="question-text">¿Con qué rapidez se desarrollaron sus síntomas?</span></div>
+        <div class="options">
+          <div class="option" data-q="s13" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Muy rápido: por la mañana estaba bien y por la tarde subió la fiebre, escalofríos y dolor intenso, y el estado empeora.</span></div>
+          <div class="option" data-q="s13" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">La enfermedad fue progresiva: primero malestar leve, luego fiebre, etc.</span></div>
+          <div class="option" data-q="s13" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">Los síntomas llevan varios días sin cambios notables.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="block" style="animation-delay:0.3s">
+      <div class="block-title"><span class="block-num">3</span>Bloque 3 — Contactos con personas y otros factores</div>
+
+      <div class="question" id="s-q14">
+        <div class="question-header"><span class="question-num">14</span><span class="question-text">¿Tuvo contacto con una persona con hantavirus confirmado o neumonía grave y rápida tras regresar de regiones endémicas?</span></div>
+        <div class="options">
+          <div class="option" data-q="s14" data-score="4" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, tuve contacto estrecho con esa persona (especialmente de Argentina/Chile — virus Andes).</span></div>
+          <div class="option" data-q="s14" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Escuché sobre casos en mi entorno, pero no tuve contacto directo.</span></div>
+          <div class="option" data-q="s14" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, nada de eso.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q15">
+        <div class="question-header"><span class="question-num">15</span><span class="question-text">En las últimas 2–6 semanas, ¿viajó a Sudamérica (especialmente Patagonia, Argentina, Chile) u otras regiones endémicas (Asia, Extremo Oriente)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s15" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, viajé a Sudamérica / Asia / Extremo Oriente.</span></div>
+          <div class="option" data-q="s15" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Sí, viajé, pero a otras regiones.</span></div>
+          <div class="option" data-q="s15" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q16">
+        <div class="question-header"><span class="question-num">16</span><span class="question-text">¿Algún familiar o colega tiene síntomas similares?</span></div>
+        <div class="options">
+          <div class="option" data-q="s16" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, varias personas a mi alrededor enfermaron a la vez con síntomas parecidos.</span></div>
+          <div class="option" data-q="s16" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Sí, pero los síntomas de cada uno son distintos.</span></div>
+          <div class="option" data-q="s16" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, todos a mi alrededor están sanos.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="block" style="animation-delay:0.4s">
+      <div class="block-title"><span class="block-num">4</span>Bloque 4 — Estado actual y signos de alarma</div>
+
+      <div class="question" id="s-q17">
+        <div class="question-header"><span class="question-num">17</span><span class="question-text">¿Cuál es su tensión arterial (si la midió en las últimas 24 horas)?</span></div>
+        <div class="options">
+          <div class="option" data-q="s17" data-score="2" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Considerablemente más baja que mi valor habitual (por ejemplo, de 120/80 ha bajado a 90/60 o menos).</span></div>
+          <div class="option" data-q="s17" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">La tensión es normal o algo elevada.</span></div>
+          <div class="option" data-q="s17" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No lo sé / no la medí.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q18">
+        <div class="question-header"><span class="question-num">18</span><span class="question-text">¿Tiene enfermedades crónicas (diabetes, hipertensión, asma, enfermedades renales) o estados que debiliten el sistema inmunológico?</span></div>
+        <div class="options">
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, tengo enfermedades crónicas graves.</span></div>
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Tengo algunos problemas crónicos de salud leves.</span></div>
+          <div class="option" data-q="s18" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, estoy sano/a en general.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q19">
+        <div class="question-header"><span class="question-num">19</span><span class="question-text">¿Tomó paracetamol o ibuprofeno en los últimos días? ¿Le ayudó a bajar la fiebre y el dolor?</span></div>
+        <div class="options">
+          <div class="option" data-q="s19" data-score="1" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Sí, los tomé, pero apenas ayudaron — la fiebre y el dolor persisten.</span></div>
+          <div class="option" data-q="s19" data-score="-1" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Sí, los medicamentos ayudaron, me encuentro notablemente mejor.</span></div>
+          <div class="option" data-q="s19" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">No, no tomé nada.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="s-q20">
+        <div class="question-header"><span class="question-num">20</span><span class="question-text">¿Cómo describiría su estado en este momento?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="s20" data-score="10" onclick="selectOption(this,'short')"><span class="option-letter">A</span><span class="option-text">Muy grave: no puedo levantarme de la cama, tengo dificultad para respirar, confusión, latido cardíaco irregular. <strong style="color:var(--accent)">⚠ ¡LLAME A EMERGENCIAS AHORA (112)!</strong></span></div>
+          <div class="option" data-q="s20" data-score="3" onclick="selectOption(this,'short')"><span class="option-letter">B</span><span class="option-text">Moderado: fiebre alta y debilidad, pero puedo moverme y valerme.</span></div>
+          <div class="option" data-q="s20" data-score="0" onclick="selectOption(this,'short')"><span class="option-letter">C</span><span class="option-text">Aceptable: ligero malestar, rinorrea, pero puedo funcionar.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-nav" id="nav-short">
+      <button class="q-nav-btn prev-btn" onclick="goPrev('short')" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Anterior
+      </button>
+      <button class="q-nav-btn skip-btn" onclick="skipQuestion('short')">Omitir</button>
+      <span class="q-counter">1 / 20</span>
+      <button class="q-nav-btn next-btn" onclick="goNext('short')" disabled>
+        Siguiente
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="q-grid-wrap">
+      <div class="q-grid-label">Preguntas</div>
+      <div class="q-grid" id="qGrid-short"></div>
+    </div>
+
+    <div class="submit-section">
+      <button class="submit-btn" id="submitBtn-short" onclick="showResults('short')" disabled>Calcular resultado</button>
+      <p class="submit-hint" id="submitHint-short">Responda las 20 preguntas para obtener el resultado</p>
+    </div>
+  </div><!-- /testForm-short -->
+
+
+  <!-- ══════════════════════════════
+       EXTENDED TEST (50 questions)
+  ══════════════════════════════ -->
+  <div id="testForm-extended" style="display:none">
+
+    <div class="progress-bar-wrap">
+      <div class="progress-info">
+        <span id="progressText-extended">Pregunta 0 de 50</span>
+        <span id="progressPct-extended">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill-extended"></div></div>
+    </div>
+
+    <!-- Block 1 -->
+    <div class="block" style="animation-delay:0.1s">
+      <div class="block-title"><span class="block-num">1</span>Bloque 1 — Historial epidemiológico (10 preguntas)</div>
+
+      <div class="question" id="e-q1">
+        <div class="question-header"><span class="question-num">01</span><span class="question-text">En las últimas 2–6 semanas, ¿visitó zonas rurales, casa de campo, bosque, sótano, ático u otro lugar donde pudieran habitar roedores?</span></div>
+        <div class="options">
+          <div class="option" data-q="e1" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, y estuve en contacto activo con polvo (barría, movía objetos viejos, trabajaba la tierra, acampaba en tienda).</span></div>
+          <div class="option" data-q="e1" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, pero solo estuve en ese lugar sin trabajar con polvo.</span></div>
+          <div class="option" data-q="e1" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No, no salí del piso/oficina en la ciudad o con certeza no tuve contacto con esos lugares.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q2">
+        <div class="question-header"><span class="question-num">02</span><span class="question-text">¿Vio personalmente excrementos de ratones, nidos o roedores muertos en algún lugar donde estuvo (en los últimos 2 meses)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e2" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, vi excrementos frescos, nidos o ratones muertos.</span></div>
+          <div class="option" data-q="e2" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Vi rastros antiguos, o me dijeron que existían.</span></div>
+          <div class="option" data-q="e2" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No, nada de eso.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q3">
+        <div class="question-header"><span class="question-num">03</span><span class="question-text">¿Inhaló polvo al limpiar habitaciones, establos o sótanos que llevaban mucho tiempo sin usar (en las últimas 6 semanas)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e3" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, noté que inhalaba polvo, había mucho polvo, posiblemente sin mascarilla.</span></div>
+          <div class="option" data-q="e3" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">No, la limpieza fue húmeda o usé mascarilla respiratoria.</span></div>
+          <div class="option" data-q="e3" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No hice ese tipo de limpieza.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q4">
+        <div class="question-header"><span class="question-num">04</span><span class="question-text">¿Tuvo contacto con roedores vivos o sus excreciones (tocarlos, limpiar su jaula)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e4" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, tuve contacto estrecho con roedores silvestres o domésticos vivos.</span></div>
+          <div class="option" data-q="e4" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Hubo un contacto fortuito y breve.</span></div>
+          <div class="option" data-q="e4" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q5">
+        <div class="question-header"><span class="question-num">05</span><span class="question-text">¿Trabaja en agricultura, silvicultura, desratización, construcción en zona rural o en laboratorio con hantavirus?</span></div>
+        <div class="options">
+          <div class="option" data-q="e5" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, es mi trabajo habitual.</span></div>
+          <div class="option" data-q="e5" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">En ocasiones realizo ese tipo de trabajo.</span></div>
+          <div class="option" data-q="e5" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q6">
+        <div class="question-header"><span class="question-num">06</span><span class="question-text">En las últimas 2–6 semanas, ¿estuvo en regiones endémicas de hantavirus (Extremo Oriente ruso, Urales, cuenca del Volga, Argentina, Chile, EE.UU. — Four Corners, China, Corea)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e6" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, estuve precisamente en esa región.</span></div>
+          <div class="option" data-q="e6" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Viajé a otras regiones.</span></div>
+          <div class="option" data-q="e6" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q7">
+        <div class="question-header"><span class="question-num">07</span><span class="question-text">En las últimas 6 semanas, ¿participó en actividades al aire libre con pernoctación en tienda de campaña o cabaña en el bosque/montaña?</span></div>
+        <div class="options">
+          <div class="option" data-q="e7" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, dormí en tienda o cabaña del bosque.</span></div>
+          <div class="option" data-q="e7" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, pero dormí en hotel con todas las comodidades.</span></div>
+          <div class="option" data-q="e7" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q8">
+        <div class="question-header"><span class="question-num">08</span><span class="question-text">¿Conoce algún caso de infección por hantavirus entre conocidos, vecinos o en su zona en los últimos 2 meses?</span></div>
+        <div class="options">
+          <div class="option" data-q="e8" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, hubo un caso confirmado en humanos.</span></div>
+          <div class="option" data-q="e8" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Escuché sobre casos en animales (ratones), pero no en humanos.</span></div>
+          <div class="option" data-q="e8" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q9">
+        <div class="question-header"><span class="question-num">09</span><span class="question-text">¿Tuvo contacto con una persona con hantavirus confirmado o neumonía grave de rápida evolución de origen desconocido (especialmente tras regresar de zonas endémicas)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e9" data-score="6" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, tuve contacto domiciliario estrecho (especialmente con alguien de Argentina/Chile — virus Andes).</span></div>
+          <div class="option" data-q="e9" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Hubo contacto fortuito o estuve en el mismo espacio.</span></div>
+          <div class="option" data-q="e9" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q10">
+        <div class="question-header"><span class="question-num">10</span><span class="question-text">En el último mes, ¿murió alguien de su entorno por insuficiencia respiratoria rápida o edema pulmonar de causa desconocida?</span></div>
+        <div class="options">
+          <div class="option" data-q="e10" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, y ocurrió tras síntomas gripales.</span></div>
+          <div class="option" data-q="e10" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, pero la causa era conocida (por ejemplo, cáncer, traumatismo).</span></div>
+          <div class="option" data-q="e10" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="block" style="animation-delay:0.2s">
+      <div class="block-title"><span class="block-num">2</span>Bloque 2 — Síntomas de la fase inicial (10 preguntas)</div>
+
+      <div class="question" id="e-q11">
+        <div class="question-header"><span class="question-num">11</span><span class="question-text">¿Cómo comenzó la enfermedad?</span></div>
+        <div class="options">
+          <div class="option" data-q="e11" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">De forma súbita, estando completamente bien: fiebre alta repentina, escalofríos, debilidad intensa.</span></div>
+          <div class="option" data-q="e11" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">De forma gradual: primero leve malestar, luego fiebre.</span></div>
+          <div class="option" data-q="e11" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Sin fiebre, solo cansancio.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q12">
+        <div class="question-header"><span class="question-num">12</span><span class="question-text">¿Cuál fue la temperatura máxima en las últimas 24 horas?</span></div>
+        <div class="options">
+          <div class="option" data-q="e12" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Más de 39°C, cede mal con antipiréticos.</span></div>
+          <div class="option" data-q="e12" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">38–39°C.</span></div>
+          <div class="option" data-q="e12" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">37–38°C.</span></div>
+          <div class="option" data-q="e12" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Normal (hasta 37°C).</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q13">
+        <div class="question-header"><span class="question-num">13</span><span class="question-text">¿Tiene escalofríos, temblores o sensación de frío con fiebre alta?</span></div>
+        <div class="options">
+          <div class="option" data-q="e13" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, escalofríos intensos, tiemblo sin control.</span></div>
+          <div class="option" data-q="e13" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligeros escalofríos.</span></div>
+          <div class="option" data-q="e13" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q14">
+        <div class="question-header"><span class="question-num">14</span><span class="question-text">¿Cómo es el dolor muscular (mialgia)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e14" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Muy intenso: duelen los músculos grandes (espalda, muslos, pantorrillas), no puedo encontrar postura cómoda.</span></div>
+          <div class="option" data-q="e14" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Dolor moderado, como en la gripe.</span></div>
+          <div class="option" data-q="e14" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Ligera molestia.</span></div>
+          <div class="option" data-q="e14" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Sin dolor muscular.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q15">
+        <div class="question-header"><span class="question-num">15</span><span class="question-text">¿Dónde se localiza la cefalea?</span></div>
+        <div class="options">
+          <div class="option" data-q="e15" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Principalmente en la frente y los ojos (retroorbitaria), pulsátil, se intensifica al mover los ojos.</span></div>
+          <div class="option" data-q="e15" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Difusa, moderada, «en casco», opresiva.</span></div>
+          <div class="option" data-q="e15" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Sin cefalea.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q16">
+        <div class="question-header"><span class="question-num">16</span><span class="question-text">¿Tiene dolor o escozor en los ojos, fotofobia?</span></div>
+        <div class="options">
+          <div class="option" data-q="e16" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, los ojos duelen, lloran, la luz molesta.</span></div>
+          <div class="option" data-q="e16" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera sequedad o fatiga ocular.</span></div>
+          <div class="option" data-q="e16" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q17">
+        <div class="question-header"><span class="question-num">17</span><span class="question-text">¿Qué tan intensa es la debilidad y el agotamiento general?</span></div>
+        <div class="options">
+          <div class="option" data-q="e17" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Extrema: no puedo levantarme de la cama, tengo mareos.</span></div>
+          <div class="option" data-q="e17" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Intensa, pero puedo desplazarme por casa.</span></div>
+          <div class="option" data-q="e17" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Cansancio leve, como al final de un día de trabajo.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q18">
+        <div class="question-header"><span class="question-num">18</span><span class="question-text">¿Tuvo náuseas y/o vómitos en los primeros días de la enfermedad?</span></div>
+        <div class="options">
+          <div class="option" data-q="e18" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, náuseas constantes con vómitos.</span></div>
+          <div class="option" data-q="e18" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Náuseas leves sin vómitos.</span></div>
+          <div class="option" data-q="e18" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q19">
+        <div class="question-header"><span class="question-num">19</span><span class="question-text">¿Siente dolor o molestia abdominal?</span></div>
+        <div class="options">
+          <div class="option" data-q="e19" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, dolor bastante intenso, a veces cólico, puede acompañarse de diarrea.</span></div>
+          <div class="option" data-q="e19" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera molestia.</span></div>
+          <div class="option" data-q="e19" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q20">
+        <div class="question-header"><span class="question-num">20</span><span class="question-text">¿Cómo valora su sudoración durante la enfermedad?</span></div>
+        <div class="options">
+          <div class="option" data-q="e20" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sudoración profusa, especialmente de noche.</span></div>
+          <div class="option" data-q="e20" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sudoración moderada al bajar la fiebre.</span></div>
+          <div class="option" data-q="e20" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Normal.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="block" style="animation-delay:0.3s">
+      <div class="block-title"><span class="block-num">3</span>Bloque 3 — Manifestaciones respiratorias y cardiovasculares (10 preguntas)</div>
+
+      <div class="question" id="e-q21">
+        <div class="question-header"><span class="question-num">21</span><span class="question-text">¿Tiene disnea (sensación de falta de aire) en reposo?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e21" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, disnea intensa, no puedo estar tumbado, debo sentarme. <strong style="color:var(--accent)">⚠ ¡Atención médica urgente!</strong></span></div>
+          <div class="option" data-q="e21" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera disnea al hablar o con mínimo esfuerzo.</span></div>
+          <div class="option" data-q="e21" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">La disnea aparece solo con esfuerzo físico.</span></div>
+          <div class="option" data-q="e21" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Sin disnea.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q22">
+        <div class="question-header"><span class="question-num">22</span><span class="question-text">¿Cuál es su frecuencia respiratoria en reposo? (cuente durante 30 segundos y multiplique por 2)</span></div>
+        <div class="options">
+          <div class="option" data-q="e22" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Más de 25 respiraciones/min.</span></div>
+          <div class="option" data-q="e22" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">20–25 respiraciones/min.</span></div>
+          <div class="option" data-q="e22" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Menos de 20 respiraciones/min.</span></div>
+          <div class="option" data-q="e22" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">No puedo contarlo / no lo sé.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q23">
+        <div class="question-header"><span class="question-num">23</span><span class="question-text">¿Tiene tos? En caso afirmativo, ¿de qué tipo?</span></div>
+        <div class="options">
+          <div class="option" data-q="e23" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Seca, irritante, sin expectoración.</span></div>
+          <div class="option alert-option" data-q="e23" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Tos con esputo espumoso o rosado (hemoptisis). <strong style="color:var(--accent)">⚠ ¡Llame a urgencias ahora mismo!</strong></span></div>
+          <div class="option" data-q="e23" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Tos húmeda con esputo normal (amarillo/verde).</span></div>
+          <div class="option" data-q="e23" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Sin tos.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q24">
+        <div class="question-header"><span class="question-num">24</span><span class="question-text">¿Siente opresión o dolor en el pecho al respirar?</span></div>
+        <div class="options">
+          <div class="option" data-q="e24" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, el dolor aumenta al inspirar, sensación de presión en el pecho.</span></div>
+          <div class="option" data-q="e24" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera opresión, pero no dolor.</span></div>
+          <div class="option" data-q="e24" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q25">
+        <div class="question-header"><span class="question-num">25</span><span class="question-text">¿Midió la saturación (SpO₂) con pulsioxímetro?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e25" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, SpO₂ por debajo del 90%. <strong style="color:var(--accent)">⚠ ¡Llame a urgencias ahora mismo!</strong></span></div>
+          <div class="option" data-q="e25" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, SpO₂ entre 90–94%.</span></div>
+          <div class="option" data-q="e25" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Sí, SpO₂ del 95% o más.</span></div>
+          <div class="option" data-q="e25" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">No la medí.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q26">
+        <div class="question-header"><span class="question-num">26</span><span class="question-text">¿Nota coloración azulada en labios, uñas o piel (cianosis)?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e26" data-score="8" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, los labios o las uñas tienen un tono azulado. <strong style="color:var(--accent)">⚠ ¡Llame a urgencias ahora mismo!</strong></span></div>
+          <div class="option" data-q="e26" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Piel algo pálida o grisácea.</span></div>
+          <div class="option" data-q="e26" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No, piel de color normal.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q27">
+        <div class="question-header"><span class="question-num">27</span><span class="question-text">¿Siente palpitaciones o irregularidad en el latido cardíaco?</span></div>
+        <div class="options">
+          <div class="option" data-q="e27" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, el corazón late fuerte, taquicardia (pulso &gt;100 en reposo).</span></div>
+          <div class="option" data-q="e27" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligero aumento del pulso (80–100).</span></div>
+          <div class="option" data-q="e27" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Pulso normal.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q28">
+        <div class="question-header"><span class="question-num">28</span><span class="question-text">¿Cuál es su tensión arterial (si la midió)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e28" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Muy baja (por debajo de 90/60, siendo su valor habitual mayor).</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Moderadamente baja o normal.</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Elevada.</span></div>
+          <div class="option" data-q="e28" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">No la medí.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q29">
+        <div class="question-header"><span class="question-num">29</span><span class="question-text">¿Siente dificultad para respirar en decúbito supino que le obliga a incorporarse?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e29" data-score="8" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, no puedo estar tumbado en posición horizontal, solo sentado o semi-incorporado. <strong style="color:var(--accent)">⚠ ¡Ayuda urgente!</strong></span></div>
+          <div class="option" data-q="e29" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera molestia, pero puedo estar tumbado.</span></div>
+          <div class="option" data-q="e29" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No, duermo en posición normal.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q30">
+        <div class="question-header"><span class="question-num">30</span><span class="question-text">¿Tiene sibilancias o silbidos al respirar, audibles a distancia?</span></div>
+        <div class="options">
+          <div class="option" data-q="e30" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, escucho silbidos o gorgoteos al espirar/inspirar.</span></div>
+          <div class="option" data-q="e30" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Solo ligera congestión torácica.</span></div>
+          <div class="option" data-q="e30" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 4 -->
+    <div class="block" style="animation-delay:0.4s">
+      <div class="block-title"><span class="block-num">4</span>Bloque 4 — Signos hematológicos, renales y hemorrágicos (10 preguntas)</div>
+
+      <div class="question" id="e-q31">
+        <div class="question-header"><span class="question-num">31</span><span class="question-text">¿Ha notado sangrado de encías al cepillarse o aparición de hematomas sin causa en los últimos días?</span></div>
+        <div class="options">
+          <div class="option" data-q="e31" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, sangrado abundante, grandes hematomas.</span></div>
+          <div class="option" data-q="e31" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sangrado leve, uno o dos hematomas pequeños.</span></div>
+          <div class="option" data-q="e31" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q32">
+        <div class="question-header"><span class="question-num">32</span><span class="question-text">¿Tiene petequias — pequeños puntos rojos o violáceos en la piel (como erupción que no desaparece al presionar)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e32" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, muchos puntos en el tronco, brazos y mucosas.</span></div>
+          <div class="option" data-q="e32" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Algunos puntos parecidos a telangiectasias.</span></div>
+          <div class="option" data-q="e32" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q33">
+        <div class="question-header"><span class="question-num">33</span><span class="question-text">¿Ha tenido epistaxis (hemorragia nasal) durante la enfermedad?</span></div>
+        <div class="options">
+          <div class="option" data-q="e33" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, varias veces, difícil de detener.</span></div>
+          <div class="option" data-q="e33" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Una vez, leve.</span></div>
+          <div class="option" data-q="e33" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q34">
+        <div class="question-header"><span class="question-num">34</span><span class="question-text">¿Cómo ha cambiado el volumen de orina en las últimas 24 horas?</span></div>
+        <div class="options">
+          <div class="option" data-q="e34" data-score="6" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">La orina disminuyó notablemente, a veces apenas unas gotas, o no oriné durante más de 6–8 horas.</span></div>
+          <div class="option" data-q="e34" data-score="2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Orina menos de lo habitual, pero sigo orinando.</span></div>
+          <div class="option" data-q="e34" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">El volumen no ha cambiado.</span></div>
+          <div class="option" data-q="e34" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">No presto atención / no lo sé.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q35">
+        <div class="question-header"><span class="question-num">35</span><span class="question-text">¿De qué color es la orina?</span></div>
+        <div class="options">
+          <div class="option" data-q="e35" data-score="5" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Oscura, color «agua de carne», turbia, con sangre.</span></div>
+          <div class="option" data-q="e35" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Concentrada, amarillo oscuro.</span></div>
+          <div class="option" data-q="e35" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Color normal.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q36">
+        <div class="question-header"><span class="question-num">36</span><span class="question-text">¿Tiene dolor en la zona lumbar o en la región renal?</span></div>
+        <div class="options">
+          <div class="option" data-q="e36" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, dolor sordo y constante en uno o ambos lados.</span></div>
+          <div class="option" data-q="e36" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera molestia tras esfuerzo físico.</span></div>
+          <div class="option" data-q="e36" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q37">
+        <div class="question-header"><span class="question-num">37</span><span class="question-text">¿Ha aparecido edema en cara, párpados o piernas (especialmente por las mañanas)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e37" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, edema visible en la cara, «bolsas» bajo los ojos, edema en los pies.</span></div>
+          <div class="option" data-q="e37" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera pastosidad matutina.</span></div>
+          <div class="option" data-q="e37" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q38">
+        <div class="question-header"><span class="question-num">38</span><span class="question-text">¿Se hizo un hemograma completo en los últimos días? (plaquetas y hematocrito)</span></div>
+        <div class="options">
+          <div class="option" data-q="e38" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, plaquetas bajas (&lt;150×10⁹/L), hematocrito elevado (&gt;50% en hombres, &gt;45% en mujeres).</span></div>
+          <div class="option" data-q="e38" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, hay pequeñas alteraciones (plaquetas en límite inferior, hematocrito algo elevado).</span></div>
+          <div class="option" data-q="e38" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Sí, todos los valores en rango normal.</span></div>
+          <div class="option" data-q="e38" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">No me lo hice.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q39">
+        <div class="question-header"><span class="question-num">39</span><span class="question-text">¿Le hicieron prueba de hantavirus en sangre (PCR o anticuerpos IgM)?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e39" data-score="10" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, resultado positivo. <strong style="color:var(--accent)">⚠ ¡Acuda al médico de inmediato si aún no lo ha hecho!</strong></span></div>
+          <div class="option" data-q="e39" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, resultado negativo.</span></div>
+          <div class="option" data-q="e39" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q40">
+        <div class="question-header"><span class="question-num">40</span><span class="question-text">¿Con qué rapidez empeora su estado?</span></div>
+        <div class="options">
+          <div class="option" data-q="e40" data-score="7" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Muy rápido: empeoro cada hora, aumenta la disnea o la debilidad.</span></div>
+          <div class="option" data-q="e40" data-score="3" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Lentamente, pero noto empeoramiento día a día.</span></div>
+          <div class="option" data-q="e40" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Sin cambios o mejorando.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 5 -->
+    <div class="block" style="animation-delay:0.5s">
+      <div class="block-title"><span class="block-num">5</span>Bloque 5 — Diagnóstico diferencial y estado general (10 preguntas)</div>
+
+      <div class="question" id="e-q41">
+        <div class="question-header"><span class="question-num">41</span><span class="question-text">¿Tiene dolor de garganta al tragar?</span></div>
+        <div class="options">
+          <div class="option" data-q="e41" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, dolor intenso, garganta enrojecida, posibles placas.</span></div>
+          <div class="option" data-q="e41" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligero picor o molestia.</span></div>
+          <div class="option" data-q="e41" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q42">
+        <div class="question-header"><span class="question-num">42</span><span class="question-text">¿Tiene rinorrea abundante con secreción líquida y/o estornudos?</span></div>
+        <div class="options">
+          <div class="option" data-q="e42" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, moco muy abundante, estornudo con frecuencia.</span></div>
+          <div class="option" data-q="e42" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera congestión nasal.</span></div>
+          <div class="option" data-q="e42" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No, respiro bien por la nariz.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q43">
+        <div class="question-header"><span class="question-num">43</span><span class="question-text">¿Nota aumento o dolor en los ganglios cervicales o submandibulares?</span></div>
+        <div class="options">
+          <div class="option" data-q="e43" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, los ganglios están aumentados y dolorosos.</span></div>
+          <div class="option" data-q="e43" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligero aumento, sin dolor.</span></div>
+          <div class="option" data-q="e43" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q44">
+        <div class="question-header"><span class="question-num">44</span><span class="question-text">¿Tiene algún otro tipo de erupción en la piel (macular, urticarial, vesicular)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e44" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, erupción abundante por todo el cuerpo.</span></div>
+          <div class="option" data-q="e44" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Pequeñas erupciones.</span></div>
+          <div class="option" data-q="e44" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q45">
+        <div class="question-header"><span class="question-num">45</span><span class="question-text">¿Tiene dolor articular (artralgia) sin inflamación?</span></div>
+        <div class="options">
+          <div class="option" data-q="e45" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, varias articulaciones duelen mucho (rodillas, manos).</span></div>
+          <div class="option" data-q="e45" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Ligera rigidez.</span></div>
+          <div class="option" data-q="e45" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q46">
+        <div class="question-header"><span class="question-num">46</span><span class="question-text">¿Estuvo en contacto en los últimos 3–7 días con alguien con gripe, COVID-19 o infección respiratoria confirmadas?</span></div>
+        <div class="options">
+          <div class="option" data-q="e46" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, tuve contacto estrecho con alguien con gripe/COVID confirmados por laboratorio.</span></div>
+          <div class="option" data-q="e46" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, estuve con alguien resfriado.</span></div>
+          <div class="option" data-q="e46" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q47">
+        <div class="question-header"><span class="question-num">47</span><span class="question-text">¿Tomó antibióticos o antivirales? ¿Le ayudaron?</span></div>
+        <div class="options">
+          <div class="option" data-q="e47" data-score="1" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, tomé antibióticos, pero no mejoré o empeioré.</span></div>
+          <div class="option" data-q="e47" data-score="-2" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Sí, tomé antivirales (para gripe/COVID) y mejoré.</span></div>
+          <div class="option" data-q="e47" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q48">
+        <div class="question-header"><span class="question-num">48</span><span class="question-text">¿Tiene enfermedades crónicas (diabetes, hipertensión, enfermedades renales, hepáticas, pulmonares, inmunodeficiencia)?</span></div>
+        <div class="options">
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, y pueden enmascarar los síntomas.</span></div>
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Tengo algunos problemas crónicos leves.</span></div>
+          <div class="option" data-q="e48" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q49">
+        <div class="question-header"><span class="question-num">49</span><span class="question-text">¿Fuma o fumó durante mucho tiempo?</span></div>
+        <div class="options">
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Sí, llevo mucho tiempo fumando, tengo tos de fumador.</span></div>
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Lo dejé.</span></div>
+          <div class="option" data-q="e49" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">No fumo.</span></div>
+        </div>
+      </div>
+
+      <div class="question" id="e-q50">
+        <div class="question-header"><span class="question-num">50</span><span class="question-text">¿Cómo describiría su estado en general en este momento?</span></div>
+        <div class="options">
+          <div class="option alert-option" data-q="e50" data-score="12" onclick="selectOption(this,'extended')"><span class="option-letter">A</span><span class="option-text">Grave: disnea intensa, confusión, tensión baja. <strong style="color:var(--accent)">⚠ ¡LLAME A EMERGENCIAS AHORA (112)!</strong></span></div>
+          <div class="option" data-q="e50" data-score="4" onclick="selectOption(this,'extended')"><span class="option-letter">B</span><span class="option-text">Moderado: fiebre y debilidad, pero estoy consciente y puedo moverme.</span></div>
+          <div class="option" data-q="e50" data-score="0" onclick="selectOption(this,'extended')"><span class="option-letter">C</span><span class="option-text">Aceptable: tengo síntomas, pero puedo valerme.</span></div>
+          <div class="option" data-q="e50" data-score="-1" onclick="selectOption(this,'extended')"><span class="option-letter">D</span><span class="option-text">Bien, no tengo ninguna molestia.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-nav" id="nav-extended">
+      <button class="q-nav-btn prev-btn" onclick="goPrev('extended')" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Anterior
+      </button>
+      <button class="q-nav-btn skip-btn" onclick="skipQuestion('extended')">Omitir</button>
+      <span class="q-counter">1 / 50</span>
+      <button class="q-nav-btn next-btn" onclick="goNext('extended')" disabled>
+        Siguiente
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="q-grid-wrap">
+      <div class="q-grid-label">Preguntas</div>
+      <div class="q-grid" id="qGrid-extended"></div>
+    </div>
+
+    <div class="submit-section">
+      <button class="submit-btn" id="submitBtn-extended" onclick="showResults('extended')" disabled>Calcular resultado</button>
+      <p class="submit-hint" id="submitHint-extended">Responda las 50 preguntas para obtener el resultado</p>
+    </div>
+  </div><!-- /testForm-extended -->
+
+
+  <!-- ══════════════════════════════
+       RESULTS SECTION
+  ══════════════════════════════ -->
+  <div class="results" id="resultsSection">
+    <div id="resultCard"></div>
+    <div class="disclaimer">
+      Este test es una herramienta de evaluación de riesgo preliminar, no un sustituto del diagnóstico de laboratorio ni del examen médico. Incluso con una puntuación baja, ante disnea aguda, hemoptisis o pérdida de conocimiento — llame a urgencias de inmediato. Cuídese.
+    </div>
+    <div style="text-align:center">
+      <button class="restart-btn" onclick="restartTest()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        Repetir el test
+      </button>
+    </div>
+
+    <div class="index-articles" style="margin-top:40px">
+      <div class="index-articles-title">Aprenda más sobre el hantavirus</div>
+      <div class="index-articles-grid">
+        <a href="/es/symptoms" class="index-article-card">
+          <div class="index-article-icon">🌡️</div>
+          <div class="index-article-tag">Clínica</div>
+          <div class="index-article-title">Síntomas del hantavirus</div>
+          <div class="index-article-desc">Etapas de la enfermedad, diferencias con la gripe y señales de alarma.</div>
+        </a>
+        <a href="/es/transmission" class="index-article-card">
+          <div class="index-article-icon">🦠</div>
+          <div class="index-article-tag">Epidemiología</div>
+          <div class="index-article-title">Vías de transmisión</div>
+          <div class="index-article-desc">Cómo se contagia, quiénes están en riesgo y por qué es peligroso el virus Andes.</div>
+        </a>
+        <a href="/es/prevention" class="index-article-card">
+          <div class="index-article-icon">🛡️</div>
+          <div class="index-article-tag">Prevención</div>
+          <div class="index-article-title">Cómo protegerse</div>
+          <div class="index-article-desc">Normas de seguridad en limpieza, naturaleza y trabajo con roedores.</div>
+        </a>
+        <a href="/es/how-to-detect" class="index-article-card">
+          <div class="index-article-icon">🔬</div>
+          <div class="index-article-tag">Diagnóstico</div>
+          <div class="index-article-title">Análisis y métodos</div>
+          <div class="index-article-desc">PCR, serología, pruebas rápidas — qué análisis solicitar y cuándo.</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+// ─── State ───────────────────────────────────────
+const answersShort    = {};
+const answersExtended = {};
+const TOTAL_SHORT    = 20;
+const TOTAL_EXTENDED = 50;
+let currentMode = 'short'; // 'short' | 'extended'
+let currentQuestion = { short: 1, extended: 1 };
+
+// ─── Question Grid ────────────────────────────────
+const skippedShort    = new Set();
+const skippedExtended = new Set();
+
+function buildGrid(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const grid = document.getElementById(`qGrid-${mode}`);
+  if (!grid) return;
+  grid.innerHTML = '';
+  for (let i = 1; i <= total; i++) {
+    const tile = document.createElement('button');
+    tile.className = 'q-tile';
+    tile.id = `tile-${mode}-${i}`;
+    tile.textContent = i;
+    tile.onclick = (function(n){ return function(){ jumpTo(mode, n); }; })(i);
+    grid.appendChild(tile);
+  }
+}
+
+function updateGrid(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const skipped = mode === 'short' ? skippedShort : skippedExtended;
+  const prefix = getQuestionPrefix(mode);
+  const cur = currentQuestion[mode];
+  for (let i = 1; i <= total; i++) {
+    const tile = document.getElementById(`tile-${mode}-${i}`);
+    if (!tile) continue;
+    const key = `${prefix}${i}`;
+    tile.className = 'q-tile';
+    if (answers[key] !== undefined) tile.classList.add('answered');
+    else if (skipped.has(i)) tile.classList.add('skipped');
+    if (i === cur) tile.classList.add('current');
+  }
+}
+
+function jumpTo(mode, num) {
+  showQuestion(mode, num, num < currentQuestion[mode], true);
+}
+
+function skipQuestion(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const cur = currentQuestion[mode];
+  const skipped = mode === 'short' ? skippedShort : skippedExtended;
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const prefix = getQuestionPrefix(mode);
+
+  if (answers[`${prefix}${cur}`] === undefined) {
+    skipped.add(cur);
+  }
+
+  let next = null;
+  for (let i = cur + 1; i <= total; i++) {
+    if (answers[`${prefix}${i}`] === undefined) { next = i; break; }
+  }
+  if (next === null) {
+    for (let i = 1; i <= total; i++) {
+      if (answers[`${prefix}${i}`] === undefined) { next = i; break; }
+    }
+  }
+
+  updateGrid(mode);
+  checkSubmit(mode);
+  if (next !== null) {
+    showQuestion(mode, next, false, false);
+  }
+}
+
+// ─── Selector ────────────────────────────────────
+function selectTest(mode) {
+  currentMode = mode;
+  document.getElementById('card-short').classList.toggle('active', mode === 'short');
+  document.getElementById('card-extended').classList.toggle('active', mode === 'extended');
+}
+
+function startTest() {
+  document.getElementById('selectorSection').style.display = 'none';
+  document.getElementById('articlesSection').style.display = 'none';
+  currentQuestion[currentMode] = 1;
+  if (currentMode === 'short') {
+    document.getElementById('testForm-short').style.display = '';
+    buildGrid('short');
+    showQuestion('short', 1);
+    updateProgress('short');
+  } else {
+    document.getElementById('testForm-extended').style.display = '';
+    buildGrid('extended');
+    showQuestion('extended', 1);
+    updateProgress('extended');
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── One-at-a-time question display ──────────────
+function getQuestionPrefix(mode) {
+  return mode === 'short' ? 's' : 'e';
+}
+
+function showQuestion(mode, num, goingBack, scroll) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const prefix = getQuestionPrefix(mode);
+
+  document.querySelectorAll(`#testForm-${mode} .question`).forEach(q => {
+    q.classList.remove('active-question', 'going-back');
+  });
+
+  const qEl = document.getElementById(`${prefix[0]}-q${num}`);
+  if (qEl) {
+    qEl.classList.add('active-question');
+    if (goingBack) qEl.classList.add('going-back');
+  }
+
+  currentQuestion[mode] = num;
+
+  updateNavButtons(mode, num, total);
+  updateGrid(mode);
+
+  if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateNavButtons(mode, num, total) {
+  const navEl = document.getElementById(`nav-${mode}`);
+  if (!navEl) return;
+
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const prefix = getQuestionPrefix(mode);
+  const hasAnswer = answers[`${prefix}${num}`] !== undefined;
+
+  navEl.querySelector('.prev-btn').disabled = (num === 1);
+  navEl.querySelector('.next-btn').disabled = !hasAnswer || (num === total);
+  navEl.querySelector('.q-counter').textContent = `${num} / ${total}`;
+}
+
+function goNext(mode) {
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const cur = currentQuestion[mode];
+  if (cur < total) showQuestion(mode, cur + 1, false, false);
+}
+
+function goPrev(mode) {
+  const cur = currentQuestion[mode];
+  if (cur > 1) showQuestion(mode, cur - 1, true, false);
+}
+
+// ─── Options ──────────────────────────────────────
+function selectOption(el, mode) {
+  const q     = el.dataset.q;
+  const score = parseInt(el.dataset.score);
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const total = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+
+  document.querySelectorAll(`.option[data-q="${q}"]`).forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+
+  answers[q] = score;
+  const qEl = el.closest('.question');
+  if (qEl) qEl.classList.add('answered');
+
+  updateProgress(mode);
+  checkSubmit(mode);
+  updateGrid(mode);
+
+  updateNavButtons(mode, currentQuestion[mode], total);
+
+  const cur = currentQuestion[mode];
+  if (cur < total) {
+    setTimeout(() => showQuestion(mode, cur + 1, false, false), 350);
+  }
+}
+
+function updateProgress(mode) {
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  const total   = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const answered = Object.keys(answers).length;
+  const pct = Math.round((answered / total) * 100);
+  document.getElementById(`progressFill-${mode}`).style.width = pct + '%';
+  document.getElementById(`progressText-${mode}`).textContent = `Pregunta ${answered} de ${total}`;
+  document.getElementById(`progressPct-${mode}`).textContent = pct + '%';
+}
+
+function checkSubmit(mode) {
+  const answers  = mode === 'short' ? answersShort : answersExtended;
+  const skipped  = mode === 'short' ? skippedShort : skippedExtended;
+  const total    = mode === 'short' ? TOTAL_SHORT : TOTAL_EXTENDED;
+  const prefix   = getQuestionPrefix(mode);
+  const btn  = document.getElementById(`submitBtn-${mode}`);
+  const hint = document.getElementById(`submitHint-${mode}`);
+
+  let unanswered = 0;
+  for (let i = 1; i <= total; i++) {
+    if (answers[`${prefix}${i}`] === undefined) unanswered++;
+  }
+
+  if (unanswered === 0) {
+    btn.disabled = false;
+    if (skipped.size > 0) {
+      hint.textContent = `Todas las preguntas respondidas (${skipped.size} omitidas y retomadas) — puede obtener el resultado`;
+    } else {
+      hint.textContent = 'Todas las preguntas respondidas — puede obtener el resultado';
+    }
+  } else {
+    btn.disabled = true;
+    hint.textContent = `Sin responder: ${unanswered} pregunta(s)`;
+  }
+}
+
+function calcScore(mode) {
+  const answers = mode === 'short' ? answersShort : answersExtended;
+  return Object.values(answers).reduce((a, b) => a + b, 0);
+}
+
+// ─── Results ──────────────────────────────────────
+function showResults(mode) {
+  const score   = calcScore(mode);
+  const isExt   = mode === 'extended';
+  const typeTag = isExt ? '🔬 Prueba extendida · 50 preguntas' : '⚡ Prueba corta · 20 preguntas';
+  let card = '';
+
+  const threshCritical = isExt ? 70 : 30;
+  const threshHigh     = isExt ? 31 : 16;
+  const threshMed      = isExt ? 10 : 5;
+
+  if (score > threshCritical) {
+    card = `
+      <div class="result-card result-critical">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent)">🚨 Resultado crítico</div>
+        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-title" style="color:var(--accent)">Llame a emergencias de inmediato</div>
+        <div class="result-desc">
+          <strong>Llame al 112 ahora mismo.</strong> Su estado requiere atención médica urgente. Con alta probabilidad se está desarrollando un síndrome pulmonar por hantavirus o una forma renal grave.<br><br>
+          Mientras espera: abra una ventana para ventilar, adopte una posición semisentada y evite movimientos bruscos. Informe a los médicos sobre sus contactos con roedores. <strong>Cada minuto cuenta</strong> — el edema pulmonar puede desarrollarse muy rápidamente.
+        </div>
+      </div>`;
+  } else if (score >= threshHigh) {
+    card = `
+      <div class="result-card result-high">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent)">⚠ Alta probabilidad de infección grave</div>
+        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-title">Se requiere hospitalización urgente</div>
+        <div class="result-desc">
+          La combinación de sus síntomas y factores de riesgo es <strong>muy sospechosa</strong> de infección por hantavirus (forma pulmonar o renal). También es posible una gripe grave con neumonía o sepsis.<br><br>
+          <strong>Debe acudir cuanto antes a urgencias hospitalarias</strong> con unidad de cuidados intensivos. Mientras llega el médico, guarde reposo, controle la tensión y la frecuencia respiratoria.
+        </div>
+      </div>`;
+  } else if (score >= threshMed) {
+    card = `
+      <div class="result-card result-medium">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--accent2)">⚡ Probabilidad moderada — no se puede descartar hantavirus</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-title">Se recomienda consulta médica</div>
+        <div class="result-desc">
+          El cuadro es inespecífico. Podría tratarse de <strong>gripe, COVID-19, adenovirus, leptospirosis, fase inicial de FHSR/SPH</strong>. Sus contactos con roedores y algunos síntomas generan sospecha.<br><br>
+          <strong>Se recomienda consultar a un médico en las próximas 24–48 horas.</strong> Solicite un hemograma completo (especialmente plaquetas) y, si es posible, PCR de hantavirus. Informe al médico sobre sus viajes y posibles contactos.
+        </div>
+      </div>`;
+  } else {
+    card = `
+      <div class="result-card result-low">
+        <div class="result-type-tag">${typeTag}</div>
+        <div class="result-label" style="color:var(--green)">✓ Baja probabilidad de hantavirus</div>
+        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-title">Signos de infección por hantavirus poco probables</div>
+        <div class="result-desc">
+          Sus síntomas e historial de contactos apuntan con mayor probabilidad a <strong>cansancio habitual, estrés, un resfriado leve u otro estado no grave</strong>.<br><br>
+          Recuerde: la fiebre alta y la debilidad intensa requieren atención en cualquier caso. Si los síntomas persisten más de <strong>3 días o empeoran</strong>, consulte a su médico de cabecera.
+        </div>
+      </div>`;
+  }
+
+  document.getElementById('resultCard').innerHTML = card;
+  document.getElementById(`testForm-${mode}`).style.display = 'none';
+  document.getElementById('resultsSection').classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showDisclaimerModal();
+}
+
+// ─── Modal ────────────────────────────────────────
+function showDisclaimerModal() {
+  const modal   = document.getElementById('disclaimerModal');
+  const btn     = document.getElementById('modalCloseBtn');
+  const timerEl = document.getElementById('modalTimer');
+  const fillEl  = document.getElementById('modalProgressFill');
+
+  modal.style.display = 'flex';
+  btn.disabled = true;
+
+  const DURATION = 3000;
+  const INTERVAL = 50;
+  let elapsed = 0;
+
+  const tick = setInterval(() => {
+    elapsed += INTERVAL;
+    const pct = Math.min((elapsed / DURATION) * 100, 100);
+    fillEl.style.width = pct + '%';
+    const remaining = Math.ceil((DURATION - elapsed) / 1000);
+    if (remaining > 0) {
+      timerEl.textContent = `Por favor, léalo atentamente — ${remaining} ${remaining === 1 ? 'segundo' : 'segundos'}…`;
+    } else {
+      timerEl.textContent = 'Ahora puede cerrar esta ventana.';
+      btn.disabled = false;
+      clearInterval(tick);
+    }
+  }, INTERVAL);
+}
+
+function closeModal() {
+  document.getElementById('disclaimerModal').style.display = 'none';
+}
+
+// ─── Restart ─────────────────────────────────────
+function restartTest() {
+  for (const k in answersShort) delete answersShort[k];
+  skippedShort.clear();
+  document.querySelectorAll('#testForm-short .option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('#testForm-short .question').forEach(q => q.classList.remove('answered', 'active-question', 'going-back'));
+  document.getElementById('submitBtn-short').disabled = true;
+  document.getElementById('submitHint-short').textContent = 'Responda las 20 preguntas para obtener el resultado';
+
+  for (const k in answersExtended) delete answersExtended[k];
+  skippedExtended.clear();
+  document.querySelectorAll('#testForm-extended .option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('#testForm-extended .question').forEach(q => q.classList.remove('answered', 'active-question', 'going-back'));
+  document.getElementById('submitBtn-extended').disabled = true;
+  document.getElementById('submitHint-extended').textContent = 'Responda las 50 preguntas para obtener el resultado';
+
+  currentQuestion.short = 1;
+  currentQuestion.extended = 1;
+  updateProgress('short');
+  updateProgress('extended');
+
+  document.querySelectorAll('.q-tile').forEach(t => t.className = 'q-tile');
+
+  document.getElementById('testForm-short').style.display = 'none';
+  document.getElementById('testForm-extended').style.display = 'none';
+  document.getElementById('resultsSection').classList.remove('visible');
+  document.getElementById('selectorSection').style.display = '';
+  document.getElementById('articlesSection').style.display = '';
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+<footer class="site-footer">
+  © 2026 <a href="https://github.com/sherhn">sherhn</a> · MIT-style License ·
+  <a href="mailto:sherhn.inc@gmail.com">sherhn.inc@gmail.com</a>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('langBtn');
+  var dd  = document.getElementById('langDropdown');
+  if (!btn || !dd) return;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dd.classList.toggle('open');
+  });
+  document.addEventListener('click', function() { dd.classList.remove('open'); });
+})();
+</script>
+
+</body>
+</html>
