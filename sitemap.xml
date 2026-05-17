@@ -1,27 +1,509 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
   <url>
     <loc>https://hantavirus-risk.sherhn.space/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/"/>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hantavirus-risk.sherhn.space/about.html</loc>
+    <loc>https://hantavirus-risk.sherhn.space/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/about"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/about"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/about"/>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hantavirus-risk.sherhn.space/faq.html</loc>
+    <loc>https://hantavirus-risk.sherhn.space/ru/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/about"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/about"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/about"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/about"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/about"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/about"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/about"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/about"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/about"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/about"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/about"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/about"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/about"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/faq</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/faq"/>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hantavirus-risk.sherhn.space/license.html.html</loc>
+    <loc>https://hantavirus-risk.sherhn.space/ru/faq</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/faq"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/faq</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/faq"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/faq</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/faq"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/faq</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/faq"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Symptoms -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/symptoms</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/symptoms"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/ru/symptoms</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/symptoms"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/symptoms</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/symptoms"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/symptoms</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/symptoms"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/symptoms</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/symptoms"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/symptoms"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Transmission -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/transmission</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/transmission"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/transmission"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/transmission"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/transmission"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/ru/transmission</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/transmission"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/transmission"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/transmission"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/transmission"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/transmission</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/transmission"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/transmission"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/transmission"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/transmission"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/transmission</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/transmission"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/transmission"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/transmission"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/transmission"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/transmission</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/transmission"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/transmission"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/transmission"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/transmission"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/transmission"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Prevention -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/prevention</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/prevention"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/prevention"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/prevention"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/prevention"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/ru/prevention</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/prevention"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/prevention"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/prevention"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/prevention"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/prevention</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/prevention"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/prevention"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/prevention"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/prevention"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/prevention</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/prevention"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/prevention"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/prevention"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/prevention"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/prevention</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/prevention"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/prevention"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/prevention"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/prevention"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/prevention"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- How to detect -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/how-to-detect</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/how-to-detect"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/ru/how-to-detect</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/how-to-detect"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/how-to-detect</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/how-to-detect"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/how-to-detect</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/how-to-detect"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/how-to-detect</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/how-to-detect"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/how-to-detect"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- History -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/history</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/history"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/history"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/history"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/history"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/ru/history</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/history"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/history"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/history"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/history"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/es/history</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/history"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/history"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/history"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/history"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/hi/history</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/history"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/history"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/history"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/history"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/zh/history</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://hantavirus-risk.sherhn.space/history"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://hantavirus-risk.sherhn.space/ru/history"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://hantavirus-risk.sherhn.space/es/history"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://hantavirus-risk.sherhn.space/hi/history"/>
+    <xhtml:link rel="alternate" hreflang="zh"        href="https://hantavirus-risk.sherhn.space/zh/history"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- License -->
+  <url>
+    <loc>https://hantavirus-risk.sherhn.space/license.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
 </urlset>
