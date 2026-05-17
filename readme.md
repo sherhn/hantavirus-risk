@@ -1,26 +1,27 @@
 # hantavirus-risk
 
-Бесплатный онлайн-инструмент предварительной оценки риска хантавирусной инфекции. Помогает быстро понять, стоит ли срочно обращаться к врачу.
+A free online tool for preliminary hantavirus infection risk assessment. Helps you quickly determine whether you need to see a doctor urgently.
 
 ## Features
 
-- Краткий тест (20 вопросов, 3–5 мин) для быстрой первичной оценки
-- Расширенный тест (50 вопросов, 10–15 мин) с детальным анализом и дифференциальной диагностикой
-- Балльная система на основе клинических критериев ХЛС и ГЛПС
-- Полностью клиентская реализация — никакие данные не передаются на сервер
-- 4 уровня результата: низкий / умеренный / высокий / критический риск
-- Адаптивный дизайн, работает на мобильных устройствах
+- Brief test (20 questions, 3–5 min) for a quick initial assessment
+- Extended test (50 questions, 10–15 min) with detailed analysis and differential diagnostics
+- Score-based system grounded in clinical criteria for HPS and HFRS
+- Fully client-side — no data is sent to any server
+- 4 result levels: low / moderate / high / critical risk
+- Responsive design, works on mobile devices
+- Auto-calculates results when the last question is answered
 
 ## Usage
 
-Откройте `index.html` в браузере или перейдите на [hantavirus-risk.sherhn.space](https://hantavirus-risk.sherhn.space).
+Open `index.html` in a browser or visit [hantavirus-risk.sherhn.space](https://hantavirus-risk.sherhn.space).
 
-1. Выберите формат теста: краткий (20 вопросов) или расширенный (50 вопросов).
-2. Отвечайте на вопросы по одному — тест автоматически переходит к следующему.
-3. После последнего вопроса нажмите «Получить результат».
-4. Прочитайте результат и рекомендации. При критическом результате — немедленно звоните 103 / 112.
+1. Choose a test format: brief (20 questions) or extended (50 questions).
+2. Answer questions one by one — the test advances automatically.
+3. After the last question, the result is calculated automatically.
+4. Read your result and recommendations. If the result is critical — call emergency services immediately (911 / 112).
 
-> ⚠ Тест не является медицинским диагнозом. Хантавирус диагностируется только лабораторно (ПЦР, IgM). При тревожных симптомах обращайтесь к врачу, не дожидаясь результата теста.
+> ⚠ This test is not a medical diagnosis. Hantavirus can only be confirmed in a laboratory (PCR, IgM serology). If you have alarming symptoms, see a doctor without waiting for the test result.
 
 ## License
 
