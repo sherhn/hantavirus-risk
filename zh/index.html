@@ -1233,10 +1233,11 @@ function checkSubmit(mode) {
   if (unanswered === 0) {
     btn.disabled = false;
     if (skipped.size > 0) {
-      hint.textContent = `所有问题均已作答（跳过 ${skipped.size} 题并已返回）— 可以获得结果`;
+      hint.textContent = `所有问题均已作答（跳过 ${skipped.size} 题并已返回）— 正在计算结果…`;
     } else {
-      hint.textContent = '所有问题均已作答 — 可以获得结果';
+      hint.textContent = '所有问题均已作答 — 正在计算结果…';
     }
+    setTimeout(() => showResults(mode), 600);
   } else {
     btn.disabled = true;
     hint.textContent = `未作答问题数：${unanswered}`;

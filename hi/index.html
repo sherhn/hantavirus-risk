@@ -1243,10 +1243,11 @@ function checkSubmit(mode) {
   if (unanswered === 0) {
     btn.disabled = false;
     if (skipped.size > 0) {
-      hint.textContent = `सभी प्रश्नों के उत्तर दिए गए (${skipped.size} छोड़े गए और वापस किए गए) — परिणाम प्राप्त किया जा सकता है`;
+      hint.textContent = `सभी प्रश्नों के उत्तर दिए गए (${skipped.size} छोड़े गए और वापस किए गए) — परिणाम की गणना हो रही है…`;
     } else {
-      hint.textContent = 'सभी प्रश्नों के उत्तर दिए गए — परिणाम प्राप्त किया जा सकता है';
+      hint.textContent = 'सभी प्रश्नों के उत्तर दिए गए — परिणाम की गणना हो रही है…';
     }
+    setTimeout(() => showResults(mode), 600);
   } else {
     btn.disabled = true;
     hint.textContent = `बिना उत्तर के रहे: ${unanswered} प्रश्न`;

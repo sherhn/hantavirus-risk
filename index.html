@@ -1243,10 +1243,12 @@ function checkSubmit(mode) {
   if (unanswered === 0) {
     btn.disabled = false;
     if (skipped.size > 0) {
-      hint.textContent = `All questions answered (${skipped.size} were skipped and revisited) — you can get your result`;
+      hint.textContent = `All questions answered (${skipped.size} were skipped and revisited) — calculating result…`;
     } else {
-      hint.textContent = 'All questions answered — you can get your result';
+      hint.textContent = 'All questions answered — calculating result…';
     }
+    // Auto-calculate result after a short delay
+    setTimeout(() => showResults(mode), 600);
   } else {
     btn.disabled = true;
     hint.textContent = `Still unanswered: ${unanswered} question(s)`;

@@ -1243,10 +1243,11 @@ function checkSubmit(mode) {
   if (unanswered === 0) {
     btn.disabled = false;
     if (skipped.size > 0) {
-      hint.textContent = `Все вопросы отвечены (${skipped.size} было пропущено и возвращено) — можно получить результат`;
+      hint.textContent = `Все вопросы отвечены (${skipped.size} было пропущено и возвращено) — считаем результат…`;
     } else {
-      hint.textContent = 'Все вопросы отвечены — можно получить результат';
+      hint.textContent = 'Все вопросы отвечены — считаем результат…';
     }
+    setTimeout(() => showResults(mode), 600);
   } else {
     btn.disabled = true;
     hint.textContent = `Осталось без ответа: ${unanswered} вопрос(ов)`;

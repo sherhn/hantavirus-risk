@@ -1232,10 +1232,11 @@ function checkSubmit(mode) {
   if (unanswered === 0) {
     btn.disabled = false;
     if (skipped.size > 0) {
-      hint.textContent = `Todas las preguntas respondidas (${skipped.size} omitidas y retomadas) — puede obtener el resultado`;
+      hint.textContent = `Todas las preguntas respondidas (${skipped.size} omitidas y retomadas) — calculando resultado…`;
     } else {
-      hint.textContent = 'Todas las preguntas respondidas — puede obtener el resultado';
+      hint.textContent = 'Todas las preguntas respondidas — calculando resultado…';
     }
+    setTimeout(() => showResults(mode), 600);
   } else {
     btn.disabled = true;
     hint.textContent = `Sin responder: ${unanswered} pregunta(s)`;
