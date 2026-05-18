@@ -1257,14 +1257,14 @@ function showResults(mode) {
 
   const threshCritical = isExt ? 70 : 30;
   const threshHigh     = isExt ? 31 : 16;
-  const threshMed      = isExt ? 10 : 5;
+  const threshMed      = isExt ? 17 : 7;
 
   if (score > threshCritical) {
     card = `
       <div class="result-card result-critical">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">🚨 Resultado crítico</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">puntos</span></div>
         <div class="result-title" style="color:var(--accent)">Llame a emergencias de inmediato</div>
         <div class="result-desc">
           <strong>Llame al 112 ahora mismo.</strong> Su estado requiere atención médica urgente. Con alta probabilidad se está desarrollando un síndrome pulmonar por hantavirus o una forma renal grave.<br><br>
@@ -1276,7 +1276,7 @@ function showResults(mode) {
       <div class="result-card result-high">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">⚠ Alta probabilidad de infección grave</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">puntos</span></div>
         <div class="result-title">Se requiere hospitalización urgente</div>
         <div class="result-desc">
           La combinación de sus síntomas y factores de riesgo es <strong>muy sospechosa</strong> de infección por hantavirus (forma pulmonar o renal). También es posible una gripe grave con neumonía o sepsis.<br><br>
@@ -1288,7 +1288,7 @@ function showResults(mode) {
       <div class="result-card result-medium">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent2)">⚡ Probabilidad moderada — no se puede descartar hantavirus</div>
-        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score} <span class="score-label">puntos</span></div>
         <div class="result-title">Se recomienda consulta médica</div>
         <div class="result-desc">
           El cuadro es inespecífico. Podría tratarse de <strong>gripe, COVID-19, adenovirus, leptospirosis, fase inicial de FHSR/SPH</strong>. Sus contactos con roedores y algunos síntomas generan sospecha.<br><br>
@@ -1300,7 +1300,7 @@ function showResults(mode) {
       <div class="result-card result-low">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--green)">✓ Baja probabilidad de hantavirus</div>
-        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-score-display" style="color:var(--green)">${score} <span class="score-label">puntos</span></div>
         <div class="result-title">Signos de infección por hantavirus poco probables</div>
         <div class="result-desc">
           Sus síntomas e historial de contactos apuntan con mayor probabilidad a <strong>cansancio habitual, estrés, un resfriado leve u otro estado no grave</strong>.<br><br>

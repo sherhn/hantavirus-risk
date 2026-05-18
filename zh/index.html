@@ -1258,14 +1258,14 @@ function showResults(mode) {
 
   const threshCritical = isExt ? 70 : 30;
   const threshHigh     = isExt ? 31 : 16;
-  const threshMed      = isExt ? 10 : 5;
+  const threshMed      = isExt ? 17 : 7;
 
   if (score > threshCritical) {
     card = `
       <div class="result-card result-critical">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">🚨 危急结果</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">分</span></div>
         <div class="result-title" style="color:var(--accent)">立即呼叫急救</div>
         <div class="result-desc">
           <strong>请立即拨打急救电话（中国120）。</strong> 您的情况需要紧急医疗干预。高度怀疑汉坦病毒肺综合征或严重肾型。<br><br>
@@ -1277,7 +1277,7 @@ function showResults(mode) {
       <div class="result-card result-high">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">⚠ 高度疑似危险感染</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">分</span></div>
         <div class="result-title">需要紧急住院</div>
         <div class="result-desc">
           您的症状和风险因素组合<strong>高度怀疑</strong>汉坦病毒感染（肺型或肾型）。也可能为重症流感合并肺炎或败血症。<br><br>
@@ -1289,7 +1289,7 @@ function showResults(mode) {
       <div class="result-card result-medium">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent2)">⚡ 中度可能性 — 不能排除汉坦病毒</div>
-        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score} <span class="score-label">分</span></div>
         <div class="result-title">需要就医咨询</div>
         <div class="result-desc">
           表现不典型。可能是<strong>流感、COVID-19、腺病毒、钩端螺旋体病、肾综合征出血热/汉坦病毒肺综合征早期</strong>。您接触啮齿动物的历史和部分症状值得警惕。<br><br>
@@ -1301,7 +1301,7 @@ function showResults(mode) {
       <div class="result-card result-low">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--green)">✓ 汉坦病毒可能性较低</div>
-        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-score-display" style="color:var(--green)">${score} <span class="score-label">分</span></div>
         <div class="result-title">汉坦病毒感染的可能性不大</div>
         <div class="result-desc">
           您的症状和接触史最大可能指向<strong>普通疲劳、压力、轻度感冒或其他非严重状况</strong>。<br><br>

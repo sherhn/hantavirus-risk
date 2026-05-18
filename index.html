@@ -1271,14 +1271,14 @@ function showResults(mode) {
 
   const threshCritical = isExt ? 70 : 30;
   const threshHigh     = isExt ? 31 : 16;
-  const threshMed      = isExt ? 10 : 5;
+  const threshMed      = isExt ? 17 : 7;
 
   if (score > threshCritical) {
     card = `
       <div class="result-card result-critical">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">🚨 Critical result</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">pts</span></div>
         <div class="result-title" style="color:var(--accent)">Call emergency services immediately</div>
         <div class="result-desc">
           <strong>Call 911 or your local emergency number right now.</strong> Your condition requires urgent medical intervention. There is a high probability of developing hantavirus pulmonary syndrome or severe renal form.<br><br>
@@ -1290,7 +1290,7 @@ function showResults(mode) {
       <div class="result-card result-high">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">⚠ High probability of a dangerous infection</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">pts</span></div>
         <div class="result-title">Urgent hospitalization needed</div>
         <div class="result-desc">
           The combination of your symptoms and risk factors is <strong>highly suspicious</strong> for hantavirus infection (pulmonary or renal form). Severe flu with pneumonia or sepsis is also possible.<br><br>
@@ -1302,7 +1302,7 @@ function showResults(mode) {
       <div class="result-card result-medium">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent2)">⚡ Moderate probability — hantavirus cannot be ruled out</div>
-        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score} <span class="score-label">pts</span></div>
         <div class="result-title">Medical consultation needed</div>
         <div class="result-desc">
           The picture is mixed. This could be <strong>influenza, COVID‑19, adenovirus, leptospirosis, or an early stage of HFRS/HPS</strong>. Your rodent contact and some symptoms are concerning.<br><br>
@@ -1314,7 +1314,7 @@ function showResults(mode) {
       <div class="result-card result-low">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--green)">✓ Low probability of hantavirus</div>
-        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-score-display" style="color:var(--green)">${score} <span class="score-label">pts</span></div>
         <div class="result-title">Signs of hantavirus infection are unlikely</div>
         <div class="result-desc">
           Your symptoms and exposure history most likely indicate <strong>ordinary fatigue, stress, a mild cold, or another non‑serious condition</strong>.<br><br>

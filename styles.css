@@ -1673,3 +1673,12 @@ h1 em { font-style: italic; color: var(--accent); }
   line-height: 1.55;
   flex: 1;
 }
+.score-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.45em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  vertical-align: middle;
+}

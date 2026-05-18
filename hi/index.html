@@ -1268,14 +1268,14 @@ function showResults(mode) {
 
   const threshCritical = isExt ? 70 : 30;
   const threshHigh     = isExt ? 31 : 16;
-  const threshMed      = isExt ? 10 : 5;
+  const threshMed      = isExt ? 17 : 7;
 
   if (score > threshCritical) {
     card = `
       <div class="result-card result-critical">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">🚨 गंभीर परिणाम</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">अंक</span></div>
         <div class="result-title" style="color:var(--accent)">तुरंत एम्बुलेंस बुलाएं</div>
         <div class="result-desc">
           <strong>अभी 112 पर कॉल करें।</strong> आपकी स्थिति को तत्काल चिकित्सा हस्तक्षेप की आवश्यकता है। उच्च संभावना के साथ हंतावायरस पल्मोनरी सिंड्रोम या गंभीर गुर्दे का रूप विकसित हो रहा है।<br><br>
@@ -1287,7 +1287,7 @@ function showResults(mode) {
       <div class="result-card result-high">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">⚠ खतरनाक संक्रमण की उच्च संभावना</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">अंक</span></div>
         <div class="result-title">तत्काल अस्पताल में भर्ती की आवश्यकता है</div>
         <div class="result-desc">
           आपके लक्षणों और जोखिम कारकों का संयोजन हंतावायरस संक्रमण (फुफ्फुसीय या गुर्दे का रूप) के लिए <strong>बहुत संदिग्ध</strong> है। गंभीर फ्लू निमोनिया या सेप्सिस भी संभव है।<br><br>
@@ -1299,7 +1299,7 @@ function showResults(mode) {
       <div class="result-card result-medium">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent2)">⚡ मध्यम संभावना — हंतावायरस से इनकार नहीं किया जा सकता</div>
-        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score} <span class="score-label">अंक</span></div>
         <div class="result-title">डॉक्टर से परामर्श आवश्यक है</div>
         <div class="result-desc">
           तस्वीर अस्पष्ट है। यह <strong>फ्लू, COVID-19, एडेनोवायरस, लेप्टोस्पायरोसिस, HFRS/HPS की प्रारंभिक अवस्था</strong> हो सकती है। कृंतकों के साथ आपके संपर्क और कुछ लक्षण चिंताजनक हैं।<br><br>
@@ -1311,7 +1311,7 @@ function showResults(mode) {
       <div class="result-card result-low">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--green)">✓ हंतावायरस की कम संभावना</div>
-        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-score-display" style="color:var(--green)">${score} <span class="score-label">अंक</span></div>
         <div class="result-title">हंतावायरस संक्रमण के संकेत कम संभावित हैं</div>
         <div class="result-desc">
           आपके लक्षण और संपर्क इतिहास सबसे अधिक संभावना के साथ <strong>सामान्य थकान, तनाव, हल्की सर्दी या अन्य गैर-गंभीर स्थिति</strong> की ओर इशारा करते हैं।<br><br>

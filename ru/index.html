@@ -1268,14 +1268,14 @@ function showResults(mode) {
 
   const threshCritical = isExt ? 70 : 30;
   const threshHigh     = isExt ? 31 : 16;
-  const threshMed      = isExt ? 10 : 5;
+  const threshMed      = isExt ? 17 : 7;
 
   if (score > threshCritical) {
     card = `
       <div class="result-card result-critical">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">🚨 Критический результат</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">баллов</span></div>
         <div class="result-title" style="color:var(--accent)">Немедленно вызывайте скорую помощь</div>
         <div class="result-desc">
           <strong>Звоните 103 или 112 прямо сейчас.</strong> Ваше состояние требует неотложного медицинского вмешательства. С высокой долей вероятности развивается хантавирусный лёгочный синдром или тяжёлая почечная форма.<br><br>
@@ -1287,7 +1287,7 @@ function showResults(mode) {
       <div class="result-card result-high">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent)">⚠ Высокая вероятность опасной инфекции</div>
-        <div class="result-score-display" style="color:var(--accent)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent)">${score} <span class="score-label">баллов</span></div>
         <div class="result-title">Необходима срочная госпитализация</div>
         <div class="result-desc">
           Сочетание ваших симптомов и факторов риска <strong>весьма подозрительно</strong> на хантавирусную инфекцию (лёгочная или почечная форма). Также возможен тяжёлый грипп с пневмонией или сепсис.<br><br>
@@ -1299,7 +1299,7 @@ function showResults(mode) {
       <div class="result-card result-medium">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--accent2)">⚡ Умеренная вероятность — нельзя исключать хантавирус</div>
-        <div class="result-score-display" style="color:var(--accent2)">${score}</div>
+        <div class="result-score-display" style="color:var(--accent2)">${score} <span class="score-label">баллов</span></div>
         <div class="result-title">Необходима консультация врача</div>
         <div class="result-desc">
           Картина смазанная. Это может быть <strong>грипп, COVID-19, аденовирус, лептоспироз, начальная стадия ГЛПС/ХЛС</strong>. Ваши контакты с грызунами и некоторые симптомы настораживают.<br><br>
@@ -1311,7 +1311,7 @@ function showResults(mode) {
       <div class="result-card result-low">
         <div class="result-type-tag">${typeTag}</div>
         <div class="result-label" style="color:var(--green)">✓ Низкая вероятность хантавируса</div>
-        <div class="result-score-display" style="color:var(--green)">${score}</div>
+        <div class="result-score-display" style="color:var(--green)">${score} <span class="score-label">баллов</span></div>
         <div class="result-title">Признаки хантавирусной инфекции маловероятны</div>
         <div class="result-desc">
           Ваши симптомы и история контактов с наибольшей вероятностью указывают на <strong>обычную усталость, стресс, лёгкую простуду или другое нетяжёлое состояние</strong>.<br><br>
